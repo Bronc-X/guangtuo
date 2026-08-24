@@ -1,0 +1,9 @@
+.download-venv/
+.runtime-venv/
+__pycache__/
+downloads/
+inputs/
+outputs/
+pretrained_weights/
+quarantine/
+triposg-main.zip

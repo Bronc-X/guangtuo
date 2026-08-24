@@ -1,0 +1,22 @@
+services:
+  triposg:
+    profiles: ["legacy-triposg-disabled"]
+    build:
+      context: .
+    image: guangtuo/triposg:fc5c409-torch271-cu128
+    environment:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      HF_HUB_ETAG_TIMEOUT: "10"
+      HF_HUB_DOWNLOAD_TIMEOUT: "60"
+      HF_XET_HIGH_PERFORMANCE: "1"
+    volumes:
+      - ./pretrained_weights:/opt/triposg/pretrained_weights
+      - ./inputs:/data/input:ro
+      - ./outputs:/data/output
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

@@ -1,0 +1,10 @@
+.download-venv/
+.runtime-venv/
+**/__pycache__/
+downloads/
+inputs/
+outputs/
+pretrained_weights/
+source-git/.git/
+source-git/scripts/briarmbg.py
+triposg-main.zip

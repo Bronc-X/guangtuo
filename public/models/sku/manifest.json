@@ -1,0 +1,348 @@
+{
+  "version": 7,
+  "generator": "gt-parametric-v7",
+  "qualityStandard": "catalog-review-sculpted-v1",
+  "materialModel": "glTF-PBR-metallic-roughness-plus-physical-extensions",
+  "constraints": {
+    "maxBytesPerModel": 8000000,
+    "minTrianglesPerModel": 32000,
+    "maxTrianglesPerModel": 140000
+  },
+  "models": [
+    {
+      "sku": "GT-AIRLESS-030",
+      "geometryId": "airless-cylinder-v6",
+      "path": "/models/sku/gt-airless-030.glb",
+      "bytes": 2132420,
+      "triangles": 59184,
+      "configurableRoles": [
+        "body",
+        "inner",
+        "trim",
+        "shadow",
+        "accent",
+        "label",
+        "assembly"
+      ],
+      "requiredComponents": [
+        "Airless_Sculpted_Body",
+        "Airless_Inner_Cartridge",
+        "Airless_Pump_Actuator",
+        "Airless_Nozzle_Opening",
+        "Airless_Cap_Assembly",
+        "Airless_Removable_Cap",
+        "Airless_Cap_Inner_Rim"
+      ],
+      "parameterBindings": {
+        "capacity": {
+          "effect": "geometry-scale",
+          "targetRoles": [
+            "root"
+          ]
+        },
+        "material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "body"
+          ]
+        },
+        "color": {
+          "effect": "pbr-color",
+          "targetRoles": [
+            "body",
+            "trim"
+          ]
+        },
+        "finish": {
+          "effect": "pbr-finish",
+          "targetRoles": [
+            "body",
+            "trim"
+          ]
+        },
+        "branding": {
+          "effect": "logo-material",
+          "targetRoles": [
+            "artwork"
+          ]
+        },
+        "logo-position": {
+          "effect": "logo-anchor",
+          "targetRoles": [
+            "artwork"
+          ]
+        }
+      },
+      "interactiveAssembly": {
+        "nodeName": "Airless_Cap_Assembly",
+        "action": "remove-cap"
+      }
+    },
+    {
+      "sku": "GT-DROPPER-030",
+      "geometryId": "dropper-round-v6",
+      "path": "/models/sku/gt-dropper-030.glb",
+      "bytes": 1718348,
+      "triangles": 66616,
+      "configurableRoles": [
+        "glass",
+        "liquid",
+        "clear",
+        "shadow",
+        "assembly",
+        "trim",
+        "accent",
+        "inner",
+        "label"
+      ],
+      "requiredComponents": [
+        "Dropper_Weighted_Glass_Bottle",
+        "Dropper_Liquid_Volume",
+        "Dropper_Pipette_Assembly",
+        "Dropper_Glass_Pipette",
+        "Dropper_Dip_Tube_Tip",
+        "Dropper_Elastomer_Bulb"
+      ],
+      "parameterBindings": {
+        "capacity": {
+          "effect": "geometry-scale",
+          "targetRoles": [
+            "root"
+          ]
+        },
+        "material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "glass"
+          ]
+        },
+        "color": {
+          "effect": "pbr-color",
+          "targetRoles": [
+            "trim"
+          ]
+        },
+        "finish": {
+          "effect": "pbr-finish",
+          "targetRoles": [
+            "glass",
+            "trim"
+          ]
+        },
+        "branding": {
+          "effect": "logo-material",
+          "targetRoles": [
+            "artwork"
+          ]
+        },
+        "logo-position": {
+          "effect": "logo-anchor",
+          "targetRoles": [
+            "artwork"
+          ]
+        }
+      },
+      "interactiveAssembly": {
+        "nodeName": "Dropper_Pipette_Assembly",
+        "action": "remove-dropper"
+      }
+    },
+    {
+      "sku": "GT-JAR-050",
+      "geometryId": "cream-jar-wide-v6",
+      "path": "/models/sku/gt-jar-050.glb",
+      "bytes": 1361308,
+      "triangles": 51704,
+      "configurableRoles": [
+        "body",
+        "inner",
+        "assembly",
+        "trim",
+        "accent",
+        "shadow",
+        "label"
+      ],
+      "requiredComponents": [
+        "Jar_Sculpted_Outer_Body",
+        "Jar_Inner_Cup",
+        "Jar_Cream_Surface",
+        "Jar_Lid_Assembly",
+        "Jar_Weighted_Lid",
+        "Jar_Lid_Inner_Disc"
+      ],
+      "parameterBindings": {
+        "capacity": {
+          "effect": "geometry-scale",
+          "targetRoles": [
+            "root"
+          ]
+        },
+        "material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "body"
+          ]
+        },
+        "color": {
+          "effect": "pbr-color",
+          "targetRoles": [
+            "body",
+            "trim"
+          ]
+        },
+        "finish": {
+          "effect": "pbr-finish",
+          "targetRoles": [
+            "body",
+            "trim"
+          ]
+        },
+        "branding": {
+          "effect": "logo-material",
+          "targetRoles": [
+            "artwork"
+          ]
+        },
+        "logo-position": {
+          "effect": "logo-anchor",
+          "targetRoles": [
+            "artwork"
+          ]
+        }
+      },
+      "interactiveAssembly": {
+        "nodeName": "Jar_Lid_Assembly",
+        "action": "open-lid"
+      }
+    },
+    {
+      "sku": "GT-MASK-FULL-025",
+      "geometryId": "mask-soft-drape-v7",
+      "path": "/models/sku/gt-mask-full-025.glb",
+      "bytes": 4423360,
+      "triangles": 86494,
+      "configurableRoles": [
+        "pack",
+        "pack-detail",
+        "label",
+        "accent",
+        "sheet"
+      ],
+      "requiredComponents": [
+        "Premium_Sachet_Shell",
+        "Full_Sculpted_Face_Sheet",
+        "Full_Eye_Rim_Left",
+        "Full_Eye_Rim_Right",
+        "Full_Mouth_Edge",
+        "Sachet_Tear_Notch"
+      ],
+      "parameterBindings": {
+        "capacity": {
+          "effect": "geometry-scale",
+          "targetRoles": [
+            "root"
+          ]
+        },
+        "material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "sheet"
+          ]
+        },
+        "pack-material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "color": {
+          "effect": "pbr-color",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "finish": {
+          "effect": "pbr-finish",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "logo-position": {
+          "effect": "logo-anchor",
+          "targetRoles": [
+            "artwork"
+          ]
+        }
+      },
+      "interactiveAssembly": null
+    },
+    {
+      "sku": "GT-MASK-SPLIT-030",
+      "geometryId": "mask-soft-drape-split-v7",
+      "path": "/models/sku/gt-mask-split-030.glb",
+      "bytes": 4356544,
+      "triangles": 83414,
+      "configurableRoles": [
+        "pack",
+        "pack-detail",
+        "label",
+        "accent",
+        "sheet-assembly",
+        "sheet"
+      ],
+      "requiredComponents": [
+        "Premium_Sachet_Shell",
+        "Split_Upper_Hydrogel_Sheet",
+        "Split_Lower_Hydrogel_Sheet",
+        "Split_Upper_Edge_Rim",
+        "Split_Lower_Edge_Rim",
+        "Sachet_Tear_Notch"
+      ],
+      "parameterBindings": {
+        "capacity": {
+          "effect": "geometry-scale",
+          "targetRoles": [
+            "root"
+          ]
+        },
+        "material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "sheet"
+          ]
+        },
+        "pack-material": {
+          "effect": "pbr-material",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "color": {
+          "effect": "pbr-color",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "finish": {
+          "effect": "pbr-finish",
+          "targetRoles": [
+            "pack",
+            "pack-detail"
+          ]
+        },
+        "logo-position": {
+          "effect": "logo-anchor",
+          "targetRoles": [
+            "artwork"
+          ]
+        }
+      },
+      "interactiveAssembly": null
+    }
+  ]
+}

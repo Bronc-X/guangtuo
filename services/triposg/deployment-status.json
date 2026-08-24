@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-08-22T12:22:20+08:00",
+  "enabled": false,
+  "status": "paused_by_project_decision",
+  "replacement": "Hunyuan3D-2mini",
+  "source": {
+    "repository": "https://github.com/VAST-AI-Research/TripoSG",
+    "commit": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c"
+  },
+  "model": {
+    "repository": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "downloaded": true,
+    "sha256Verified": true,
+    "bytes": 7946491209
+  },
+  "runtime": {
+    "targetGpu": "NVIDIA GeForce RTX 5070 Ti",
+    "python": "3.10.21",
+    "torch": "2.7.1",
+    "cuda": "12.8",
+    "compiledArchitectures": ["sm_50", "sm_60", "sm_61", "sm_70", "sm_75", "sm_80", "sm_86", "sm_90", "sm_100", "sm_120"],
+    "nativeWindowsEnvironment": true,
+    "containerBaseDigest": "sha256:ad6d59a3bbf3e82c1c849c9ac09cfc2a3e0bbb8655042fd899be6681b3fe2a85"
+  },
+  "host": {
+    "currentGpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpuMemoryMiB": 16303,
+    "driverVersion": "591.86",
+    "nvidiaPnpPresent": true,
+    "cudaAvailable": true,
+    "dockerAvailable": false,
+    "wslAvailable": false
+  },
+  "lastNativeSmoke": {
+    "seed": 42,
+    "steps": 50,
+    "diffusionSeconds": 10.9,
+    "totalSeconds": 42.15,
+    "vertices": 4119,
+    "faces": 8216,
+    "bytes": 148812,
+    "watertight": false,
+    "visualVerdict": "concept_reference_only"
+  },
+  "checks": {
+    "sourceDownloaded": "passed",
+    "downloadResumption": "passed",
+    "modelHashes": "passed",
+    "pythonSyntax": "passed",
+    "nativeRuntimeImports": "passed",
+    "nativePackageCompatibility": "passed",
+    "transparentInputContract": "passed",
+    "commercialLicenseGuards": "passed",
+    "meshSimplificationUnit": "passed",
+    "containerBuild": "pending_docker",
+    "gpuInference": "passed_native_windows",
+    "glbValidation": "passed_native_windows"
+  }
+}

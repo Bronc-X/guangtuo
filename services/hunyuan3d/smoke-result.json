@@ -1,0 +1,76 @@
+{
+  "status": "historical_cpu_preflight_before_nvidia_connection",
+  "tested_at": "2026-08-21T21:55:09+0800",
+  "source_commit": "f8db63096c8282cb27354314d896feba5ba6ff8a",
+  "source_archive_sha256": "1BE140879646034A98941E494072CE0AB26918FDC2FB59210443D56D41BC5622",
+  "model_repo": "tencent/Hunyuan3D-2mini",
+  "model_revision": "f90a0f7df7d5e6f71109cf333f6a95a0ae3194a6",
+  "system": {
+    "os": "Microsoft Windows 11 Pro 10.0.26200 build 26200",
+    "cpu": "Intel(R) Core(TM) Ultra X7 358H",
+    "logical_cores": 16,
+    "ram_gb": 63.49,
+    "gpu": "Intel(R) Arc(TM) B390 GPU",
+    "gpu_driver": "32.0.101.8509",
+    "nvidia_smi": false,
+    "nvcc": false,
+    "wsl": false,
+    "free_disk_gb_before": 1513.51
+  },
+  "python": "3.12.10",
+  "packages": {
+    "hy3dgen": "2.0.2",
+    "torch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu",
+    "diffusers": "0.40.0",
+    "transformers": "5.15.1",
+    "numpy": "2.5.2",
+    "pymeshlab": "2025.7.post1",
+    "xatlas": "0.0.11",
+    "onnxruntime": "1.29.0",
+    "rembg": "2.0.81"
+  },
+  "install_seconds": {
+    "venv": 14.91,
+    "torch_cpu": 192.02,
+    "requirements": 377.29,
+    "editable_package": 10.59
+  },
+  "checks": {
+    "pip_check": "pass",
+    "compileall": "pass",
+    "gradio_help": "pass",
+    "api_server_help": "pass_with_transformers_deprecation_warning",
+    "core_imports": "pass",
+    "bundled_glb_load": "pass",
+    "cuda_available": false,
+    "xpu_available_in_tested_torch": false,
+    "custom_rasterizer_build": "fail_missing_CUDA_HOME",
+    "differentiable_renderer_build": "fail_missing_MSVC_14_or_greater",
+    "model_config_download": "pass",
+    "model_weight_metadata_head": "pass",
+    "model_inference": "not_run_official_cuda_path_unavailable"
+  },
+  "import_smoke": {
+    "elapsed_seconds": 61.0,
+    "initial_rss_mb": 26.48,
+    "final_rss_mb": 810.28,
+    "largest_import": {
+      "module": "rembg",
+      "seconds": 37.862,
+      "rss_after_mb": 763.99
+    }
+  },
+  "model_artifact": {
+    "config_sha256": "cabcba7f6115752c8fe5b370e12bf714936f70377a8a80f151872f76c2d64609",
+    "standard_mini_weight_bytes": 3819958234,
+    "standard_mini_weight_etag": "3cc66f3bea33e4062b7dbc875ffe1d70c4888914aec3e91b60f94e9bd01b522b",
+    "whole_model_repo_bytes": 25258959889,
+    "gated": false
+  },
+  "bundled_sample_glb": {
+    "bytes": 720764,
+    "geometry_count": 1,
+    "note": "Repository sample only; not generated on this machine."
+  }
+}

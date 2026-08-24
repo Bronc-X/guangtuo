@@ -1,0 +1,56 @@
+{
+  "openapi": "3.1.0",
+  "info": {"title": "Guangtuo Bio Inquiry API", "version": "1.0.0"},
+  "servers": [{"url": "https://api.example.com"}],
+  "paths": {
+    "/v1/inquiries": {
+      "post": {
+        "operationId": "createInquiry",
+        "parameters": [{"name": "Idempotency-Key", "in": "header", "required": true, "schema": {"type": "string", "minLength": 12, "maxLength": 128}}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/InquiryInput"}}}},
+        "responses": {"202": {"description": "Queued", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CreatedJob"}}}}, "400": {"$ref": "#/components/responses/InvalidRequest"}}
+      }
+    },
+    "/v1/inquiries/{id}/status": {
+      "get": {"operationId": "getInquiryStatus", "security": [{"inquiryToken": []}], "parameters": [{"$ref": "#/components/parameters/InquiryId"}], "responses": {"200": {"description": "Current status", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicJob"}}}}, "404": {"$ref": "#/components/responses/NotFound"}}}
+    },
+    "/v1/inquiries/{id}/proposal": {
+      "get": {"operationId": "getProposal", "security": [{"inquiryToken": []}], "parameters": [{"$ref": "#/components/parameters/InquiryId"}], "responses": {"200": {"description": "Six-part proposal", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Proposal"}}}}, "404": {"$ref": "#/components/responses/NotFound"}}}
+    },
+    "/v1/inquiries/{id}/retry": {
+      "post": {"operationId": "retryInquiry", "security": [{"inquiryToken": []}], "parameters": [{"$ref": "#/components/parameters/InquiryId"}, {"name": "Idempotency-Key", "in": "header", "required": true, "schema": {"type": "string", "minLength": 12, "maxLength": 128}}], "responses": {"202": {"description": "Requeued", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicJob"}}}}, "409": {"description": "Not retryable"}}}
+    },
+    "/v1/reviews/{id}": {
+      "get": {"operationId": "getReview", "security": [{"reviewerToken": []}], "parameters": [{"$ref": "#/components/parameters/InquiryId"}], "responses": {"200": {"description": "Review item"}}},
+      "post": {"operationId": "approveReview", "security": [{"reviewerToken": []}], "parameters": [{"$ref": "#/components/parameters/InquiryId"}, {"name": "Idempotency-Key", "in": "header", "required": true, "schema": {"type": "string"}}], "responses": {"202": {"description": "Approved and queued"}, "403": {"description": "Reviewer not authorised"}, "409": {"description": "Commercial review required"}}}
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "inquiryToken": {"type": "http", "scheme": "bearer"},
+      "reviewerToken": {"type": "openIdConnect", "openIdConnectUrl": "https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration"}
+    },
+    "parameters": {"InquiryId": {"name": "id", "in": "path", "required": true, "schema": {"type": "string", "format": "uuid"}}},
+    "responses": {
+      "InvalidRequest": {"description": "Invalid request", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicError"}}}},
+      "NotFound": {"description": "Not found or inaccessible", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicError"}}}}
+    },
+    "schemas": {
+      "InquiryInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "businessEmail", "company", "market", "category", "sku", "configuration", "quantity", "budget", "launchDate", "productGoal", "packagingPreference", "certificationConstraints", "notes", "privacyConsent"],
+        "properties": {
+          "name": {"type": "string", "maxLength": 200}, "businessEmail": {"type": "string", "format": "email", "maxLength": 254}, "company": {"type": "string", "maxLength": 200}, "market": {"type": "string", "maxLength": 200}, "category": {"type": "string", "maxLength": 200}, "sku": {"type": "string", "maxLength": 200}, "configuration": {"type": "string", "maxLength": 1200}, "quantity": {"type": "string", "maxLength": 200}, "budget": {"type": "string", "maxLength": 200}, "launchDate": {"type": "string", "maxLength": 200}, "productGoal": {"type": "string", "maxLength": 500}, "packagingPreference": {"type": "string", "maxLength": 500}, "certificationConstraints": {"type": "string", "maxLength": 500}, "notes": {"type": "string", "maxLength": 2000}, "privacyConsent": {"type": "boolean", "const": true}
+        }
+      },
+      "PublicJob": {
+        "type": "object", "additionalProperties": false, "required": ["id", "status", "retryCount", "updatedAt"],
+        "properties": {"id": {"type": "string", "format": "uuid"}, "status": {"type": "string", "enum": ["queued", "processing", "completed", "retryable_error", "failed"]}, "retryCount": {"type": "integer", "minimum": 0, "maximum": 2}, "updatedAt": {"type": "integer"}}
+      },
+      "CreatedJob": {"allOf": [{"$ref": "#/components/schemas/PublicJob"}, {"type": "object", "required": ["accessToken"], "properties": {"accessToken": {"type": "string", "minLength": 32}}}]},
+      "Proposal": {"type": "object", "required": ["needSummary", "recommendedConfiguration", "missingInformation", "commercialPlaceholders", "nextMaterials", "suggestedReply"], "properties": {"needSummary": {"type": "string"}, "recommendedConfiguration": {"type": "string"}, "missingInformation": {"type": "string"}, "commercialPlaceholders": {"type": "string"}, "nextMaterials": {"type": "string"}, "suggestedReply": {"type": "string"}}},
+      "PublicError": {"type": "object", "additionalProperties": false, "required": ["code"], "properties": {"code": {"type": "string"}}}
+    }
+  }
+}

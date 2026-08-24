@@ -1,0 +1,5 @@
+Use case: background-extraction
+Asset type: TripoSG transparent PNG input
+Input image: edit target; it currently contains a visually drawn gray-and-white checkerboard background, which is incorrect.
+Primary request: remove every checkerboard/background pixel and encode those areas as genuine PNG alpha transparency.
+Constraints: change only the background representation; preserve the cosmetic pump bottle and cylindrical cap exactly pixel-for-pixel in geometry, scale, position, colors, materials, highlights, label, and edges; output RGBA with transparent pixels outside the product; no visible checkerboard, no solid background, no shadow, no halo, no added elements, no restyling, no watermark.
