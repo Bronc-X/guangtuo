@@ -1,0 +1,6 @@
+argostranslate==1.11.0
+ctranslate2==4.8.2
+numpy==2.5.3
+packaging==26.3
+pyyaml==6.0.3
+sentencepiece==0.2.2

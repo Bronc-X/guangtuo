@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import {pageLabels} from '@/data/page-labels';
 import Image from 'next/image';
 import {ActionBand, PageIntro, SectionTitle} from '@/components/site-section-kit';
 import {companyPageAlternates, companyPageCopy, companyText} from '@/data/company-page-copy';
@@ -24,7 +25,7 @@ export default async function FactoryPage({params}: PageParams) {
   const t = (value: Parameters<typeof companyText>[1]) => companyText(locale, value);
 
   return (
-    <main className="page-main">
+    <main className="page-main" data-cms="pages:factory">
       <PageIntro eyebrow={t(copy.intro.eyebrow)} title={t(copy.intro.title)} body={t(copy.intro.body)} meta={copy.intro.meta.map(t)} />
 
       <section className="section">
@@ -64,7 +65,7 @@ export default async function FactoryPage({params}: PageParams) {
             <p>{t(copy.evidence.body)}</p>
           </div>
           <div className="trust-panel__graphic" aria-hidden="true">
-            <div className="trust-wordmark"><strong>GUANGTUO</strong><span>HYDROGEL PRODUCTION</span></div>
+            <div className="trust-wordmark"><strong>SHOWKI</strong><span>{pageLabels[locale].production}</span></div>
           </div>
         </div>
       </section>

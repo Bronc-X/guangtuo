@@ -1,0 +1,11 @@
+import {mkdir,copyFile,cp} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {build} from 'esbuild';
+const output=resolve(process.argv[2]??'output/blender-hydrogel-samples-v1');
+await mkdir(output,{recursive:true});
+await build({entryPoints:['scripts/blender/preview-client.mjs'],bundle:true,format:'esm',minify:true,outdir:output,entryNames:'preview',assetNames:'fonts/[name]-[hash]',loader:{'.woff2':'file'},logLevel:'info'});
+await copyFile('scripts/blender/preview.html',resolve(output,'index.html'));
+await copyFile('public/assets/products/hydrogel/formats/face-white-transparent.png',resolve(output,'face-reference.png'));
+await copyFile('public/assets/products/hydrogel/formats/eye-wtc-butterfly.png',resolve(output,'eye-reference.png'));
+for(const name of ['manrope','cormorant-garamond','noto-sans-sc']) await cp(`node_modules/@fontsource-variable/${name}/LICENSE`,resolve(output,`font-license-${name}.txt`));
+console.log('Preview built:',output);

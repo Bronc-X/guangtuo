@@ -1,0 +1,33 @@
+[Unit]
+Description=Showkibiotech content and inquiry service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=showkibiotech
+Group=showkibiotech
+WorkingDirectory=/opt/showkibiotech/app
+EnvironmentFile=/etc/showkibiotech/runtime.env
+ExecStart=/usr/local/bin/node --import tsx services/content-admin/server.ts
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=read-only
+InaccessiblePaths=/home /root
+ProtectSystem=strict
+ReadWritePaths=/var/lib/showkibiotech /var/www/showkibiotech
+TimeoutStopSec=60
+KillMode=control-group
+# Keep SSH and Nginx responsive if a content build exhausts its budget.
+MemoryHigh=1400M
+MemoryMax=1550M
+MemorySwapMax=2048M
+OOMPolicy=continue
+CPUWeight=20
+LimitCORE=0
+
+[Install]
+WantedBy=multi-user.target

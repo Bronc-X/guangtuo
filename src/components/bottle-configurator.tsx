@@ -1,17 +1,21 @@
 'use client';
 
 import {Canvas, useThree} from '@react-three/fiber';
-import {Bounds, ContactShadows, Environment, Html, OrbitControls, useGLTF, useTexture} from '@react-three/drei';
+import {Bounds, ContactShadows, Environment, Html, OrbitControls, useBounds, useGLTF, useTexture} from '@react-three/drei';
 import Link from 'next/link';
+import {DownloadLeadGate} from './download-lead-gate';
 import Image from 'next/image';
 import {Component, Suspense, useCallback, useEffect, useMemo, useState, type ChangeEvent, type CSSProperties, type ReactNode} from 'react';
-import {ACESFilmicToneMapping, CanvasTexture, Mesh, MeshPhysicalMaterial, MeshStandardMaterial, PCFSoftShadowMap, RepeatWrapping, SRGBColorSpace, type Object3D} from 'three';
+import {ACESFilmicToneMapping, CanvasTexture, Color, Mesh, MeshPhysicalMaterial, MeshStandardMaterial, PCFSoftShadowMap, RepeatWrapping, SRGBColorSpace, type Object3D} from 'three';
 import {
   isCustomProductColor,
   resolvePackagingConceptColor,
-  type PackagingConcept
+  type PackagingConcept,
+  type PackagingPrintText
 } from '@/data/legacy-packaging-catalog';
+import {PackagingPrintArtwork} from '@/components/packaging-print-artwork';
 import {decodeConfiguration, encodeConfiguration, getConfigurationFragmentForSync} from '@/lib/config-state';
+import {packagingMeshPart, validPackagingPartSelection} from '@/lib/packaging-parts';
 import {localizedPath, type Locale} from '@/lib/routing';
 
 type Capture = () => Promise<Blob | null>;
@@ -37,6 +41,8 @@ type AssemblyInteraction = {
 };
 
 const assemblyInteractions: Partial<Record<PackagingConcept['shape'], AssemblyInteraction>> = {
+  lotion: {nodeName: 'Lotion_Pump_Assembly', closed: {zh: '装回泵头', en: 'Replace pump'}, open: {zh: '取出泵头', en: 'Remove pump'}, openPosition: [1.2, 0.6, 0], openRotation: [0, 0, -.25]},
+  cleanser: {nodeName: 'Cleanser_Flip_Assembly', closed: {zh: '合上翻盖', en: 'Close cap'}, open: {zh: '打开翻盖', en: 'Open cap'}, openPosition: [0, 0, 0], openRotation: [-2.4, 0, 0]},
   airless: {
     nodeName: 'Airless_Cap_Assembly',
     closed: {zh: '盖回瓶盖', en: 'Replace cap'},
@@ -57,7 +63,11 @@ const assemblyInteractions: Partial<Record<PackagingConcept['shape'], AssemblyIn
     open: {zh: '打开罐盖', en: 'Open lid'},
     openPosition: [0.72, 0.42, -0.95],
     openRotation: [0.3, 0.04, -0.5]
-  }
+  },
+  mousse: {nodeName: 'Mousse_Cap_Assembly', closed: {zh: '盖上透明罩', en: 'Replace clear cover'}, open: {zh: '取下透明罩', en: 'Remove clear cover'}, openPosition: [1, .5, 0], openRotation: [0, 0, -.18]},
+  spray: {nodeName: 'Spray_Cap_Assembly', closed: {zh: '盖上喷雾罩', en: 'Replace spray cover'}, open: {zh: '取下喷雾罩', en: 'Remove spray cover'}, openPosition: [1, .5, 0], openRotation: [0, 0, -.18]},
+  'cotton-box': {nodeName: 'Cotton_Lid_Assembly', closed: {zh: '合上翻盖', en: 'Close hinged lid'}, open: {zh: '打开翻盖', en: 'Open hinged lid'}, openPosition: [0, 0, 0], openRotation: [-1.85, 0, 0]},
+  'dual-chamber': {nodeName: 'Dual_Cap_Assembly', closed: {zh: '盖上双泵盖', en: 'Replace twin cap'}, open: {zh: '取下双泵盖', en: 'Remove twin cap'}, openPosition: [1.1, .7, 0], openRotation: [0, 0, -.14]}
 };
 
 export function getAssemblyInteraction(shape: PackagingConcept['shape']) {
@@ -95,6 +105,7 @@ export function applyRuntimeAssemblyState(model: Object3D, shape: PackagingConce
 
 export function BottleConfigurator({product, locale}: {product: PackagingConcept; locale: Locale}) {
   const zh = locale === 'zh';
+  const [downloadGate, setDownloadGate] = useState(false);
   const [selections, setSelections] = useState<Record<string, string>>(() => Object.fromEntries(product.optionGroups.map((group) => [group.id, group.options[0]?.id ?? ''])));
   const [capture, setCapture] = useState<Capture | null>(null);
   const [captureStatus, setCaptureStatus] = useState<'idle' | 'working' | 'done' | 'error'>('idle');
@@ -264,7 +275,8 @@ export function BottleConfigurator({product, locale}: {product: PackagingConcept
         </div>
 
         <div className="configurator__actions">
-          <button className="button button--ghost" type="button" disabled={!capture || captureStatus === 'working'} onClick={downloadRender}>
+          {downloadGate && <DownloadLeadGate locale={locale} sku={product.sku} configuration={JSON.stringify(selections)} onClose={() => setDownloadGate(false)} onComplete={() => {setDownloadGate(false); void downloadRender();}} />}
+          <button className="button button--ghost" type="button" disabled={!capture || captureStatus === 'working'} onClick={() => setDownloadGate(true)}>
             {captureStatus === 'working' ? (zh ? '正在生成…' : 'Preparing…') : captureStatus === 'done' ? (zh ? '效果图已下载' : 'Preview downloaded') : (zh ? '下载当前效果图' : 'Download preview')}
           </button>
           <Link className="button button--primary" href={`${localizedPath(locale, 'inquiry')}#${fragment}`}>{zh ? '获取这款产品的报价' : 'Request a quote'}</Link>
@@ -275,7 +287,7 @@ export function BottleConfigurator({product, locale}: {product: PackagingConcept
   );
 }
 
-function CaptureBridge({onReady}: {onReady: (capture: Capture) => void}) {
+export function CaptureBridge({onReady}: {onReady: (capture: Capture) => void}) {
   const {gl, scene, camera} = useThree();
   useEffect(() => {
     onReady(() => new Promise((resolve) => {
@@ -306,8 +318,13 @@ class ModelErrorBoundary extends Component<{children: ReactNode; fallback: React
   }
 }
 
-export function ConfiguredProductModel({product, selections, color, finish, logoDataUrl, assemblyState = 'closed', onLoaded}: {product: PackagingConcept; selections: Record<string, string>; color: string; finish: string; logoDataUrl: string | null; assemblyState?: ModelAssemblyState; onLoaded?: () => void}) {
+export function ConfiguredProductModel({product, selections, color, finish, logoDataUrl, printText, assemblyState = 'closed', onLoaded}: {product: PackagingConcept; selections: Record<string, string>; color: string; finish: string; logoDataUrl: string | null; printText?: PackagingPrintText; assemblyState?: ModelAssemblyState; onLoaded?: () => void}) {
   const {scene} = useGLTF(product.modelPath);
+  const bounds = useBounds();
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => bounds.refresh().clip().fit());
+    return () => cancelAnimationFrame(frame);
+  }, [bounds, product.sku, selections.capacity, assemblyState]);
   const invalidate = useThree((state) => state.invalidate);
   const model = useMemo(() => {
     const clone = scene.clone(true);
@@ -316,20 +333,37 @@ export function ConfiguredProductModel({product, selections, color, finish, logo
       object.material = Array.isArray(object.material)
         ? object.material.map((material) => material.clone())
         : object.material.clone();
+      const materials = Array.isArray(object.material) ? object.material : [object.material];
+      for (const material of materials) {
+        if (!(material instanceof MeshStandardMaterial)) continue;
+        material.userData.studioPartBase = {
+          color: material.color.getHexString(),
+          roughness: material.roughness,
+          metalness: material.metalness,
+          opacity: material.opacity,
+          transparent: material.transparent,
+          depthWrite: material.depthWrite,
+          transmission: material instanceof MeshPhysicalMaterial ? material.transmission : 0,
+          thickness: material instanceof MeshPhysicalMaterial ? material.thickness : 0,
+          clearcoat: material instanceof MeshPhysicalMaterial ? material.clearcoat : 0,
+          clearcoatRoughness: material instanceof MeshPhysicalMaterial ? material.clearcoatRoughness : 0
+        };
+      }
       object.castShadow = true;
-      object.receiveShadow = true;
+      // Self-shadowing on closely nested molded parts creates dense shadow acne in WebGL.
+      object.receiveShadow = false;
     });
     return clone;
   }, [scene]);
 
   useEffect(() => {
-    applyRuntimeModelConfiguration(model, product.shape, selections, color, finish, invalidate);
+    applyRuntimeModelConfiguration(model, product.shape, selections, color, finish, invalidate, Boolean(product.source));
     model.traverse((object) => {
       if (!(object instanceof Mesh)) return;
       const role = typeof object.userData.role === 'string' ? object.userData.role : '';
-      if (role === 'label') object.visible = !shouldHideEmbeddedBranding(role, Boolean(logoDataUrl));
+      if (role === 'label') object.visible = !product.editablePrint && !shouldHideEmbeddedBranding(role, Boolean(logoDataUrl));
     });
-  }, [color, finish, invalidate, logoDataUrl, model, product.shape, selections]);
+  }, [color, finish, invalidate, logoDataUrl, model, product.editablePrint, product.shape, product.source, selections]);
 
   useEffect(() => {
     applyRuntimeAssemblyState(model, product.shape, assemblyState, invalidate);
@@ -352,7 +386,7 @@ export function ConfiguredProductModel({product, selections, color, finish, logo
     };
   }, [model, onLoaded]);
 
-  const relativeScale = capacityScale(product.shape, selections.capacity);
+  const relativeScale: [number, number, number] = product.source ? [1, 1, 1] : capacityScale(product.shape, selections.capacity);
   const presentation = product.modelPresentation;
   const scale: [number, number, number] = relativeScale.map((value) => value * presentation.scale) as [number, number, number];
   const position: [number, number, number] = [
@@ -361,10 +395,13 @@ export function ConfiguredProductModel({product, selections, color, finish, logo
     presentation.position[2]
   ];
   const logoOffset = selections['logo-position'] === 'front-upper' ? presentation.logoStep : selections['logo-position'] === 'front-lower' ? -presentation.logoStep : 0;
-  const logoPosition: [number, number, number] = [presentation.logoAnchor[0], presentation.logoAnchor[1] + logoOffset, presentation.logoAnchor[2]];
+  const logoPosition: [number, number, number] = product.editablePrint
+    ? [0, product.editablePrint.brandY, product.editablePrint.bodyRadius + .035]
+    : [presentation.logoAnchor[0], presentation.logoAnchor[1] + logoOffset, presentation.logoAnchor[2]];
 
   return <group scale={scale} position={position}>
     <primitive object={model} />
+    {product.editablePrint && <PackagingPrintArtwork layout={product.editablePrint} text={printText ?? product.editablePrint.defaults} logoReplacesBrand={Boolean(logoDataUrl)} />}
     {logoDataUrl && <LogoArtwork dataUrl={logoDataUrl} position={logoPosition} size={presentation.logoSize} branding={selections.branding} />}
   </group>;
 }
@@ -383,6 +420,8 @@ function capacityScale(shape: PackagingConcept['shape'], capacity: string): [num
     if (capacity === '80g') return [1.1, 1.12, 1.1];
     return [1, 1, 1];
   }
+  if (capacity === '100ml') return [0.93, 0.86, 0.93];
+  if (capacity === '200ml') return [1.08, 1.13, 1.08];
   if (capacity === '15ml') return [0.94, 0.88, 0.94];
   if (capacity === '50ml') return [1.06, 1.13, 1.06];
   return [1, 1, 1];
@@ -411,9 +450,64 @@ export function getRuntimeSheetColor(shape: PackagingConcept['shape'], material:
   return '#dfe7e2';
 }
 
-export function applyRuntimeModelConfiguration(model: Object3D, shape: PackagingConcept['shape'], selections: Record<string, string>, color: string, finish: string, invalidate: () => void) {
-  applyModelConfiguration(model, shape, selections, color, finish);
+export function applyRuntimeModelConfiguration(model: Object3D, shape: PackagingConcept['shape'], selections: Record<string, string>, color: string, finish: string, invalidate: () => void, supplierReference = false) {
+  if (supplierReference) applySourceBodyConfiguration(model, shape, selections, color, finish);
+  else applyModelConfiguration(model, shape, selections, color, finish);
+  applyPartConfiguration(model, shape, selections);
   invalidate();
+}
+
+function applySourceBodyConfiguration(model: Object3D, shape: PackagingConcept['shape'], selections: Record<string, string>, color: string, finish: string) {
+  model.traverse((object) => {
+    if (!(object instanceof Mesh)) return;
+    const role = typeof object.userData.role === 'string' ? object.userData.role : '';
+    if (packagingMeshPart(shape, object.name, role) !== 'body') return;
+    const materials = Array.isArray(object.material) ? object.material : [object.material];
+    for (const material of materials) {
+      if (!(material instanceof MeshStandardMaterial)) continue;
+      const base = material.userData.studioPartBase as {color: string; roughness: number; metalness: number; opacity: number; transparent: boolean; depthWrite: boolean; transmission: number; thickness: number; clearcoat: number; clearcoatRoughness: number} | undefined;
+      if (!base) continue;
+      material.color.set(selections.color && selections.color !== 'reference' ? color : `#${base.color}`);
+      material.roughness = finish === 'gloss' ? .16 : finish === 'soft-touch' ? .8 : base.roughness;
+      material.metalness = base.metalness;
+      material.opacity = base.opacity;
+      material.transparent = base.transparent;
+      material.depthWrite = base.depthWrite;
+      if (material instanceof MeshPhysicalMaterial) {
+        material.transmission = base.transmission;
+        material.thickness = base.thickness;
+        material.clearcoat = finish === 'gloss' ? .9 : finish === 'soft-touch' ? .04 : base.clearcoat;
+        material.clearcoatRoughness = finish === 'gloss' ? .08 : finish === 'soft-touch' ? .65 : base.clearcoatRoughness;
+      }
+      material.needsUpdate = true;
+    }
+  });
+}
+
+function applyPartConfiguration(model: Object3D, shape: PackagingConcept['shape'], selections: Record<string, string>) {
+  model.traverse((object) => {
+    if (!(object instanceof Mesh)) return;
+    const role = typeof object.userData.role === 'string' ? object.userData.role : '';
+    const part = packagingMeshPart(shape, object.name, role);
+    if (part !== 'cap' && part !== 'pump') return;
+    const color = selections[`${part}-color`];
+    const finish = selections[`${part}-finish`];
+    const materials = Array.isArray(object.material) ? object.material : [object.material];
+    for (const material of materials) {
+      if (!(material instanceof MeshStandardMaterial)) continue;
+      const base = material.userData.studioPartBase as {color: string; roughness: number; clearcoat: number; clearcoatRoughness: number} | undefined;
+      if (!base) continue;
+      material.color.set(color && validPackagingPartSelection(`${part}-color`, color) ? color : `#${base.color}`);
+      material.roughness = finish && finish !== 'reference' && validPackagingPartSelection(`${part}-finish`, finish)
+        ? finish === 'gloss' ? .16 : finish === 'soft-touch' ? .8 : .45
+        : base.roughness;
+      if (material instanceof MeshPhysicalMaterial) {
+        material.clearcoat = finish && finish !== 'reference' ? finish === 'gloss' ? .9 : finish === 'soft-touch' ? .04 : .3 : base.clearcoat;
+        material.clearcoatRoughness = finish && finish !== 'reference' ? finish === 'gloss' ? .08 : finish === 'soft-touch' ? .65 : .28 : base.clearcoatRoughness;
+      }
+      material.needsUpdate = true;
+    }
+  });
 }
 
 function applyModelConfiguration(model: Object3D, shape: PackagingConcept['shape'], selections: Record<string, string>, color: string, finish: string) {
@@ -429,8 +523,9 @@ function applyModelConfiguration(model: Object3D, shape: PackagingConcept['shape
         material.color.set(color);
         material.roughness = profile.roughness;
         material.metalness = profile.metalness;
-        material.transparent = false;
-        material.opacity = 1;
+        material.transparent = shape === 'cotton-box';
+        material.opacity = shape === 'cotton-box' ? 0.42 : 1;
+        material.depthWrite = shape !== 'cotton-box';
         if (material instanceof MeshPhysicalMaterial) {
           material.transmission = profile.transmission;
           material.thickness = profile.thickness;
@@ -441,6 +536,12 @@ function applyModelConfiguration(model: Object3D, shape: PackagingConcept['shape
           material.clearcoat = profile.clearcoat;
           material.clearcoatRoughness = profile.clearcoatRoughness;
         }
+      } else if (role === 'chamber-a' || role === 'chamber-b') {
+        material.color.set(color);
+        if (role === 'chamber-b') material.color.lerp(new Color('#e8f1dc'), 0.55);
+        material.roughness = 0.28;
+        material.transparent = false;
+        material.opacity = 1;
       } else if (role === 'glass') {
         const glassColor = selections.material === 'amber' ? '#8a5733' : selections.material === 'frosted' ? '#eef3ef' : '#ffffff';
         material.color.set(glassColor);
@@ -524,7 +625,7 @@ function applyModelConfiguration(model: Object3D, shape: PackagingConcept['shape
         material.transparent = branding === 'screen';
         material.opacity = branding === 'screen' ? 0.08 : 1;
         material.depthWrite = branding !== 'screen';
-        material.color.set(branding === 'foil' ? '#a6532e' : '#f5ede0');
+        material.color.set(branding === 'foil' ? '#a6532e' : shape === 'dual-chamber' ? '#263127' : '#f5ede0');
         material.metalness = branding === 'foil' ? 0.72 : 0;
         material.roughness = branding === 'foil' ? 0.24 : 0.68;
       }

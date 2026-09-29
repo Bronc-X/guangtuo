@@ -5,6 +5,17 @@ import type {InquiryInput} from '@/lib/contracts';
 const input = {name: 'Lead', businessEmail: 'lead@example.com', company: 'Brand', market: 'EU', category: 'airless', sku: 'GT-1', configuration: '', quantity: '1000', budget: 'Review', launchDate: '2027', productGoal: 'Serum', packagingPreference: 'Pump', certificationConstraints: '', notes: '', privacyConsent: true} satisfies InquiryInput;
 
 describe('production API client', () => {
+  it('preserves the caller idempotency key and language across network retries', async () => {
+    const calls: RequestInit[] = [];
+    const fetcher: typeof fetch = async (_url, init) => {
+      calls.push(init!);
+      return new Response(JSON.stringify({id: 'job-1', status: 'completed', retryCount: 0, updatedAt: 1, accessToken: 'secret-token'}), {status: 202});
+    };
+    await createRemoteInquiry('/api', input, fetcher, {idempotencyKey: 'stable-idempotency-123', locale: 'ar'});
+    await createRemoteInquiry('/api', input, fetcher, {idempotencyKey: 'stable-idempotency-123', locale: 'ar'});
+    expect(new Headers(calls[0].headers).get('Idempotency-Key')).toBe('stable-idempotency-123');
+    expect(new Headers(calls[1].headers).get('X-Inquiry-Locale')).toBe('ar');
+  });
   it('submits with an idempotency key and returns a fragment-safe credential', async () => {
     const fetcher = vi.fn(async () => new Response(JSON.stringify({id: 'job-1', status: 'queued', retryCount: 0, updatedAt: 1, accessToken: 'secret-token'}), {status: 202}));
     const result = await createRemoteInquiry('https://api.example.com/v1', input, fetcher);

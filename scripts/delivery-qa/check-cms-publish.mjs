@@ -1,0 +1,28 @@
+import {readFileSync} from 'node:fs';
+import {browse, js, save, shot, until} from './browser-driver.mjs';
+
+const fixtureSnapshot = 'tmp/delivery-qa-20260908/content/published-content.json';
+const productionSnapshot = 'content/published-content.json';
+const originalProduction = readFileSync(productionSnapshot, 'utf8');
+const title = '交付验收测试文章 20260908';
+browse('fill', 'label:has-text("文章标题") input', title);
+browse('fill', 'label:has-text("内容摘要") textarea', '这是独立测试环境的上传、保存与发布验证，不用于客户正式站点。');
+browse('fill', 'label:has-text("文章正文") textarea', '第一段：验证上传的图片能用于文章封面。\n\n第二段：验证保存草稿不会直接发布，点击发布后生成内容快照与公开图片。');
+const mediaId = js('[...document.querySelectorAll("select option")].find(e => e.textContent === "qa-image.png").value');
+browse('select', 'label:has-text("封面图片") select', mediaId);
+browse('click', 'button:has-text("保存草稿")');
+await until('document.body.innerText.includes("草稿已保存")');
+const draftAbsentFromSnapshot = !readFileSync(fixtureSnapshot, 'utf8').includes(title);
+shot('cms-draft-saved');
+browse('click', 'button:has-text("发布文章")');
+await until('document.body.innerText.includes("确认发布文章？")');
+browse('click', 'button:text-is("确认发布")');
+await until('document.body.innerText.includes("文章已发布")');
+const snapshot = JSON.parse(readFileSync(fixtureSnapshot, 'utf8'));
+const published = snapshot.articles.find(a => a.title === title);
+save('cms-publish', {draftAbsentFromSnapshot, published, productionUnchanged: readFileSync(productionSnapshot, 'utf8') === originalProduction});
+shot('cms-published');
+browse('click', 'button[aria-label="发布记录"]');
+await until('document.body.innerText.includes("交付验收测试文章")');
+shot('cms-release-history');
+console.log(JSON.stringify({draftAbsentFromSnapshot, published, productionUnchanged: readFileSync(productionSnapshot, 'utf8') === originalProduction}));

@@ -1,0 +1,572 @@
+[
+  {
+    "id": "SK-P08-01",
+    "sourcePage": 8,
+    "category": "hydration",
+    "isNew": true,
+    "name": "PDRN ICE CRYSTAL ESSENCE MIST",
+    "effect": "Deeply hydrates and repairs skin, soothes irritation, instantly refreshes and revitalizes complexion",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-01.webp"
+  },
+  {
+    "id": "SK-P08-02",
+    "sourcePage": 8,
+    "category": "body-care",
+    "isNew": true,
+    "name": "BATH OIL CREAM",
+    "effect": "Cleanses body skin while deeply nourishing, relieves dryness and tightness, leaves skin soft and supple after bathing",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-02.webp"
+  },
+  {
+    "id": "SK-P08-03",
+    "sourcePage": 8,
+    "category": "body-care",
+    "isNew": true,
+    "name": "CRANBERRY WATER-OIL DUAL LAYER ANTIBACTERIAL MOUSSE (INTIMATE CARE)",
+    "effect": "Gently cleanses and inhibits harmful bacteria, soothes intimate skin, maintains natural acidic micro-ecology",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-03.webp"
+  },
+  {
+    "id": "SK-P08-04",
+    "sourcePage": 8,
+    "category": "deep-cleansing",
+    "isNew": true,
+    "name": "OXYGEN INFUSING BUBBLE MASK",
+    "effect": "Deeply purifies pores, infuses skin with oxygen, brightens dull tone, lifts away impurities",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-04.webp"
+  },
+  {
+    "id": "SK-P08-05",
+    "sourcePage": 8,
+    "category": "anti-aging",
+    "isNew": true,
+    "name": "PDRN COLLAGEN PRO-XYLANE FACE CREAM",
+    "effect": "Anti-aging firming, boosts collagen production, repairs skin barrier, plumps and smooths fine lines",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-05.webp"
+  },
+  {
+    "id": "SK-P08-06",
+    "sourcePage": 8,
+    "category": "sun-protection",
+    "isNew": true,
+    "name": "MICROALGAE PHOTO-PROTECTION ESSENCE MIST",
+    "effect": "Shields skin from photo-damage, delivers anti-oxidant care, soothes and repairs light-stressed skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p08-06.webp"
+  },
+  {
+    "id": "SK-P09-01",
+    "sourcePage": 9,
+    "category": "makeup-remover",
+    "isNew": false,
+    "name": "CLEANSING OIL",
+    "effect": "Deeply dissolves stubborn makeup and excess oil, thoroughly cleanses pores",
+    "specification": null,
+    "image": "/assets/products/brochure/p09-01.webp"
+  },
+  {
+    "id": "SK-P09-02",
+    "sourcePage": 9,
+    "category": "makeup-remover",
+    "isNew": false,
+    "name": "GENTLE EYE & LIP MAKEUP REMOVER",
+    "effect": "Gently removes eye and lip makeup, soothes delicate skin, non-irritating",
+    "specification": null,
+    "image": "/assets/products/brochure/p09-02.webp"
+  },
+  {
+    "id": "SK-P09-03",
+    "sourcePage": 9,
+    "category": "makeup-remover",
+    "isNew": false,
+    "name": "CLEANSING BALM",
+    "effect": "Melts away waterproof makeup, repairs and nourishes skin during cleansing",
+    "specification": null,
+    "image": "/assets/products/brochure/p09-03.webp"
+  },
+  {
+    "id": "SK-P10-01",
+    "sourcePage": 10,
+    "category": "facial-cleansing",
+    "isNew": false,
+    "name": "AMINO ACID GENTLE CLEANSER",
+    "effect": "Mildly cleanses skin, maintains natural acid mantle, no tightness after washing",
+    "specification": null,
+    "image": "/assets/products/brochure/p10-01.webp"
+  },
+  {
+    "id": "SK-P10-02",
+    "sourcePage": 10,
+    "category": "facial-cleansing",
+    "isNew": false,
+    "name": "SALICYLIC ACID PURIFYING CLEANSER",
+    "effect": "Unclogs pores, improves blackheads and closed comedones, purifies skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p10-02.webp"
+  },
+  {
+    "id": "SK-P10-03",
+    "sourcePage": 10,
+    "category": "facial-cleansing",
+    "isNew": false,
+    "name": "OIL-CONTROL BALANCING CLEANSER",
+    "effect": "Regulates sebum secretion, controls excess oil, soothes skin with plant extracts",
+    "specification": null,
+    "image": "/assets/products/brochure/p10-03.webp"
+  },
+  {
+    "id": "SK-P10-04",
+    "sourcePage": 10,
+    "category": "facial-cleansing",
+    "isNew": false,
+    "name": "PDRN MILK FOAM CLEANSER",
+    "effect": "Gently cleanses, locks in moisture, leaves skin soft and hydrated",
+    "specification": null,
+    "image": "/assets/products/brochure/p10-04.webp"
+  },
+  {
+    "id": "SK-P10-05",
+    "sourcePage": 10,
+    "category": "facial-cleansing",
+    "isNew": false,
+    "name": "BARRIER REPAIR CLEANSER",
+    "effect": "Gently cleanses while repairing and strengthening skin barrier",
+    "specification": null,
+    "image": "/assets/products/brochure/p10-05.webp"
+  },
+  {
+    "id": "SK-P11-01",
+    "sourcePage": 11,
+    "category": "deep-cleansing",
+    "isNew": false,
+    "name": "AIRY CLAY MASK",
+    "effect": "Absorbs excess oil and blackheads, purifies pores, soothes skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p11-01.webp"
+  },
+  {
+    "id": "SK-P11-02",
+    "sourcePage": 11,
+    "category": "deep-cleansing",
+    "isNew": false,
+    "name": "RED CARPET MASK",
+    "effect": "Deeply cleanses and brightens skin, refines skin texture",
+    "specification": null,
+    "image": "/assets/products/brochure/p11-02.webp"
+  },
+  {
+    "id": "SK-P11-03",
+    "sourcePage": 11,
+    "category": "deep-cleansing",
+    "isNew": false,
+    "name": "PORE CLEANSING FREEZE MASK",
+    "effect": "Lifts away pore impurities, soothes skin without drying out",
+    "specification": null,
+    "image": "/assets/products/brochure/p11-03.webp"
+  },
+  {
+    "id": "SK-P11-04",
+    "sourcePage": 11,
+    "category": "deep-cleansing",
+    "isNew": false,
+    "name": "GENTLE EXFOLIATING PAD",
+    "effect": "Gently exfoliates dead skin, improves rough pores, smooths skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p11-04.webp"
+  },
+  {
+    "id": "SK-P12-01",
+    "sourcePage": 12,
+    "category": "hydration",
+    "isNew": false,
+    "name": "HYALURONIC ACID MOISTURIZING ESSENCE TONER",
+    "effect": "Deeply hydrates skin, repairs barrier, enhances moisture retention",
+    "specification": null,
+    "image": "/assets/products/brochure/p12-01.webp"
+  },
+  {
+    "id": "SK-P12-02",
+    "sourcePage": 12,
+    "category": "hydration",
+    "isNew": false,
+    "name": "REPAIRING NOURISHING FACE CREAM",
+    "effect": "Deeply nourishes and repairs skin, locks in moisture for long hours",
+    "specification": null,
+    "image": "/assets/products/brochure/p12-02.webp"
+  },
+  {
+    "id": "SK-P12-03",
+    "sourcePage": 12,
+    "category": "hydration",
+    "isNew": false,
+    "name": "DEEP MOISTURIZING ESSENCE",
+    "effect": "Long-lasting moisturizing, soothes and nourishes skin, relieves dryness",
+    "specification": null,
+    "image": "/assets/products/brochure/p12-03.webp"
+  },
+  {
+    "id": "SK-P12-04",
+    "sourcePage": 12,
+    "category": "hydration",
+    "isNew": false,
+    "name": "OVERNIGHT MOISTURIZING SLEEPING MASK",
+    "effect": "Delivers intensive hydrating and repairing care overnight, improves dry dull skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p12-04.webp"
+  },
+  {
+    "id": "SK-P12-05",
+    "sourcePage": 12,
+    "category": "hydration",
+    "isNew": false,
+    "name": "LIGHT MOISTURIZING LOTION",
+    "effect": "Refreshing daily moisturizing, non-greasy, no pore-clogging",
+    "specification": null,
+    "image": "/assets/products/brochure/p12-05.webp"
+  },
+  {
+    "id": "SK-P13-01",
+    "sourcePage": 13,
+    "category": "soothing",
+    "isNew": false,
+    "name": "soothing spray",
+    "effect": "Instantly soothes irritated skin, refreshes and hydrates",
+    "specification": null,
+    "image": "/assets/products/brochure/p13-01.webp"
+  },
+  {
+    "id": "SK-P13-02",
+    "sourcePage": 13,
+    "category": "soothing",
+    "isNew": false,
+    "name": "SKIN BARRIER EMERGENCY REPAIR BALM",
+    "effect": "Rapidly repairs damaged skin barrier, relieves irritation and discomfort",
+    "specification": null,
+    "image": "/assets/products/brochure/p13-02.webp"
+  },
+  {
+    "id": "SK-P13-03",
+    "sourcePage": 13,
+    "category": "soothing",
+    "isNew": false,
+    "name": "ONION CONDITIONING ESSENCE",
+    "effect": "Soothes redness, conditions skin texture, strengthens skin barrier",
+    "specification": "30 mL / 1.01 fl.oz",
+    "image": "/assets/products/brochure/p13-03.webp"
+  },
+  {
+    "id": "SK-P13-04",
+    "sourcePage": 13,
+    "category": "soothing",
+    "isNew": false,
+    "name": "SOOTHING REPAIR SHEET MASK",
+    "effect": "Soothes sensitive skin, deeply hydrates and repairs skin barrier",
+    "specification": null,
+    "image": "/assets/products/brochure/p13-04.webp"
+  },
+  {
+    "id": "SK-P14-01",
+    "sourcePage": 14,
+    "category": "anti-aging",
+    "isNew": false,
+    "name": "YOUTHFUL GLOW MIST",
+    "effect": "Boosts skin elasticity, fades fine lines, refreshes and brightens complexion",
+    "specification": null,
+    "image": "/assets/products/brochure/p14-01.webp"
+  },
+  {
+    "id": "SK-P14-02",
+    "sourcePage": 14,
+    "category": "anti-aging",
+    "isNew": false,
+    "name": "ANTI-AGING REFINING FACE CREAM",
+    "effect": "Firms skin, reduces wrinkles, nourishes and refines skin texture",
+    "specification": null,
+    "image": "/assets/products/brochure/p14-02.webp"
+  },
+  {
+    "id": "SK-P14-03",
+    "sourcePage": 14,
+    "category": "anti-aging",
+    "isNew": false,
+    "name": "HEXAPEPTIDE FIRMING ESSENCE",
+    "effect": "Firms and lifts skin, reduces fine lines and wrinkles, enhances skin elasticity",
+    "specification": null,
+    "image": "/assets/products/brochure/p14-03.webp"
+  },
+  {
+    "id": "SK-P14-04",
+    "sourcePage": 14,
+    "category": "anti-aging",
+    "isNew": false,
+    "name": "EYE ANTI-WRINKLE ESSENCE",
+    "effect": "Targets fine lines around eye area, firms eye contour, reduces puffiness",
+    "specification": null,
+    "image": "/assets/products/brochure/p14-04.webp"
+  },
+  {
+    "id": "SK-P14-05",
+    "sourcePage": 14,
+    "category": "anti-aging",
+    "isNew": false,
+    "name": "BAKUCHIOL & ACMELLA OLERACEA ESSENTIAL OIL",
+    "effect": "Anti-oxidant, firms skin, improves fine lines, deeply nourishes",
+    "specification": null,
+    "image": "/assets/products/brochure/p14-05.webp"
+  },
+  {
+    "id": "SK-P15-01",
+    "sourcePage": 15,
+    "category": "dark-spots",
+    "isNew": false,
+    "name": "NIACINAMIDE EVEN-TONE ESSENCE",
+    "effect": "Evens skin tone, fades dark spots, brightens dull complexion",
+    "specification": null,
+    "image": "/assets/products/brochure/p15-01.webp"
+  },
+  {
+    "id": "SK-P15-02",
+    "sourcePage": 15,
+    "category": "dark-spots",
+    "isNew": false,
+    "name": "EVEN-TONE BRIGHTENING CREAM",
+    "effect": "Brightens overall complexion, inhibits pigment production, moisturizes skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p15-02.webp"
+  },
+  {
+    "id": "SK-P15-03",
+    "sourcePage": 15,
+    "category": "dark-spots",
+    "isNew": false,
+    "name": "VC DERIVATIVE ANTIOXIDANT ESSENCE",
+    "effect": "Anti-oxidation, brightens skin, resists photo-damage, fades dullness",
+    "specification": null,
+    "image": "/assets/products/brochure/p15-03.webp"
+  },
+  {
+    "id": "SK-P15-04",
+    "sourcePage": 15,
+    "category": "dark-spots",
+    "isNew": false,
+    "name": "PEARL MILK LOTION",
+    "effect": "Brightens and nourishes skin, leaves skin radiant and smooth",
+    "specification": null,
+    "image": "/assets/products/brochure/p15-04.webp"
+  },
+  {
+    "id": "SK-P15-05",
+    "sourcePage": 15,
+    "category": "dark-spots",
+    "isNew": false,
+    "name": "SPOT TARGETED TREATMENT ESSENCE",
+    "effect": "Targets local dark spots, intensively fades pigmentation",
+    "specification": null,
+    "image": "/assets/products/brochure/p15-05.webp"
+  },
+  {
+    "id": "SK-P16-01",
+    "sourcePage": 16,
+    "category": "mens-skincare",
+    "isNew": false,
+    "name": "MEN'S OIL-CONTROL REFRESHING CLEANSER",
+    "effect": "Deeply cleanses excess oil and sweat, controls oil, refreshes skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p16-01.webp"
+  },
+  {
+    "id": "SK-P16-02",
+    "sourcePage": 16,
+    "category": "mens-skincare",
+    "isNew": false,
+    "name": "MEN'S REPAIRING ESSENCE",
+    "effect": "Soothes post-shave irritation, improves rough and dull skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p16-02.webp"
+  },
+  {
+    "id": "SK-P16-03",
+    "sourcePage": 16,
+    "category": "mens-skincare",
+    "isNew": false,
+    "name": "MEN'S MULTI-EFFECT REPAIR LOTION",
+    "effect": "Moisturizes, soothes skin, fights fatigue-related dullness, all-in-one care",
+    "specification": null,
+    "image": "/assets/products/brochure/p16-03.webp"
+  },
+  {
+    "id": "SK-P16-04",
+    "sourcePage": 16,
+    "category": "mens-skincare",
+    "isNew": false,
+    "name": "MEN'S SPECIAL SUNSCREEN LOTION",
+    "effect": "Broad spectrum UV protection, oil-controlling, no white cast",
+    "specification": null,
+    "image": "/assets/products/brochure/p16-04.webp"
+  },
+  {
+    "id": "SK-P17-01",
+    "sourcePage": 17,
+    "category": "scalp-care",
+    "isNew": false,
+    "name": "OIL-CONTROL VOLUMIZING SCALP ESSENCE",
+    "effect": "Reduces scalp oil secretion, volumizes hair roots, refreshes scalp",
+    "specification": null,
+    "image": "/assets/products/brochure/p17-01.webp"
+  },
+  {
+    "id": "SK-P17-02",
+    "sourcePage": 17,
+    "category": "scalp-care",
+    "isNew": false,
+    "name": "SOOTHING REPAIR SCALP PRE-WASH OIL",
+    "effect": "Soothes dry itchy scalp, repairs damaged scalp barrier",
+    "specification": null,
+    "image": "/assets/products/brochure/p17-02.webp"
+  },
+  {
+    "id": "SK-P17-03",
+    "sourcePage": 17,
+    "category": "scalp-care",
+    "isNew": false,
+    "name": "ANTI-DANDRUFF CONDITIONING SCALP ESSENCE",
+    "effect": "Improves dandruff, relieves scalp itching, conditions scalp environment",
+    "specification": null,
+    "image": "/assets/products/brochure/p17-03.webp"
+  },
+  {
+    "id": "SK-P18-01",
+    "sourcePage": 18,
+    "category": "body-care",
+    "isNew": false,
+    "name": "GENTLE BODY WASH",
+    "effect": "Gently cleanses body skin, no tight feeling after washing",
+    "specification": null,
+    "image": "/assets/products/brochure/p18-01.webp"
+  },
+  {
+    "id": "SK-P18-02",
+    "sourcePage": 18,
+    "category": "body-care",
+    "isNew": false,
+    "name": "REPAIRING BODY ESSENTIAL OIL",
+    "effect": "Moisturizes and firms body skin, suitable for body massage",
+    "specification": null,
+    "image": "/assets/products/brochure/p18-02.webp"
+  },
+  {
+    "id": "SK-P18-03",
+    "sourcePage": 18,
+    "category": "body-care",
+    "isNew": false,
+    "name": "BODY SCRUB",
+    "effect": "Gently exfoliates dead skin, improves rough bumpy skin, smooths body texture",
+    "specification": null,
+    "image": "/assets/products/brochure/p18-03.webp"
+  },
+  {
+    "id": "SK-P18-04",
+    "sourcePage": 18,
+    "category": "body-care",
+    "isNew": false,
+    "name": "OVERNIGHT LIP REPAIR OIL",
+    "effect": "Intensively nourishes and repairs lip skin overnight, fades lip lines",
+    "specification": null,
+    "image": "/assets/products/brochure/p18-04.webp"
+  },
+  {
+    "id": "SK-P18-05",
+    "sourcePage": 18,
+    "category": "body-care",
+    "isNew": false,
+    "name": "BODY COLD CREAM",
+    "effect": "Cools and hydrates body skin, relieves dryness, refreshes skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p18-05.webp"
+  },
+  {
+    "id": "SK-P19-01",
+    "sourcePage": 19,
+    "category": "sun-protection",
+    "isNew": false,
+    "name": "SUN STICK",
+    "effect": "Provides convenient UV protection, easy to reapply, prevents sun damage",
+    "specification": null,
+    "image": "/assets/products/brochure/p19-01.webp"
+  },
+  {
+    "id": "SK-P19-02",
+    "sourcePage": 19,
+    "category": "sun-protection",
+    "isNew": false,
+    "name": "WATERPROOF & SWEATPROOF BODY SUNSCREEN LOTION SPF50, PA+++",
+    "effect": "High-level UV protection, water and sweat resistant",
+    "specification": null,
+    "image": "/assets/products/brochure/p19-02.webp"
+  },
+  {
+    "id": "SK-P19-03",
+    "sourcePage": 19,
+    "category": "sun-protection",
+    "isNew": false,
+    "name": "BROAD SPECTRUM SUNSCREEN LOTION SPF50, PA+++",
+    "effect": "Daily facial UV protection, oil-controlling, no white cast, makeup-friendly",
+    "specification": null,
+    "image": "/assets/products/brochure/p19-03.webp"
+  },
+  {
+    "id": "SK-P19-04",
+    "sourcePage": 19,
+    "category": "sun-protection",
+    "isNew": false,
+    "name": "3-COLOR SUNSCREEN SPRAY SPF50, PA+++",
+    "effect": "Full-coverage UV protection, quick application, refreshes skin",
+    "specification": null,
+    "image": "/assets/products/brochure/p19-04.webp"
+  },
+  {
+    "id": "SK-P20-01",
+    "sourcePage": 20,
+    "category": "foundation",
+    "isNew": false,
+    "name": "SETTING GEL MIST",
+    "effect": "Sets makeup long-lasting, refreshes skin, enhances makeup finish",
+    "specification": null,
+    "image": "/assets/products/brochure/p20-01.webp"
+  },
+  {
+    "id": "SK-P20-02",
+    "sourcePage": 20,
+    "category": "foundation",
+    "isNew": false,
+    "name": "SUNSCREEN FOUNDATION SPF50, PA+++",
+    "effect": "Evens skin tone, provides natural coverage and UV protection",
+    "specification": null,
+    "image": "/assets/products/brochure/p20-02.webp"
+  },
+  {
+    "id": "SK-P20-03",
+    "sourcePage": 20,
+    "category": "foundation",
+    "isNew": false,
+    "name": "PORE BLURRING PRIMER CREAM",
+    "effect": "Blurs pores, creates smooth skin base, prolongs makeup wear",
+    "specification": null,
+    "image": "/assets/products/brochure/p20-03.webp"
+  },
+  {
+    "id": "SK-P20-04",
+    "sourcePage": 20,
+    "category": "foundation",
+    "isNew": false,
+    "name": "MAKEUP BASE PRIMER",
+    "effect": "Isolates makeup and external pollutants, preps skin for foundation",
+    "specification": null,
+    "image": "/assets/products/brochure/p20-04.webp"
+  }
+]

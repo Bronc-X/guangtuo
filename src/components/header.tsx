@@ -1,17 +1,21 @@
 'use client';
 
 import Link from 'next/link';
+import {BrandLogo} from '@/components/brand-logo';
 import {useTranslations} from 'next-intl';
 import {usePathname} from 'next/navigation';
 import {useEffect, useState} from 'react';
 import {categories} from '@/data/catalog';
-import {locales, localizedPath, replacePathLocale, type Locale} from '@/lib/routing';
+import {pageLabels} from '@/data/page-labels';
+import {localeDirection, locales, localizedPath, replacePathLocale, type Locale} from '@/lib/routing';
 
 const localeLabels: Record<Locale, string> = {
   en: 'English',
   zh: '中文',
   fr: 'Français',
-  es: 'Español'
+  es: 'Español',
+  ru: 'Русский',
+  ar: 'العربية'
 };
 
 const headerCopy: Record<Locale, {
@@ -27,25 +31,25 @@ const headerCopy: Record<Locale, {
     menu: 'Menu', language: 'Language', browse: 'Browse by product family', close: 'Close',
     panelEyebrow: 'LET’S TALK', panelTitle: 'What can we help you with?',
     options: [
-      {title: 'Browse finished products', body: 'Compare face, eye and neck mask formats.', path: 'products'},
+      {title: 'Browse finished products', body: 'Compare face, eye and targeted hydrogel formats.', path: 'products'},
       {title: 'Request samples', body: 'Choose the masks you would like to try.', path: 'inquiry#request=sample'},
       {title: 'Request a quote', body: 'Tell us the product, quantity and destination market.', path: 'inquiry'}
     ]
   },
   zh: {
     menu: '菜单', language: '语言', browse: '按产品系列浏览', close: '关闭',
-    panelEyebrow: '欢迎联系', panelTitle: '这次想先了解什么？',
+    panelEyebrow: '欢迎联系修齐', panelTitle: '想为品牌找哪一款水凝膜？',
     options: [
-      {title: '浏览成品目录', body: '比较面部、眼部与颈部面膜形态。', path: 'products'},
-      {title: '申请样品', body: '选择想亲自试用的面膜产品。', path: 'inquiry#request=sample'},
-      {title: '获取报价', body: '告诉我们产品、数量与目标市场。', path: 'inquiry'}
+      {title: '浏览水凝膜产品', body: '查看面膜、眼膜与其他局部膜贴的外观、成分和规格。', path: 'products'},
+      {title: '申请产品样品', body: '亲自比较凝胶肤感、颜色与贴合度。', path: 'inquiry#request=sample'},
+      {title: '获取产品报价', body: '提交感兴趣的产品、预计数量与目标市场。', path: 'inquiry'}
     ]
   },
   fr: {
     menu: 'Menu', language: 'Langue', browse: 'Par famille de produits', close: 'Fermer',
     panelEyebrow: 'ÉCHANGEONS', panelTitle: 'Comment pouvons-nous vous aider ?',
     options: [
-      {title: 'Voir les produits finis', body: 'Comparez les masques visage, yeux et cou.', path: 'products'},
+      {title: 'Voir les produits finis', body: 'Comparez les formats visage, yeux et zones ciblées.', path: 'products'},
       {title: 'Demander des échantillons', body: 'Choisissez les masques que vous souhaitez essayer.', path: 'inquiry#request=sample'},
       {title: 'Demander un devis', body: 'Indiquez le produit, la quantité et le marché.', path: 'inquiry'}
     ]
@@ -54,30 +58,44 @@ const headerCopy: Record<Locale, {
     menu: 'Menú', language: 'Idioma', browse: 'Por familia de productos', close: 'Cerrar',
     panelEyebrow: 'HABLEMOS', panelTitle: '¿En qué podemos ayudarte?',
     options: [
-      {title: 'Ver productos terminados', body: 'Compara mascarillas faciales, de ojos y de cuello.', path: 'products'},
+      {title: 'Ver productos terminados', body: 'Compara formatos faciales, oculares y localizados.', path: 'products'},
       {title: 'Solicitar muestras', body: 'Elige las mascarillas que quieres probar.', path: 'inquiry#request=sample'},
       {title: 'Solicitar cotización', body: 'Indica producto, cantidad y mercado.', path: 'inquiry'}
+    ]
+  },
+  ru: {
+    menu: 'Меню', language: 'Язык', browse: 'По категории продукта', close: 'Закрыть',
+    panelEyebrow: 'ОБСУДИМ', panelTitle: 'Чем мы можем вам помочь?',
+    options: [
+      {title: 'Смотреть готовые продукты', body: 'Сравните форматы для лица, глаз и локальных зон.', path: 'products'},
+      {title: 'Запросить образцы', body: 'Выберите маски, которые хотите попробовать.', path: 'inquiry#request=sample'},
+      {title: 'Запросить цену', body: 'Укажите продукт, количество и целевой рынок.', path: 'inquiry'}
+    ]
+  },
+  ar: {
+    menu: 'القائمة', language: 'اللغة', browse: 'تصفح حسب فئة المنتج', close: 'إغلاق',
+    panelEyebrow: 'لنتحدث', panelTitle: 'كيف يمكننا مساعدتك؟',
+    options: [
+      {title: 'تصفح المنتجات الجاهزة', body: 'قارن تصاميم الوجه والعين والمناطق الموضعية.', path: 'products'},
+      {title: 'طلب عينات', body: 'اختر الأقنعة التي ترغب في تجربتها.', path: 'inquiry#request=sample'},
+      {title: 'طلب عرض سعر', body: 'أخبرنا بالمنتج والكمية والسوق المستهدف.', path: 'inquiry'}
     ]
   }
 };
 
-function projectPath(locale: Locale, path: string) {
-  const [route, hash] = path.split('#');
-  return `${localizedPath(locale, route)}${hash ? `#${hash}` : ''}`;
-}
-
-export function Header({locale}: {locale: Locale}) {
+export function Header({locale, articleLocales = {}}: {locale: Locale; articleLocales?: Record<string, Locale[]>}) {
   const t = useTranslations('Nav');
   const copy = headerCopy[locale];
   const pathname = usePathname();
   const isHome = pathname.replace(/\/+$/, '') === `/${locale}`;
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
-  const [startOpen, setStartOpen] = useState(false);
+
   const [isPinned, setIsPinned] = useState(false);
 
   useEffect(() => {
     document.documentElement.lang = locale;
+    document.documentElement.dir = localeDirection(locale);
   }, [locale]);
 
   useEffect(() => {
@@ -93,7 +111,7 @@ export function Header({locale}: {locale: Locale}) {
 
   function switchLanguage(targetLocale: Locale) {
     const currentPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-    window.location.assign(replacePathLocale(currentPath, targetLocale));
+    window.location.assign(replacePathLocale(currentPath, targetLocale, articleLocales));
   }
 
   function selectLanguage(targetLocale: Locale) {
@@ -105,8 +123,8 @@ export function Header({locale}: {locale: Locale}) {
   return (
     <>
       <header className={isHome ? `site-header site-header--hero${isPinned ? ' site-header--pinned' : ''}` : 'site-header'}>
-        <Link className="brand" href={localizedPath(locale)} aria-label="Guangtuo Bio home">
-          <span className="brand__identity"><b>GUANGTUO</b><small>{locale === 'zh' ? '广拓生物' : 'GUANGTUO BIO'}</small></span>
+        <Link className="brand" href={localizedPath(locale)} aria-label={pageLabels[locale].home}>
+          <BrandLogo />
         </Link>
         <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="site-nav" onClick={() => {
           setMenuOpen((value) => !value);
@@ -129,7 +147,6 @@ export function Header({locale}: {locale: Locale}) {
           <Link href={localizedPath(locale, 'factory')} onClick={() => setMenuOpen(false)}>{t('factory')}</Link>
           <Link href={localizedPath(locale, 'patents')} onClick={() => setMenuOpen(false)}>{t('patents')}</Link>
           <Link href={localizedPath(locale, 'about')} onClick={() => setMenuOpen(false)}>{t('about')}</Link>
-          <Link href={localizedPath(locale, 'contact')} onClick={() => setMenuOpen(false)}>{t('contact')}</Link>
           <div
             className={languageOpen ? 'nav-language nav-language--open' : 'nav-language'}
             onBlur={(event) => {
@@ -171,10 +188,9 @@ export function Header({locale}: {locale: Locale}) {
             </div>
           </div>
         </nav>
-        <button className="header-cta" type="button" onClick={() => setStartOpen(true)}>{t('start')}</button>
+        <Link className="header-cta" href={`${localizedPath(locale, 'inquiry')}#inquiry-form`} onClick={() => setMenuOpen(false)}>{t('start')}</Link>
       </header>
-      <button className="mobile-project-cta" type="button" onClick={() => setStartOpen(true)}>{t('start')} <span>↗</span></button>
-      {startOpen && <StartPanel locale={locale} onClose={() => setStartOpen(false)} />}
+      <Link className="mobile-project-cta" href={`${localizedPath(locale, 'inquiry')}#inquiry-form`} onClick={() => setMenuOpen(false)}>{t('start')} <span>↗</span></Link>
     </>
   );
 }
@@ -184,25 +200,5 @@ function NavChevron() {
     <svg className="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
       <path d="m4 6 4 4 4-4" />
     </svg>
-  );
-}
-
-function StartPanel({locale, onClose}: {locale: Locale; onClose: () => void}) {
-  const copy = headerCopy[locale];
-  return (
-    <div className="dialog-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section className="start-panel" role="dialog" aria-modal="true" aria-labelledby="start-title">
-        <button className="dialog-close" type="button" onClick={onClose} aria-label={copy.close}>×</button>
-        <p className="eyebrow">{copy.panelEyebrow}</p>
-        <h2 id="start-title">{copy.panelTitle}</h2>
-        <div className="start-panel__options">
-          {copy.options.map((option, index) => (
-            <Link href={projectPath(locale, option.path)} onClick={onClose} key={option.path}>
-              <span>0{index + 1}</span><b>{option.title}</b><small>{option.body}</small>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </div>
   );
 }

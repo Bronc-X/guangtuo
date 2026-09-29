@@ -27,6 +27,7 @@ import {
   defaultLocale,
   isLocale,
   locales,
+  localeDirection,
   localizedPath,
   replacePathLocale,
   type Locale
@@ -44,8 +45,8 @@ const navigationKeys = [
 ] as const;
 
 describe('locale routing', () => {
-  it('uses English as the first and default locale, followed by Chinese, French and Spanish', () => {
-    expect(locales).toEqual(['en', 'zh', 'fr', 'es']);
+  it('uses English as the default locale and supports all six published languages', () => {
+    expect(locales).toEqual(['en', 'zh', 'fr', 'es', 'ru', 'ar']);
     expect(defaultLocale).toBe('en');
 
     for (const locale of locales) expect(isLocale(locale)).toBe(true);
@@ -53,11 +54,20 @@ describe('locale routing', () => {
     expect(isLocale('')).toBe(false);
   });
 
+  it('uses right-to-left document flow only for Arabic', () => {
+    expect(localeDirection('ar')).toBe('rtl');
+    for (const locale of ['en', 'zh', 'fr', 'es', 'ru'] as const) {
+      expect(localeDirection(locale)).toBe('ltr');
+    }
+  });
+
   it('builds canonical trailing-slash paths for every locale', () => {
     expect(localizedPath('en')).toBe('/en/');
     expect(localizedPath('zh', '/products/')).toBe('/zh/products/');
     expect(localizedPath('fr', 'products/GT-EM-001')).toBe('/fr/products/GT-EM-001/');
     expect(localizedPath('es', '')).toBe('/es/');
+    expect(localizedPath('ru', 'products')).toBe('/ru/products/');
+    expect(localizedPath('ar', 'contact')).toBe('/ar/about/#contact');
   });
 
   it('replaces only the locale segment while preserving the route, query and hash', () => {
@@ -73,7 +83,9 @@ describe('locale routing', () => {
       {locale: 'en'},
       {locale: 'zh'},
       {locale: 'fr'},
-      {locale: 'es'}
+      {locale: 'es'},
+      {locale: 'ru'},
+      {locale: 'ar'}
     ]);
   });
 
@@ -98,6 +110,21 @@ describe('locale routing', () => {
     expect(languageScript.type).toBe('script');
     expect(languageScript.props.dangerouslySetInnerHTML.__html)
       .toBe('document.documentElement.lang="fr";');
+  });
+
+  it('sets Arabic language and RTL direction before localized page chrome', async () => {
+    const layout = await LocaleLayout({
+      children: createElement('main'),
+      params: Promise.resolve({locale: 'ar'})
+    });
+    const fragment = layout as ReactElement<{
+      children: ReactElement<{dangerouslySetInnerHTML: {__html: string}}> [];
+    }>;
+    const languageScript = fragment.props.children[0];
+
+    expect(getMessages).toHaveBeenCalledWith({locale: 'ar'});
+    expect(languageScript.props.dangerouslySetInnerHTML.__html)
+      .toBe('document.documentElement.lang="ar";document.documentElement.dir="rtl";');
   });
 
   it('accepts the intentional pre-hydration html lang correction', () => {

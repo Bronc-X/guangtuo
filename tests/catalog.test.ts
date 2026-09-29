@@ -1,8 +1,12 @@
+import {existsSync} from 'node:fs';
+import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
-import {categories, products, validateCatalog, type LocalizedText, type Product, type ProductOptionGroup} from '@/data/catalog';
+import {categories, legacyCategories, productInCategory, products as allProducts, validateCatalog, type LocalizedText, type Product, type ProductOptionGroup} from '@/data/catalog';
+import {hydrogelFormats, hydrogelMaterialFamilies, hydrogelPatentProofs, hydrogelProcessSteps, localizeHydrogelMeasure} from '@/data/hydrogel-formats';
 
-const localeKeys = ['en', 'zh', 'fr', 'es'] as const;
-const localized = (en: string): LocalizedText => ({en, zh: en, fr: en, es: en});
+const localeKeys = ['en', 'zh', 'fr', 'es', 'ru', 'ar'] as const;
+const products = allProducts.filter((product) => !product.sourcePage);
+const localized = (en: string): LocalizedText => ({en, zh: en, fr: en, es: en, ru: en, ar: en});
 
 function expectLocalizedText(value: LocalizedText) {
   expect(Object.keys(value).sort()).toEqual([...localeKeys].sort());
@@ -10,22 +14,39 @@ function expectLocalizedText(value: LocalizedText) {
 }
 
 describe('finished-product catalog contract', () => {
-  it('ships thirteen stable product records in the approved category mix', () => {
-    expect(products).toHaveLength(13);
-    expect(products.filter((product) => product.category === 'face-masks')).toHaveLength(4);
-    expect(products.filter((product) => product.category === 'eye-masks')).toHaveLength(8);
-    expect(products.filter((product) => product.category === 'neck-masks')).toHaveLength(1);
-    expect(new Set(products.map((product) => product.productId)).size).toBe(13);
-    expect(new Set(products.map((product) => product.sku)).size).toBe(13);
-    expect(new Set(products.map((product) => product.slug)).size).toBe(13);
-    expect(products.every((product) => categories.some((category) => category.slug === product.category))).toBe(true);
+  it('adds all 57 brochure entries without duplicating the 21 established product routes', () => {
+    expect(allProducts).toHaveLength(78);
+    expect(categories).toHaveLength(13);
+    expect(new Set(allProducts.map((product) => product.slug)).size).toBe(78);
+    const brochure = allProducts.filter((product) => product.sourcePage);
+    expect(brochure).toHaveLength(57);
+    expect(brochure.filter((product) => product.isNew)).toHaveLength(6);
+    for (const product of brochure) {
+      expect(product.sourcePage).toBeGreaterThanOrEqual(8);
+      expect(product.sourcePage).toBeLessThanOrEqual(20);
+      expect(productInCategory(product, product.category)).toBe(true);
+      expect(product.media?.image).toBeTruthy();
+      expect(existsSync(join(process.cwd(), 'public', product.media!.image!.slice(1)))).toBe(true);
+      expect(product.commercialTerms.moq).toBeNull();
+    }
+  });
+  it('ships twenty-one stable product records in the approved category mix', () => {
+    expect(products).toHaveLength(21);
+    expect(products.filter((product) => product.category === 'face-masks')).toHaveLength(5);
+    expect(products.filter((product) => product.category === 'eye-masks')).toHaveLength(9);
+    expect(products.filter((product) => product.category === 'specialty-patches')).toHaveLength(7);
+    expect(new Set(products.map((product) => product.productId)).size).toBe(21);
+    expect(new Set(products.map((product) => product.sku)).size).toBe(21);
+    expect(new Set(products.map((product) => product.slug)).size).toBe(21);
+    expect(products.every((product) => legacyCategories.some((category) => category.slug === product.category))).toBe(true);
   });
 
   it('gives each product one V01 sellable SKU derived from its stable product id', () => {
     expect(products.map((product) => product.productId)).toEqual([
       'GT-FM-001', 'GT-FM-002', 'GT-FM-003', 'GT-EM-001', 'GT-FM-004',
       'GT-EM-002', 'GT-NM-001', 'GT-EM-003', 'GT-EM-004', 'GT-EM-005',
-      'GT-EM-006', 'GT-EM-007', 'GT-EM-008'
+      'GT-EM-006', 'GT-EM-007', 'GT-EM-008', 'GT-FM-005', 'GT-EM-009',
+      'GT-LP-001', 'GT-FP-001', 'GT-NP-001', 'GT-VL-001', 'GT-FE-001', 'GT-JM-001'
     ]);
     for (const product of products) expect(product.sku).toBe(`${product.productId}-V01`);
   });
@@ -44,11 +65,19 @@ describe('finished-product catalog contract', () => {
       'Gold Collagen Eye Mask',
       'Pink Collagen Peptide Eye Mask',
       'Collagen Peptide Eye Mask',
-      'Blue Moisturizing Eye Mask'
+      'Blue Moisturizing Eye Mask',
+      'Polymer Gel Face Mask',
+      'Polymer Gel Cold-Compress Eye Mask',
+      'Individual Hydrogel Lip Patch',
+      'Polymer Gel Forehead Patch',
+      'Nasolabial Folds Patch',
+      'Polymer Gel V-Line Lifting Patch',
+      'Forehead & Eye 2-in-1 Anti-Wrinkle Patch',
+      'Double Ear-Hook Jawline Mask'
     ]);
   });
 
-  it('provides complete natural-language fields for all four site locales', () => {
+  it('provides complete natural-language fields for all six site locales', () => {
     for (const category of categories) expectLocalizedText(category.name);
     for (const product of products) {
       expectLocalizedText(product.name);
@@ -70,7 +99,7 @@ describe('finished-product catalog contract', () => {
     for (const [index, product] of products.entries()) {
       expect(product.publishStatus).toBe('draft');
       expect(product.sortOrder).toBe(index + 1);
-      expect(product.media?.image).toMatch(/^\/assets\/products\/masks\//);
+      expect(product.media?.image).toMatch(/^\/assets\/products\/(?:masks|hydrogel)\//);
       expect(product.media?.imageStatus).toBe('available');
       expect(product.configurator3d).toBeUndefined();
     }
@@ -87,16 +116,34 @@ describe('finished-product catalog contract', () => {
   it('keeps source-backed net weights, MOQ quantities and MOQ units', () => {
     expect(products.map((product) => product.specifications.find((item) => item.id === 'net-weight')?.value.en)).toEqual([
       '35 g', '35 g', '35 g', '100 g', '29 g', '10.5 g', '13.5 g',
-      '100 g', '100 g', '100 g', '100 g', '100 g', '100 g'
+      '100 g', '100 g', '100 g', '100 g', '100 g', '100 g',
+      '30 g', '8 g', '6 g', '5 g', '3 g', '15 g', '15 g', '25 g'
     ]);
-    expect(products.map((product) => product.commercialTerms.moq.quantity)).toEqual([
-      50000, 50000, 50000, 10000, 50000, 50000, 50000,
-      10000, 10000, 10000, 10000, 10000, 10000
+    expect(products.map((product) => product.commercialTerms.moq?.quantity)).toEqual([
+      50000, 50000, 50000, 10000, 10000, 10000, 10000,
+      10000, 10000, 10000, 10000, 10000, 10000,
+      25000, 25000, 10000, 50000, 50000, 25000, 25000, 25000
     ]);
-    expect(products.map((product) => product.commercialTerms.moq.unit)).toEqual([
+    expect(products.map((product) => product.commercialTerms.moq?.unit)).toEqual([
       'pieces', 'pieces', 'pieces', 'bottles', 'pieces', 'pieces', 'pieces',
-      'bottles', 'bottles', 'bottles', 'bottles', 'bottles', 'bottles'
+      'bottles', 'bottles', 'bottles', 'bottles', 'bottles', 'bottles',
+      'pieces', 'pieces', 'pieces', 'pieces', 'pieces', 'pieces', 'pieces', 'pieces'
     ]);
+  });
+
+  it('publishes the source-backed hydrogel atlas, production flow and patent evidence', () => {
+    expect(hydrogelFormats).toHaveLength(41);
+    expect(hydrogelFormats.filter((format) => format.category === 'face-masks')).toHaveLength(7);
+    expect(hydrogelFormats.filter((format) => format.category === 'eye-masks')).toHaveLength(21);
+    expect(hydrogelFormats.filter((format) => format.category === 'specialty-patches')).toHaveLength(13);
+    expect(new Set(hydrogelFormats.map((format) => format.id)).size).toBe(41);
+    expect(hydrogelFormats.every((format) => format.image.startsWith('/assets/products/hydrogel/formats/'))).toBe(true);
+    expect(hydrogelFormats.every((format) => format.sourceSlide >= 21 && format.sourceSlide <= 29)).toBe(true);
+    expect(hydrogelMaterialFamilies).toHaveLength(5);
+    expect(hydrogelProcessSteps).toHaveLength(12);
+    expect(hydrogelPatentProofs).toHaveLength(5);
+    expect(new Set(hydrogelPatentProofs.map((patent) => patent.patentNo)).size).toBe(5);
+    expect(localizeHydrogelMeasure('1.4 g × 60 pieces / box', 'zh')).toBe('1.4 g × 60 片 / 盒');
   });
 
   it('retains runtime option-group upper-bound validation without generating variant combinations', () => {

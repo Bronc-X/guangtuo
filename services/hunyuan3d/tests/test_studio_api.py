@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from pydantic import ValidationError
+from fastapi.testclient import TestClient
 
 from services.hunyuan3d import studio_api
 
@@ -18,6 +19,15 @@ resolve_sku_image = studio_api.resolve_sku_image
 
 
 class StudioApiContractTests(unittest.TestCase):
+    def test_gateway_requires_server_token_and_explicit_generation_enablement(self):
+        client = TestClient(studio_api.app)
+        with patch.dict(os.environ, {"STUDIO_GATEWAY_TOKEN": "test-only", "STUDIO_GENERATION_ENABLED": "false"}):
+            self.assertEqual(client.get("/jobs/" + "a" * 32).status_code, 401)
+            self.assertEqual(client.get("/jobs/" + "a" * 32, headers={"Authorization": "Bearer wrong"}).status_code, 401)
+            self.assertEqual(client.post("/concept-images", headers={"Authorization": "Bearer test-only"}, json={}).status_code, 503)
+        with patch.dict(os.environ, {"STUDIO_GATEWAY_TOKEN": ""}):
+            self.assertEqual(client.get("/health").status_code, 503)
+
     def test_resolves_only_catalog_sku_images(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             project_root = Path(temporary_directory)
@@ -35,6 +45,16 @@ class StudioApiContractTests(unittest.TestCase):
                 resolve_sku_image("GT-JAR-050", project_root),
                 image_path.resolve(),
             )
+
+            brochure_image = project_root / "public" / "assets" / "packaging" / "hd-843.png"
+            brochure_image.parent.mkdir(parents=True)
+            brochure_image.touch()
+            self.assertEqual(resolve_sku_image("HD-843", project_root), brochure_image.resolve())
+
+            size_image = project_root / "public" / "assets" / "packaging" / "hd-998-800ml.png"
+            size_image.touch()
+            self.assertEqual(resolve_sku_image("HD-998-800ML", project_root), size_image.resolve())
+            self.assertEqual(len([sku for sku in studio_api.SKU_IMAGE_PATHS if sku.startswith("HD-")]), 144)
 
             with self.assertRaisesRegex(ValueError, "Unknown catalog SKU"):
                 resolve_sku_image("../../not-a-sku", project_root)

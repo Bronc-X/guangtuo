@@ -23,6 +23,23 @@ describe('mailbox agent presets and human hand-off', () => {
     })).toMatchObject({decision: 'substantive_auto_reply', matchedPresetId: 'configurable-capacity', notifyHuman: false});
   });
 
+  it('matches approved Russian and Arabic catalogue questions without falling back to English', () => {
+    expect(assessInboundMail({subject: 'Размеры продукции', body: 'Какие размеры доступны?', hasAttachments: false, confidence: 0.94}))
+      .toMatchObject({decision: 'substantive_auto_reply', matchedPresetId: 'configurable-capacity'});
+    expect(assessInboundMail({subject: 'المنتجات', body: 'ما أنواع الأقنعة المتاحة؟', hasAttachments: false, confidence: 0.94}))
+      .toMatchObject({decision: 'substantive_auto_reply', matchedPresetId: 'product-range'});
+
+    const russian = buildInboundMailReply({subject: 'Размеры продукции', body: 'Какие размеры доступны?', hasAttachments: false, confidence: 0.94}, 'ru');
+    const arabic = buildInboundMailReply({subject: 'المنتجات', body: 'ما أنواع الأقنعة المتاحة؟', hasAttachments: false, confidence: 0.94}, 'ar');
+    expect(russian.body).toMatch(/[А-Яа-я]/);
+    expect(arabic.body).toMatch(/[\u0600-\u06ff]/);
+  });
+
+  it('escalates Russian and Arabic commercial commitments to a person', () => {
+    expect(assessInboundMail({subject: 'Цена и скидка', body: 'Пришлите условия оплаты', hasAttachments: false, confidence: 0.98}).notifyHuman).toBe(true);
+    expect(assessInboundMail({subject: 'السعر والخصم', body: 'أرسل شروط الدفع', hasAttachments: false, confidence: 0.98}).notifyHuman).toBe(true);
+  });
+
   it('hands commercial, attachment, injection and low-confidence messages to a person', () => {
     expect(escalationRules.length).toBeGreaterThanOrEqual(10);
     expect(assessInboundMail({subject: 'MOQ and discount', body: 'Send payment terms', hasAttachments: false, confidence: 0.98}).notifyHuman).toBe(true);

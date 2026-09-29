@@ -14,8 +14,8 @@ export function DefaultLocaleRedirect() {
     <>
       <meta httpEquiv="refresh" content={`0;url=${englishHome}`} />
       <main className="gateway" aria-labelledby="default-locale-title">
-        <div className="gateway__wordmark" aria-hidden="true">GUANGTUO</div>
-        <p className="eyebrow">GUANGTUO BIO</p>
+        <div className="gateway__wordmark" aria-hidden="true">SHOWKI</div>
+        <p className="eyebrow">SHOWKI BIOTECH</p>
         <h1 id="default-locale-title">Continue to the English website</h1>
         <p>If you are not redirected automatically, use the link below.</p>
         <div className="gateway__links">

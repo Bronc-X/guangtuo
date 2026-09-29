@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "project": "广拓生物独立站",
+    "report_type": "客户每日工作简报",
+    "report_id": "GT-WEB-DB-20260929",
+    "version": "v1.0",
+    "date": "2026-09-29",
+    "effective_through": "2026-09-29 20:10（北京时间）",
+    "phase": "产品目录与3D工作室上线",
+    "status": "VERIFIED 已验证"
+  },
+  "summary": "产品目录、后台保存发布和3D工作室完成本轮更新；线上版本已打开核对，相关测试通过。",
+  "scope_note": "本期只记录9月29日增量；包材3D模型为外观选型1.0版。",
+  "metrics": [
+    {"value": "78", "label": "产品概念"},
+    {"value": "12", "label": "护理系列"},
+    {"value": "144", "label": "独立包材模型"},
+    {"value": "123", "label": "相关测试通过"}
+  ],
+  "evidence_note": "截图采自9月29日线上版本。后台保存与发布已修复，相关自动测试通过；线上写入待复核。",
+  "screenshots": [
+    {
+      "id": "S01", "title": "产品目录新版首屏", "path": "content/daily-brief/2026-09-29/products.png",
+      "route": "showkibiotech.com/en/products/", "tag": "线上截图"
+    },
+    {
+      "id": "S02", "title": "按护理需求浏览产品", "path": "content/daily-brief/2026-09-29/products-catalog.png",
+      "route": "/en/products/", "status": "VERIFIED 已验证", "tag": "线上截图",
+      "summary": "新增57款宣传册产品，保留21款原有水凝胶产品；可按护理系列和新品入口浏览。"
+    },
+    {
+      "id": "S03", "title": "3D包材工作室1.0", "path": "content/daily-brief/2026-09-29/studio.png",
+      "route": "/en/studio/", "status": "VERIFIED 已验证", "tag": "线上截图",
+      "summary": "工作室已上线，可查看包材模型、手册型号、容量与材质，并进行外观预览。"
+    },
+    {
+      "id": "S04", "title": "型号切换与模型联动", "path": "content/daily-brief/2026-09-29/studio-variant.png",
+      "route": "/en/studio/", "status": "VERIFIED 已验证", "tag": "线上截图",
+      "summary": "实测从HD-1267 250 ml切换至HD-1167 200 ml，规格信息及对应3D模型同步更新。"
+    },
+    {
+      "id": "S05", "title": "首页产品与工作室入口", "path": "content/daily-brief/2026-09-29/home.png",
+      "route": "/en/", "status": "VERIFIED 已验证", "tag": "线上截图",
+      "summary": "首页展示78款产品方向，并保留产品浏览、样品咨询和3D工作室入口。"
+    }
+  ],
+  "attention": {
+    "id": "A01", "status": "CLIENT INPUT 待客户确认",
+    "title": "外形尺寸待厂家确认",
+    "path": "content/daily-brief/2026-09-29/studio-variant.png", "tag": "线上截图",
+    "summary": "当前模型用于外观选型；瓶高、直径、螺纹和配件公差需以厂家工程资料及实物样品确认。"
+  },
+  "qa": [
+    {"value": "200", "label": "产品与工作室页面"},
+    {"value": "144", "label": "模型资产逐项映射"},
+    {"value": "123", "label": "相关自动测试通过"},
+    {"value": "19:04", "label": "线上构建时间"}
+  ],
+  "client_inputs": [
+    "请确认57款新品的名称、功效与可公开图片；缺失MOQ和净含量继续标记待确认。",
+    "请提供或确认包材的毫米尺寸、结构资料及首批外观验收意见。",
+    "法语、西语、俄语、阿语产品文案仍需母语及功效声称审校。"
+  ],
+  "next_steps": [
+    {"title": "核对产品", "body": "逐项校对新品图片、名称与详情资料。"},
+    {"title": "验收模型", "body": "收集首批包材外观反馈，修订1.0版。"},
+    {"title": "补充规格", "body": "对接厂家确认尺寸、材质和MOQ。"},
+    {"title": "复核后台", "body": "用真实编辑流程复核保存、发布与回看。"}
+  ],
+  "disclaimer": "3D模型仅供外观选型；未确认工程参数不作为开模依据。"
+}

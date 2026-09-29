@@ -27,7 +27,7 @@ async function generate(input: InquiryInput): Promise<unknown> {
   const businessContext = {
     market: input.market, category: input.category, sku: input.sku, configuration: input.configuration,
     quantity: input.quantity, budget: input.budget, launchDate: input.launchDate, productGoal: input.productGoal,
-    packagingPreference: input.packagingPreference, certificationConstraints: input.certificationConstraints, notes: input.notes
+    packagingPreference: input.packagingPreference, certificationConstraints: input.certificationConstraints, notes: input.notes, salesChannel: input.salesChannel, salesPlatforms: input.salesPlatforms, efficacy: input.efficacy, productColor: input.productColor, texture: input.texture, otherNeeds: input.otherNeeds, conversation: input.conversation
   };
   const command = new ConverseCommand({
     modelId,

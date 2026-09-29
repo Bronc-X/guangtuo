@@ -64,13 +64,16 @@ describe('finished-product website repositioning', () => {
     expect(card).not.toContain('src={product.poster}');
   });
 
-  it('restores the homepage map, factory gallery and full 3D creation module', () => {
+  it('keeps the homepage map, factory gallery and an on-demand 3D creation module', () => {
     const home = source('src/app/[locale]/page.tsx');
+    const homeStudio = source('src/components/home-studio.tsx');
 
     expect(home).toContain('partnership-map');
     expect(home).toContain('factory-gallery');
-    expect(home).toContain('<Sku3dStudio');
-    expect(home).toContain('legacyPackagingProducts');
+    expect(home).toContain('<HomeStudio');
+    expect(home).not.toContain("from '@/components/sku-3d-studio'");
+    expect(homeStudio).toContain("import('./sku-3d-studio')");
+    expect(homeStudio).toContain('IntersectionObserver');
   });
 
   it('places the homepage header inside the hero, then pins it after scrolling', () => {
@@ -98,7 +101,7 @@ describe('finished-product website repositioning', () => {
     expect(layout).toContain('<MailAgentWidget');
     expect(widget).toContain("'use client'");
     expect(widget).toContain('mail-agent__launcher');
-    expect(widget).toContain('mailAgentPresets');
+    expect(widget).toContain('advisorResponse');
     expect(widget).not.toMatch(/return\s+null/);
     for (const locale of locales) expect(widget).toContain(`${locale}:`);
   });

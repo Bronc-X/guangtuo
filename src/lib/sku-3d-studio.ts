@@ -2,7 +2,7 @@ import {z} from 'zod';
 
 import {
   isCustomProductColor,
-  legacyPackagingProducts,
+  allPackagingProducts,
   type PackagingConcept
 } from '@/data/legacy-packaging-catalog';
 import type {Locale} from '@/lib/routing';
@@ -58,7 +58,7 @@ export const GPT_IMAGE_CONCEPT_POLICY = {
 export const STUDIO_WORKFLOW_COPY = {
   zh: {
     kicker: '3D 包装设计',
-    heading: '包装做出来之前，\n先看看它会是什么样。',
+    heading: '看看包装的样子。',
     intro: '选一款现有包装，调整颜色、材质与 Logo；也可以从一个新造型开始。',
     configurationTab: '现有包装',
     conceptTab: '新造型'
@@ -83,6 +83,12 @@ export const STUDIO_WORKFLOW_COPY = {
     intro: 'Elige un formato actual y cambia color, material y logotipo, o imagina una forma nueva.',
     configurationTab: 'Personalizar un concepto',
     conceptTab: 'Crear una forma'
+  },
+  ru: {
+    kicker: 'СТУДИЯ 3D-УПАКОВКИ', heading: 'Посмотрите упаковку до её производства.', intro: 'Выберите текущий формат и измените цвет, материал и логотип или начните с совершенно новой формы.', configurationTab: 'Настроить продукт', conceptTab: 'Создать новую форму'
+  },
+  ar: {
+    kicker: 'استوديو التغليف ثلاثي الأبعاد', heading: 'شاهد تغليفك قبل تصنيعه.', intro: 'اختر تصميماً حالياً وعدّل اللون والمادة والشعار، أو ابدأ بشكل جديد تماماً.', configurationTab: 'تخصيص منتج', conceptTab: 'إنشاء شكل جديد'
   }
 } as const satisfies Record<Locale, {
   kicker: string;
@@ -142,6 +148,8 @@ const specificationEffects = {
 } as const;
 
 const specificationTargetRoles = {
+  lotion: {capacity: ['root'], material: ['body'], color: ['body', 'trim'], finish: ['body', 'trim'], branding: ['artwork'], 'logo-position': ['artwork']},
+  cleanser: {capacity: ['root'], material: ['body'], color: ['body', 'trim'], finish: ['body', 'trim'], branding: ['artwork'], 'logo-position': ['artwork']},
   airless: {
     capacity: ['root'], material: ['body'], color: ['body', 'trim'], finish: ['body', 'trim'], branding: ['artwork'], 'logo-position': ['artwork']
   },
@@ -156,7 +164,11 @@ const specificationTargetRoles = {
   },
   'split-mask': {
     capacity: ['root'], material: ['sheet'], 'pack-material': ['pack', 'pack-detail'], color: ['pack', 'pack-detail'], finish: ['pack', 'pack-detail'], 'logo-position': ['artwork']
-  }
+  },
+  mousse: {capacity: ['root'], material: ['body'], color: ['body'], finish: ['body'], branding: ['artwork'], 'logo-position': ['artwork']},
+  spray: {capacity: ['root'], material: ['body'], color: ['body'], finish: ['body'], branding: ['artwork'], 'logo-position': ['artwork']},
+  'cotton-box': {capacity: ['root'], material: ['body'], color: ['body', 'trim'], finish: ['body', 'trim'], branding: ['artwork'], 'logo-position': ['artwork']},
+  'dual-chamber': {capacity: ['root'], material: ['body'], color: ['body', 'trim'], finish: ['body', 'trim'], branding: ['artwork'], 'logo-position': ['artwork']}
 } as const;
 
 const specificationEffectCopy: Record<Locale, Record<StudioSpecificationEffect, string>> = {
@@ -191,13 +203,19 @@ const specificationEffectCopy: Record<Locale, Record<StudioSpecificationEffect, 
     'pbr-finish': 'ACABADO',
     'logo-material': 'LOGOTIPO',
     'logo-anchor': 'POSICIÓN'
+  },
+  ru: {
+    'geometry-scale': 'РАЗМЕР', 'pbr-material': 'МАТЕРИАЛ', 'pbr-color': 'ЦВЕТ УПАКОВКИ', 'pbr-finish': 'ПОВЕРХНОСТЬ', 'logo-material': 'ЛОГОТИП', 'logo-anchor': 'ПОЗИЦИЯ'
+  },
+  ar: {
+    'geometry-scale': 'الحجم', 'pbr-material': 'المادة', 'pbr-color': 'لون التغليف', 'pbr-finish': 'السطح', 'logo-material': 'الشعار', 'logo-anchor': 'الموضع'
   }
 };
 
 export type StudioSpecificationEffect = (typeof specificationEffects)[keyof typeof specificationEffects];
 
 function getPackagingConcept(sku: string): PackagingConcept | undefined {
-  return legacyPackagingProducts.find((item) => item.sku === sku);
+  return allPackagingProducts.find((item) => item.sku === sku);
 }
 
 export function getStudioSpecificationPlan(sku: string, specifications: Record<string, string>) {
@@ -281,6 +299,12 @@ const stageCopy: Record<Locale, Record<StudioStage, string>> = {
     finalizing: 'Ajustando los detalles',
     completed: 'La vista 3D está lista',
     failed: 'No se pudo completar'
+  },
+  ru: {
+    queued: 'Подготовка', preparing: 'Подготавливаем изображение', generating: 'Создаём 3D-просмотр', finalizing: 'Уточняем детали', completed: '3D-просмотр готов', failed: 'Не удалось завершить'
+  },
+  ar: {
+    queued: 'جارٍ الاستعداد', preparing: 'جارٍ تجهيز الصورة', generating: 'جارٍ إنشاء العرض ثلاثي الأبعاد', finalizing: 'جارٍ تحسين التفاصيل', completed: 'العرض ثلاثي الأبعاد جاهز', failed: 'لم تكتمل العملية'
   }
 };
 

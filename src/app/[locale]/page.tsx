@@ -4,37 +4,51 @@ import Link from 'next/link';
 import {ActionBand, RadiantFrame} from '@/components/site-section-kit';
 import {ProductCard} from '@/components/product-card';
 import {SectionHeading} from '@/components/section-heading';
-import {Sku3dStudio} from '@/components/sku-3d-studio';
-import {categories, products} from '@/data/catalog';
-import {legacyPackagingProducts} from '@/data/legacy-packaging-catalog';
+import {HomeStudio} from '@/components/home-studio';
+import {categories, productInCategory, products} from '@/data/catalog';
 import {getSiteCopy, steps} from '@/data/site-copy';
+import {getArticlePageCopy} from '@/data/page-labels';
 import {categoryVisuals, developmentVisuals} from '@/data/site-visuals';
+import {getPublishedHome, listPublishedArticles} from '@/lib/published-content';
 import {isLocale, localizedPath, type Locale} from '@/lib/routing';
 
 const metadataCopy = {
-  en: {title: 'Guangtuo Bio | Hydrogel Masks for Skincare Brands', description: 'Explore 13 face, eye and neck masks, hydrogel customisation, samples, packaging and production support.'},
-  zh: {title: '广拓生物｜水凝胶面膜', description: '浏览 13 款面部、眼部与颈部面膜，了解水凝胶定制、样品、包装与生产支持。'},
-  fr: {title: 'Guangtuo Bio | Masques hydrogel', description: 'Découvrez 13 masques visage, yeux et cou, la personnalisation hydrogel, les échantillons et la production.'},
-  es: {title: 'Guangtuo Bio | Mascarillas de hidrogel', description: 'Descubre 13 mascarillas faciales, de ojos y de cuello, personalización, muestras, envase y producción.'}
+  en: {title: 'Showki Biotech | Skincare OEM/ODM & Hydrogel', description: 'Explore 78 skincare and hydrogel product concepts across 12 care ranges, with formulation, sampling and packaging support.'},
+  zh: {title: '修齐生物｜护肤品 OEM/ODM 与水凝胶研发', description: '探索 78 款护肤与水凝胶产品，覆盖清洁、保湿、修护、身体护理及底妆等系列，提供研发、打样与包装支持。'},
+  fr: {title: 'Showki Biotech | Soins OEM/ODM et hydrogel', description: 'Découvrez 78 produits de soin et hydrogel dans 12 gammes, avec formulation et échantillons.'},
+  es: {title: 'Showki Biotech | Cosmética OEM/ODM e hidrogel', description: 'Explora 78 productos de cuidado e hidrogel en 12 gamas, con formulación y muestras.'},
+  ru: {title: 'Showki Biotech | Косметика OEM/ODM и гидрогель', description: '78 концепций косметики и гидрогелевых продуктов в 12 категориях с разработкой и образцами.'},
+  ar: {title: 'Showki Biotech | مستحضرات العناية والهيدروجيل', description: 'استكشف 78 منتجاً للعناية بالبشرة والهيدروجيل ضمن 12 مجموعة مع تطوير التركيبات والعينات.'}
 } satisfies Record<Locale, {title: string; description: string}>;
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}): Promise<Metadata> {
   const {locale: rawLocale} = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : 'en';
+  const content = getPublishedHome(locale);
   return {
-    ...metadataCopy[locale],
-    alternates: {languages: {en: '/en/', zh: '/zh/', fr: '/fr/', es: '/es/'}}
+    title: {absolute: content?.heroTitle ?? metadataCopy[locale].title},
+    description: content?.heroBody ?? metadataCopy[locale].description,
+    alternates: {languages: {en: '/en/', zh: '/zh/', fr: '/fr/', es: '/es/', ru: '/ru/', ar: '/ar/'}}
   };
 }
 
 export default async function HomePage({params}: {params: Promise<{locale: string}>}) {
   const {locale: rawLocale} = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : 'en';
-  const c = getSiteCopy(locale);
-  const featuredProducts = products.filter((product) => product.featured).slice(0, 3);
+  const siteCopy = getSiteCopy(locale);
+  const publishedHome = getPublishedHome(locale);
+  const c = {
+    ...siteCopy,
+    heroTitle: publishedHome?.heroTitle ?? siteCopy.heroTitle,
+    heroBody: publishedHome?.heroBody ?? siteCopy.heroBody
+  };
+  const heroImage = publishedHome?.heroImage ?? categoryVisuals['eye-masks'].src;
+  const latestArticles = listPublishedArticles(locale).slice(0, 3);
+  const articleCopy = getArticlePageCopy(locale);
+  const featuredProducts = products.filter((product) => product.isNew).slice(0, 3);
 
   return (
-    <main className="page-main">
+    <main className="page-main" data-cms="home">
       <section className="hero">
         <div>
           <p className="eyebrow">{c.eyebrow}</p>
@@ -49,8 +63,8 @@ export default async function HomePage({params}: {params: Promise<{locale: strin
         <RadiantFrame
           className="hero__visual"
           imageClassName="hero__image"
-          image={categoryVisuals['eye-masks'].src}
-          imageAlt={categoryVisuals['eye-masks'].alt[locale]}
+          image={heroImage}
+          imageAlt={publishedHome ? c.heroTitle : categoryVisuals['eye-masks'].alt[locale]}
           eyebrow={c.gelCapability.eyebrow}
           caption={c.gelCapability.title}
           position={categoryVisuals['eye-masks'].position}
@@ -65,21 +79,35 @@ export default async function HomePage({params}: {params: Promise<{locale: strin
         <div className="inline-actions"><Link className="text-link" href={localizedPath(locale, 'products')}>{c.viewAll} <span>→</span></Link></div>
       </section>
 
+      {latestArticles.length > 0 && (
+        <section className="section section--paper">
+          <SectionHeading eyebrow={articleCopy.index} title={articleCopy.homeTitle} body={articleCopy.homeBody} />
+          <div className="mode-grid">
+            {latestArticles.map((article, index) => (
+              <Link data-cms={`articles:${article.slug}`} className="mode-card" href={localizedPath(locale, `insights/${article.slug}`)} key={article.id}>
+                <div className="mode-card__visual"><Image src={article.cover} fill sizes="(max-width: 700px) 100vw, 33vw" alt={article.title} /></div>
+                <div className="mode-card__content"><span>{String(index + 1).padStart(2, '0')} · {article.category}</span><h3 data-cms-field="title">{article.title}</h3><p data-cms-field="summary">{article.summary}</p></div>
+              </Link>
+            ))}
+          </div>
+          <div className="inline-actions"><Link className="text-link" href={localizedPath(locale, 'insights')}>{articleCopy.all} <span>→</span></Link></div>
+        </section>
+      )}
+
       <section className="section section--paper">
         <SectionHeading eyebrow={c.families} title={c.familiesTitle} />
         <div className="mode-grid">
-          {c.modes.map(([number, title, body], index) => (
-            <Link className="mode-card" href={localizedPath(locale, `categories/${categories[index].slug}`)} key={number}>
+          {categories.slice(0, 6).map((category, index) => (
+            <Link className="mode-card" href={localizedPath(locale, `categories/${category.slug}`)} key={category.slug}>
               <div className="mode-card__visual">
                 <Image
-                  src={categoryVisuals[categories[index].slug].src}
+                  src={products.find((product) => productInCategory(product, category.slug))?.media?.image ?? categoryVisuals['eye-masks'].src}
                   fill
                   sizes="(max-width: 700px) 100vw, 33vw"
-                  alt={categoryVisuals[categories[index].slug].alt[locale]}
-                  style={categoryVisuals[categories[index].slug].position ? {objectPosition: categoryVisuals[categories[index].slug].position} : undefined}
+                  alt={category.name[locale]}
                 />
               </div>
-              <div className="mode-card__content"><span>{number}</span><h3>{title}</h3><p>{body}</p></div>
+              <div className="mode-card__content"><span>{String(index + 1).padStart(2, '0')}</span><h3>{category.name[locale]}</h3><p>{products.filter((product) => productInCategory(product, category.slug)).length} {locale === 'zh' ? '款产品' : 'products'}</p></div>
             </Link>
           ))}
         </div>
@@ -149,7 +177,7 @@ export default async function HomePage({params}: {params: Promise<{locale: strin
         </figure>
       </section>
 
-      <Sku3dStudio locale={locale} products={legacyPackagingProducts} embedded />
+      <HomeStudio locale={locale} />
 
       <section className="section section--dark">
         <div className="capability-grid">

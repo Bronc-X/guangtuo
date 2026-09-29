@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import {useEffect, useState} from 'react';
 import {products} from '@/data/catalog';
-import {getRemoteStatus} from '@/lib/api-client';
+import {getRemoteStatus, resolveInquiryApiBaseUrl} from '@/lib/api-client';
 import type {EmailDraft, InquiryInput, JobStatus, Proposal} from '@/lib/contracts';
 import {localizedPath, type Locale} from '@/lib/routing';
 
@@ -22,8 +22,8 @@ const statusCopy: Record<Locale, {
     preview: 'Preview mode: this submission does not send an email.', waiting: 'AWAITING ADVISOR', products: 'Continue browsing', contact: 'Contact an advisor'
   },
   zh: {
-    eyebrow: '询盘状态', labels: {queued: '正在保存您的选择', processing: '正在整理询盘信息', completed: '询盘信息已准备完成', retryable_error: '暂时未能保存成功，请稍后重试', failed: '暂时无法找到这份询盘信息'},
-    preview: '预览模式：本次提交不会发送邮件。', waiting: '等待顾问联系', products: '继续查看产品', contact: '联系产品顾问'
+    eyebrow: '产品需求', labels: {queued: '正在提交您的产品需求', processing: '正在确认提交结果', completed: '您的产品需求已收到', retryable_error: '这次提交暂未成功，请稍后重试', failed: '暂时无法找到这份产品需求'},
+    preview: '这是网站演示环境，您的信息尚未实际发送。', waiting: '需求内容已保存', products: '继续浏览水凝膜', contact: '咨询产品顾问'
   },
   fr: {
     eyebrow: 'STATUT DE LA DEMANDE', labels: {queued: 'Demande enregistrée', processing: 'Organisation de la demande', completed: 'La demande est prête', retryable_error: 'La demande n’a pas été enregistrée. Réessayez', failed: 'Cette demande est introuvable'},
@@ -32,6 +32,14 @@ const statusCopy: Record<Locale, {
   es: {
     eyebrow: 'ESTADO DE LA CONSULTA', labels: {queued: 'Consulta guardada', processing: 'Organizando la consulta', completed: 'La consulta está lista', retryable_error: 'No se guardó la consulta. Inténtalo de nuevo', failed: 'No se encontró esta consulta'},
     preview: 'Modo de vista previa: este envío no manda ningún correo.', waiting: 'EN ESPERA DEL ASESOR', products: 'Seguir explorando', contact: 'Contactar a un asesor'
+  },
+  ru: {
+    eyebrow: 'СТАТУС ЗАПРОСА', labels: {queued: 'Запрос сохранён', processing: 'Обрабатываем запрос', completed: 'Запрос готов', retryable_error: 'Запрос не удалось сохранить. Попробуйте снова', failed: 'Запрос не найден'},
+    preview: 'Режим просмотра: электронное письмо не отправляется.', waiting: 'ОЖИДАЕТ КОНСУЛЬТАНТА', products: 'Продолжить просмотр', contact: 'Связаться с консультантом'
+  },
+  ar: {
+    eyebrow: 'حالة الاستفسار', labels: {queued: 'تم حفظ الاستفسار', processing: 'جارٍ تنظيم الاستفسار', completed: 'الاستفسار جاهز', retryable_error: 'لم يُحفظ الاستفسار. حاول مرة أخرى', failed: 'تعذر العثور على هذا الاستفسار'},
+    preview: 'وضع المعاينة: لن يؤدي هذا الإرسال إلى إرسال بريد إلكتروني.', waiting: 'بانتظار المستشار', products: 'متابعة التصفح', contact: 'التواصل مع مستشار'
   }
 };
 
@@ -39,6 +47,7 @@ export function JobStatusView({locale}: {locale: Locale}) {
   const copy = statusCopy[locale];
   const [job, setJob] = useState<StoredJob | null>(null);
   const [status, setStatus] = useState<JobStatus>('queued');
+  const [remoteMode, setRemoteMode] = useState(false);
 
   useEffect(() => {
     const fragment = new URLSearchParams(window.location.hash.replace(/^#/, ''));
@@ -47,8 +56,9 @@ export function JobStatusView({locale}: {locale: Locale}) {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!jobId) { setStatus('failed'); return; }
     if (fragment.get('mode') === 'remote') {
+      setRemoteMode(true);
       const token = sessionStorage.getItem(`gt-access:${jobId}`);
-      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+      const apiBaseUrl = resolveInquiryApiBaseUrl(process.env.NEXT_PUBLIC_API_BASE_URL, process.env.NODE_ENV === 'production');
       if (!token || !apiBaseUrl) { setStatus('failed'); return; }
       let stopped = false;
       const startedAt = Date.now();
@@ -82,7 +92,7 @@ export function JobStatusView({locale}: {locale: Locale}) {
       <div className={`status-orbit status-orbit--${status}`}><span>{status === 'completed' ? '✓' : status === 'failed' ? '!' : ''}</span></div>
       <p className="eyebrow">{copy.eyebrow}</p>
       <h2>{copy.labels[status]}</h2>
-      <p>{copy.preview}</p>
+      <p>{remoteMode ? ({en: 'Your enquiry is saved on the server. An advisor will review it before any reply is sent.', zh: '您的需求已由服务器保存。顾问确认后才会发送回复邮件。', fr: 'Votre demande est enregistrée sur le serveur. Un conseiller la vérifiera avant tout envoi.', es: 'Su consulta está guardada en el servidor. Un asesor la revisará antes de enviar una respuesta.', ru: 'Запрос сохранён на сервере. Консультант проверит его перед отправкой ответа.', ar: 'تم حفظ استفسارك على الخادم. سيراجعه المستشار قبل إرسال أي رد.'})[locale] : copy.preview}</p>
       {job && status === 'completed' && <div className="status-result"><b>{selectedProduct?.name[locale] ?? job.inquiry.sku}</b><span>{job.inquiry.sku} · {copy.waiting}</span><p>{job.proposal.sections.needSummary}</p></div>}
       <div className="status-actions"><Link className="button button--primary" href={localizedPath(locale, 'products')}>{copy.products}</Link><Link className="button button--ghost" href={localizedPath(locale, 'contact')}>{copy.contact}</Link></div>
     </div>

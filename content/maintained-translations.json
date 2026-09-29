@@ -1,0 +1,1577 @@
+{
+  "胶原弹力面膜": {
+    "en": "Collagen Elastic Face Mask",
+    "fr": "Masque visage au collagène pour l’élasticité",
+    "es": "Mascarilla facial con colágeno para la elasticidad",
+    "ru": "Коллагеновая маска для упругости кожи",
+    "ar": "قناع الكولاجين لمرونة البشرة"
+  },
+  "八种胶原蛋白搭配四种透明质酸，让弹润保湿的卖点一目了然。膜体贴敷后逐渐变薄、趋于透明，消费者既能感受贴合，也能看见使用过程中的变化。": {
+    "en": "A collagen mask with eight collagen types and four hyaluronic acid types, designed to become thinner and more translucent as it adheres.",
+    "fr": "Un masque réunissant huit types de collagène et quatre types d’acide hyaluronique, conçu pour s’affiner et devenir plus translucide pendant la pose.",
+    "es": "Una mascarilla con ocho tipos de colágeno y cuatro tipos de ácido hialurónico, diseñada para volverse más fina y translúcida durante el uso.",
+    "ru": "Коллагеновая маска с восемью видами коллагена и четырьмя видами гиалуроновой кислоты, которая становится тоньше и прозрачнее по мере прилегания к коже.",
+    "ar": "قناع كولاجين يحتوي على ثمانية أنواع من الكولاجين وأربعة أنواع من حمض الهيالورونيك، ويصبح أرق وأكثر شفافية كلما التصق بالبشرة."
+  },
+  "八种胶原蛋白 · 四种透明质酸": {
+    "en": "Eight collagen types · four hyaluronic acid types",
+    "fr": "Huit types de collagène · quatre acides hyaluroniques",
+    "es": "Ocho tipos de colágeno · cuatro ácidos hialurónicos",
+    "ru": "Восемь видов коллагена · четыре вида гиалуроновой кислоты",
+    "ar": "ثمانية أنواع من الكولاجين · أربعة أنواع من حمض الهيالورونيك"
+  },
+  "保湿、弹润与紧致感面部护理": {
+    "en": "Firmness and elasticity-focused facial care",
+    "fr": "Soin du visage axé sur la fermeté et l’élasticité",
+    "es": "Cuidado facial enfocado en firmeza y elasticidad",
+    "ru": "Уход за лицом для повышения упругости и эластичности",
+    "ar": "عناية بالوجه تركز على التماسك والمرونة"
+  },
+  "35 g": {
+    "en": "35 g",
+    "fr": "35 g",
+    "es": "35 g",
+    "ru": "35 g",
+    "ar": "35 g"
+  },
+  "积雪草舒缓焕亮面膜": {
+    "en": "Centella Asiatica Soothing Brightening Mask",
+    "fr": "Masque apaisant et illuminateur à la centella asiatica",
+    "es": "Mascarilla calmante e iluminadora de centella asiática",
+    "ru": "Успокаивающая осветляющая маска с центеллой азиатской",
+    "ar": "قناع مهدئ ومشرق بسنتيلا أسياتيكا"
+  },
+  "三重积雪草复合物搭配马齿苋等植物提取物，主打温和舒缓与清透水润，适合打造让消费者容易理解的日常维稳面膜。": {
+    "en": "A triple Centella asiatica complex with purslane and other plant extracts for soothing care and a brighter-looking complexion.",
+    "fr": "Un complexe triple de centella asiatica associé au pourpier et à d’autres extraits végétaux pour un soin apaisant et un teint visiblement plus lumineux.",
+    "es": "Un complejo triple de centella asiática con verdolaga y otros extractos vegetales para un cuidado calmante y una apariencia más luminosa.",
+    "ru": "Тройной комплекс центеллы азиатской с портулаком и другими растительными экстрактами успокаивает кожу и придаёт ей более сияющий вид.",
+    "ar": "مركب ثلاثي من سنتيلا أسياتيكا مع الرجلة ومستخلصات نباتية أخرى لتهدئة البشرة ومنحها مظهراً أكثر إشراقاً."
+  },
+  "三重积雪草复合物 · 马齿苋": {
+    "en": "Triple Centella asiatica complex · purslane",
+    "fr": "Triple complexe de centella asiatica · pourpier",
+    "es": "Complejo triple de centella asiática · verdolaga",
+    "ru": "Тройной комплекс центеллы азиатской · портулак",
+    "ar": "مركب ثلاثي من سنتيلا أسياتيكا · الرجلة"
+  },
+  "温和舒缓、维稳与清透水润面部护理": {
+    "en": "Soothing care for redness-prone, sensitive-feeling skin",
+    "fr": "Soin apaisant des peaux sujettes aux rougeurs et à l’inconfort",
+    "es": "Cuidado calmante para piel con tendencia a rojeces y sensibilidad",
+    "ru": "Успокаивающий уход для чувствительной кожи, склонной к покраснению",
+    "ar": "عناية مهدئة للبشرة الحساسة والمعرضة للاحمرار"
+  },
+  "铜三肽-1舒缓胶原焕亮面膜": {
+    "en": "Copper Tripeptide-1 Soothing Collagen Brightening Mask",
+    "fr": "Masque apaisant et illuminateur au collagène et au tripeptide de cuivre-1",
+    "es": "Mascarilla calmante e iluminadora con colágeno y tripéptido de cobre-1",
+    "ru": "Успокаивающая осветляющая коллагеновая маска с трипептидом меди-1",
+    "ar": "قناع كولاجين مهدئ ومشرق بثلاثي ببتيد النحاس-1"
+  },
+  "铜三肽-1搭配透明质酸、泛醇与泛醇醌，既有醒目的成分看点，也有滋润肤感，适合主打干燥、粗糙肌肤的补水舒缓护理。": {
+    "en": "Copper Tripeptide-1 combines with hyaluronic acid, panthenol and ubiquinol for hydrating, soothing and nourishing facial care.",
+    "fr": "Le tripeptide de cuivre-1 s’associe à l’acide hyaluronique, au panthénol et à l’ubiquinol pour un soin hydratant, apaisant et nourrissant.",
+    "es": "El tripéptido de cobre-1 se combina con ácido hialurónico, pantenol y ubiquinol para un cuidado hidratante, calmante y nutritivo.",
+    "ru": "Трипептид меди-1 в сочетании с гиалуроновой кислотой, пантенолом и убихинолом обеспечивает увлажняющий, успокаивающий и питательный уход.",
+    "ar": "يجمع ثلاثي ببتيد النحاس-1 بين حمض الهيالورونيك والبانثينول واليوبيكوينول لتوفير عناية مرطبة ومهدئة ومغذية للوجه."
+  },
+  "铜三肽-1 · 透明质酸 · 泛醇 · 泛醇醌": {
+    "en": "Copper Tripeptide-1 · hyaluronic acid · panthenol · ubiquinol",
+    "fr": "Tripeptide de cuivre-1 · acide hyaluronique · panthénol · ubiquinol",
+    "es": "Tripéptido de cobre-1 · ácido hialurónico · pantenol · ubiquinol",
+    "ru": "Трипептид меди-1 · гиалуроновая кислота · пантенол · убихинол",
+    "ar": "ثلاثي ببتيد النحاس-1 · حمض الهيالورونيك · بانثينول · يوبيكوينول"
+  },
+  "干燥、粗糙肤感的补水舒缓与修护护理": {
+    "en": "Hydration and soothing care for dry, rough-feeling skin",
+    "fr": "Soin hydratant et apaisant des peaux sèches et rêches",
+    "es": "Cuidado hidratante y calmante para piel seca y áspera",
+    "ru": "Увлажняющий и успокаивающий уход для сухой и шероховатой кожи",
+    "ar": "عناية مرطبة ومهدئة للبشرة الجافة والخشنة"
+  },
+  "红金双色透明质酸眼膜": {
+    "en": "Red-Gold Dual-Color Hyaluronic Acid Eye Mask",
+    "fr": "Patchs yeux bicolores rouge et or à l’acide hyaluronique",
+    "es": "Parches bicolor rojo y dorado con ácido hialurónico",
+    "ru": "Двухцветные красно-золотые патчи с гиалуроновой кислотой",
+    "ar": "لصقات عين ثنائية اللون بالأحمر والذهبي مع حمض الهيالورونيك"
+  },
+  "红金双色凝胶在瓶内格外醒目，透明质酸搭配马齿苋等植物提取物，让产品同时拥有好看的外观与容易理解的保湿舒缓卖点。": {
+    "en": "A red-and-gold dual-color gel eye mask with hyaluronic acid and soothing plant extracts including purslane.",
+    "fr": "Des patchs gel bicolores rouge et or à l’acide hyaluronique et aux extraits végétaux apaisants, dont le pourpier.",
+    "es": "Parches de gel bicolor rojo y dorado con ácido hialurónico y extractos vegetales calmantes, incluida la verdolaga.",
+    "ru": "Двухцветные красно-золотые гелевые патчи с гиалуроновой кислотой и успокаивающими растительными экстрактами, включая портулак.",
+    "ar": "لصقات جل ثنائية اللون بالأحمر والذهبي مع حمض الهيالورونيك ومستخلصات نباتية مهدئة تشمل الرجلة."
+  },
+  "双色凝胶 · 透明质酸 · 马齿苋": {
+    "en": "Dual-color gel · hyaluronic acid · purslane",
+    "fr": "Gel bicolore · acide hyaluronique · pourpier",
+    "es": "Gel bicolor · ácido hialurónico · verdolaga",
+    "ru": "Двухцветный гель · гиалуроновая кислота · портулак",
+    "ar": "جل ثنائي اللون · حمض الهيالورونيك · الرجلة"
+  },
+  "兼顾瓶装颜值、保湿与舒缓感的眼周护理": {
+    "en": "Moisturizing eye-area care for dryness and fine lines",
+    "fr": "Soin hydratant du contour des yeux ciblant sécheresse et ridules",
+    "es": "Cuidado hidratante del contorno de ojos para sequedad y líneas finas",
+    "ru": "Увлажняющий уход за областью вокруг глаз при сухости и мелких морщинах",
+    "ar": "عناية مرطبة لمنطقة العين للجفاف والخطوط الدقيقة"
+  },
+  "100 g": {
+    "en": "100 g",
+    "fr": "100 g",
+    "es": "100 g",
+    "ru": "100 g",
+    "ar": "100 g"
+  },
+  "微孔冷感抗皱膏状面膜": {
+    "en": "Anti-Wrinkle Cream Mask with Micropore Cooling Technology",
+    "fr": "Masque crème anti-rides à technologie rafraîchissante microporeuse",
+    "es": "Mascarilla en crema antiarrugas con tecnología refrescante microporosa",
+    "ru": "Крем-маска против морщин с микропористой охлаждающей технологией",
+    "ar": "قناع كريمي مضاد للتجاعيد بتقنية التبريد الدقيقة المسام"
+  },
+  "铜三肽-1、胶原蛋白与 PDRN 构成鲜明的成分组合，冷感膏状质地让贴敷体验更有记忆点，并兼顾舒缓、滋养与紧致感。": {
+    "en": "A cream mask formulated with Copper Tripeptide-1, collagen and PDRN, pairing a cooling sensation with care for dry and sensitive skin.",
+    "fr": "Un masque crème au tripeptide de cuivre-1, au collagène et au PDRN, associant une sensation de fraîcheur à un soin des peaux sèches et sensibles.",
+    "es": "Una mascarilla en crema con tripéptido de cobre-1, colágeno y PDRN que combina una sensación refrescante con el cuidado de la piel seca y sensible.",
+    "ru": "Крем-маска с трипептидом меди-1, коллагеном и PDRN сочетает охлаждающий эффект с уходом за сухой и чувствительной кожей.",
+    "ar": "قناع كريمي بثلاثي ببتيد النحاس-1 والكولاجين وPDRN يجمع بين الإحساس المنعش والعناية بالبشرة الجافة والحساسة."
+  },
+  "铜三肽-1 · 胶原蛋白 · PDRN · 冷感体验": {
+    "en": "Copper Tripeptide-1 · collagen · PDRN · cooling feel",
+    "fr": "Tripeptide de cuivre-1 · collagène · PDRN · effet frais",
+    "es": "Tripéptido de cobre-1 · colágeno · PDRN · sensación refrescante",
+    "ru": "Трипептид меди-1 · коллаген · PDRN · охлаждающий эффект",
+    "ar": "ثلاثي ببتيد النحاس-1 · كولاجين · PDRN · إحساس منعش"
+  },
+  "冷感舒缓、滋养与紧致感面部护理": {
+    "en": "Cooling, soothing and firming-focused facial care",
+    "fr": "Soin du visage rafraîchissant, apaisant et axé sur la fermeté",
+    "es": "Cuidado facial refrescante, calmante y enfocado en la firmeza",
+    "ru": "Охлаждающий, успокаивающий и укрепляющий уход за лицом",
+    "ar": "عناية بالوجه تركز على التبريد والتهدئة والتماسك"
+  },
+  "29 g": {
+    "en": "29 g",
+    "fr": "29 g",
+    "es": "29 g",
+    "ru": "29 g",
+    "ar": "29 g"
+  },
+  "虾青素微孔冰导眼膜": {
+    "en": "Astaxanthin Microporous Ice-Guided Eye Mask",
+    "fr": "Patchs yeux à l’astaxanthine et effet frais microporeux",
+    "es": "Parches para ojos con astaxantina y efecto frío microporoso",
+    "ru": "Микропористые охлаждающие патчи с астаксантином",
+    "ar": "لصقات عين مبردة دقيقة المسام بالأستازانتين"
+  },
+  "虾青素与多肽组合搭配微孔冷感膜型，让成分故事与清凉贴合的眼周体验同时被感受到。": {
+    "en": "An astaxanthin and peptide eye mask with a cooling microporous format for tired-looking eye-area care.",
+    "fr": "Des patchs à l’astaxanthine et aux peptides, dans un format microporeux rafraîchissant, pour le contour des yeux marqué par la fatigue.",
+    "es": "Parches con astaxantina y péptidos en un formato microporoso refrescante para el cuidado del contorno de ojos con aspecto fatigado.",
+    "ru": "Охлаждающие микропористые патчи с астаксантином и пептидами для ухода за уставшей областью вокруг глаз.",
+    "ar": "لصقات عين بالأستازانتين والببتيدات بتصميم مبرد دقيق المسام للعناية بمظهر منطقة العين المتعب."
+  },
+  "虾青素 · 多肽复合物 · 微孔冷感形态": {
+    "en": "Astaxanthin · peptide blend · cooling microporous format",
+    "fr": "Astaxanthine · complexe de peptides · format microporeux frais",
+    "es": "Astaxantina · mezcla de péptidos · formato microporoso refrescante",
+    "ru": "Астаксантин · комплекс пептидов · охлаждающий микропористый формат",
+    "ar": "أستازانتين · مزيج ببتيدات · تصميم مبرد دقيق المسام"
+  },
+  "疲惫、浮肿感、暗沉感与初期细纹眼周护理": {
+    "en": "Care for puffiness, dark circles and early fine lines",
+    "fr": "Soin ciblant poches, cernes et premières ridules",
+    "es": "Cuidado para bolsas, ojeras y primeras líneas finas",
+    "ru": "Уход против отёчности, тёмных кругов и первых мелких морщин",
+    "ar": "عناية بالانتفاخ والهالات الداكنة والخطوط الدقيقة المبكرة"
+  },
+  "10.5 g": {
+    "en": "10.5 g",
+    "fr": "10.5 g",
+    "es": "10.5 g",
+    "ru": "10.5 g",
+    "ar": "10.5 g"
+  },
+  "胶原微孔抗皱颈膜": {
+    "en": "Collagen Microporous Anti-Wrinkle Neck Mask",
+    "fr": "Masque cou anti-rides au collagène microporeux",
+    "es": "Mascarilla de cuello antiarrugas con colágeno microporoso",
+    "ru": "Коллагеновая микропористая маска для шеи против морщин",
+    "ar": "قناع رقبة كولاجين دقيق المسام مضاد للتجاعيد"
+  },
+  "微孔冷感膜型贴合颈部轮廓，胶原蛋白与多肽复合物强化成分看点，让颈部护理同时拥有清凉感、包裹感与紧致感。": {
+    "en": "A cooling microporous neck mask combining collagen with a peptide complex for care focused on neck lines and loss of firmness.",
+    "fr": "Un masque cou microporeux rafraîchissant associant collagène et complexe de peptides pour un soin ciblant les lignes du cou et le manque de fermeté.",
+    "es": "Una mascarilla de cuello microporosa y refrescante que combina colágeno y un complejo de péptidos para el cuidado de líneas y pérdida de firmeza.",
+    "ru": "Охлаждающая микропористая маска для шеи с коллагеном и комплексом пептидов помогает ухаживать за складками и снижением упругости кожи.",
+    "ar": "قناع رقبة مبرد دقيق المسام يجمع الكولاجين مع مركب ببتيدات للعناية بخطوط الرقبة وفقدان التماسك."
+  },
+  "胶原蛋白 · 多肽复合物 · 微孔冷感形态": {
+    "en": "Collagen · peptide complex · cooling microporous format",
+    "fr": "Collagène · complexe de peptides · format microporeux frais",
+    "es": "Colágeno · complejo de péptidos · formato microporoso refrescante",
+    "ru": "Коллаген · комплекс пептидов · охлаждающий микропористый формат",
+    "ar": "كولاجين · مركب ببتيدات · تصميم مبرد دقيق المسام"
+  },
+  "颈部紧致、平滑与冷感护理": {
+    "en": "Firming and smoothing-focused neck care",
+    "fr": "Soin du cou axé sur la fermeté et le lissage",
+    "es": "Cuidado del cuello enfocado en firmeza y suavidad",
+    "ru": "Укрепляющий и разглаживающий уход за шеей",
+    "ar": "عناية بالرقبة تركز على التماسك والتنعيم"
+  },
+  "13.5 g": {
+    "en": "13.5 g",
+    "fr": "13.5 g",
+    "es": "13.5 g",
+    "ru": "13.5 g",
+    "ar": "13.5 g"
+  },
+  "芦荟保湿眼膜": {
+    "en": "Aloe Vera Moisturizing Eye Mask",
+    "fr": "Patchs hydratants pour les yeux à l’aloe vera",
+    "es": "Parches hidratantes para ojos con aloe vera",
+    "ru": "Увлажняющие патчи с алоэ вера",
+    "ar": "لصقات عين مرطبة بالألوفيرا"
+  },
+  "芦荟、胶原蛋白、透明质酸与海藻组成消费者熟悉的保湿配方；清爽凝胶配合瓶装取用，适合日常眼周护理。": {
+    "en": "An eye mask with aloe vera, collagen, hyaluronic acid and marine algae for refreshing, moisturizing eye-area care.",
+    "fr": "Des patchs à l’aloe vera, au collagène, à l’acide hyaluronique et aux algues marines pour un soin frais et hydratant du contour des yeux.",
+    "es": "Parches con aloe vera, colágeno, ácido hialurónico y algas marinas para un cuidado refrescante e hidratante del contorno de ojos.",
+    "ru": "Патчи с алоэ вера, коллагеном, гиалуроновой кислотой и морскими водорослями освежают и увлажняют область вокруг глаз.",
+    "ar": "لصقات عين بالألوفيرا والكولاجين وحمض الهيالورونيك والطحالب البحرية لإنعاش وترطيب منطقة العين."
+  },
+  "芦荟 · 胶原蛋白 · 透明质酸 · 海藻": {
+    "en": "Aloe vera · collagen · hyaluronic acid · marine algae",
+    "fr": "Aloe vera · collagène · acide hyaluronique · algues marines",
+    "es": "Aloe vera · colágeno · ácido hialurónico · algas marinas",
+    "ru": "Алоэ вера · коллаген · гиалуроновая кислота · морские водоросли",
+    "ar": "ألوفيرا · كولاجين · حمض الهيالورونيك · طحالب بحرية"
+  },
+  "日常补水、清爽与眼周浮肿感护理": {
+    "en": "Hydration and puffiness-focused eye care",
+    "fr": "Soin du contour des yeux axé sur l’hydratation et les poches",
+    "es": "Cuidado del contorno de ojos enfocado en hidratación y bolsas",
+    "ru": "Увлажняющий уход против отёчности вокруг глаз",
+    "ar": "عناية مرطبة لمنطقة العين تركز على الانتفاخ"
+  },
+  "胶原保湿眼膜": {
+    "en": "Collagen Moisturizing Eye Mask",
+    "fr": "Patchs hydratants pour les yeux au collagène",
+    "es": "Parches hidratantes para ojos con colágeno",
+    "ru": "Увлажняющие коллагеновые патчи",
+    "ar": "لصقات عين مرطبة بالكولاجين"
+  },
+  "双色胶原凝胶搭配透明质酸，放在瓶内就有直观辨识度，也让日常眼周护理的保湿卖点更容易被消费者理解。": {
+    "en": "A dual-color collagen gel eye mask with hyaluronic acid for moisturizing care and a refreshed-looking eye area.",
+    "fr": "Des patchs gel bicolores au collagène et à l’acide hyaluronique pour hydrater et rafraîchir visiblement le contour des yeux.",
+    "es": "Parches de gel bicolor con colágeno y ácido hialurónico para hidratar y mejorar el aspecto del contorno de ojos.",
+    "ru": "Двухцветные коллагеновые гелевые патчи с гиалуроновой кислотой увлажняют и освежают область вокруг глаз.",
+    "ar": "لصقات جل كولاجين ثنائية اللون مع حمض الهيالورونيك لترطيب منطقة العين ومنحها مظهراً منتعشاً."
+  },
+  "双色胶原凝胶 · 透明质酸": {
+    "en": "Dual-color collagen gel · hyaluronic acid",
+    "fr": "Gel bicolore au collagène · acide hyaluronique",
+    "es": "Gel bicolor con colágeno · ácido hialurónico",
+    "ru": "Двухцветный коллагеновый гель · гиалуроновая кислота",
+    "ar": "جل كولاجين ثنائي اللون · حمض الهيالورونيك"
+  },
+  "干燥、疲惫眼周的日常保湿护理": {
+    "en": "Moisturizing care for dry, tired-looking eye areas",
+    "fr": "Soin hydratant des contours des yeux secs et fatigués",
+    "es": "Cuidado hidratante para contornos de ojos secos y fatigados",
+    "ru": "Увлажняющий уход для сухой и уставшей области вокруг глаз",
+    "ar": "عناية مرطبة لمنطقة العين الجافة والمتعبة"
+  },
+  "金色胶原眼膜": {
+    "en": "Gold Collagen Eye Mask",
+    "fr": "Patchs yeux dorés au collagène",
+    "es": "Parches dorados para ojos con colágeno",
+    "ru": "Золотые коллагеновые патчи",
+    "ar": "لصقات عين ذهبية بالكولاجين"
+  },
+  "金色凝胶搭配多肽复合物、胶原蛋白与透明质酸，视觉更显精致，也为眼周护理带来明确的保湿与紧致感卖点。": {
+    "en": "A gold-look eye mask combining a peptide blend with collagen and hyaluronic acid for moisturizing, firming-focused care.",
+    "fr": "Des patchs à l’aspect doré associant un complexe de peptides, du collagène et de l’acide hyaluronique pour un soin hydratant axé sur la fermeté.",
+    "es": "Parches de aspecto dorado con una mezcla de péptidos, colágeno y ácido hialurónico para un cuidado hidratante enfocado en la firmeza.",
+    "ru": "Золотистые патчи с комплексом пептидов, коллагеном и гиалуроновой кислотой обеспечивают увлажняющий и укрепляющий уход.",
+    "ar": "لصقات عين بمظهر ذهبي تجمع مزيجاً من الببتيدات مع الكولاجين وحمض الهيالورونيك لعناية مرطبة تركز على التماسك."
+  },
+  "金色外观 · 多肽复合物 · 胶原蛋白 · 透明质酸": {
+    "en": "Gold look · peptide blend · collagen · hyaluronic acid",
+    "fr": "Aspect doré · complexe de peptides · collagène · acide hyaluronique",
+    "es": "Aspecto dorado · mezcla de péptidos · colágeno · ácido hialurónico",
+    "ru": "Золотистый вид · комплекс пептидов · коллаген · гиалуроновая кислота",
+    "ar": "مظهر ذهبي · مزيج ببتيدات · كولاجين · حمض الهيالورونيك"
+  },
+  "暗沉感、浮肿感与细纹眼周护理": {
+    "en": "Care for dark circles, puffiness and fine lines",
+    "fr": "Soin ciblant cernes, poches et ridules",
+    "es": "Cuidado para ojeras, bolsas y líneas finas",
+    "ru": "Уход против тёмных кругов, отёчности и мелких морщин",
+    "ar": "عناية بالهالات الداكنة والانتفاخ والخطوط الدقيقة"
+  },
+  "粉色胶原肽眼膜": {
+    "en": "Pink Collagen Peptide Eye Mask",
+    "fr": "Patchs yeux roses au collagène et aux peptides",
+    "es": "Parches rosas para ojos con colágeno y péptidos",
+    "ru": "Розовые коллагеново-пептидные патчи",
+    "ar": "لصقات عين وردية بالكولاجين والببتيدات"
+  },
+  "柔和粉色凝胶搭配胶原蛋白与透明质酸，外观亲和、成分好懂，适合打造温和清新的日常保湿眼膜。": {
+    "en": "A pink eye mask with collagen and hyaluronic acid, positioned for gentle care of tired and sensitive-feeling eye areas.",
+    "fr": "Des patchs roses au collagène et à l’acide hyaluronique, conçus pour un soin doux des contours des yeux fatigués et sensibles.",
+    "es": "Parches rosas con colágeno y ácido hialurónico para el cuidado suave de contornos de ojos cansados y sensibles.",
+    "ru": "Розовые патчи с коллагеном и гиалуроновой кислотой предназначены для деликатного ухода за уставшей и чувствительной областью вокруг глаз.",
+    "ar": "لصقات عين وردية بالكولاجين وحمض الهيالورونيك لعناية لطيفة بمنطقة العين المتعبة والحساسة."
+  },
+  "粉色凝胶 · 胶原蛋白 · 透明质酸": {
+    "en": "Pink gel · collagen · hyaluronic acid",
+    "fr": "Gel rose · collagène · acide hyaluronique",
+    "es": "Gel rosa · colágeno · ácido hialurónico",
+    "ru": "Розовый гель · коллаген · гиалуроновая кислота",
+    "ar": "جل وردي · كولاجين · حمض الهيالورونيك"
+  },
+  "温和保湿与疲惫眼周护理": {
+    "en": "Gentle care for puffiness, dark circles and fine lines",
+    "fr": "Soin doux ciblant poches, cernes et ridules",
+    "es": "Cuidado suave para bolsas, ojeras y líneas finas",
+    "ru": "Деликатный уход против отёчности, тёмных кругов и мелких морщин",
+    "ar": "عناية لطيفة بالانتفاخ والهالات الداكنة والخطوط الدقيقة"
+  },
+  "胶原肽眼膜": {
+    "en": "Collagen Peptide Eye Mask",
+    "fr": "Patchs yeux au collagène et aux peptides",
+    "es": "Parches para ojos con colágeno y péptidos",
+    "ru": "Коллагеново-пептидные патчи",
+    "ar": "لصقات عين بالكولاجين والببتيدات"
+  },
+  "胶原蛋白搭配马齿苋，凝胶膜体柔软贴合眼周并承载精华，让保湿与紧致感不只停留在成分名称上。": {
+    "en": "A collagen and purslane eye mask in a gel format designed to hold the essence against the eye area.",
+    "fr": "Des patchs gel au collagène et au pourpier, conçus pour maintenir l’essence au contact du contour des yeux.",
+    "es": "Parches de gel con colágeno y verdolaga, diseñados para mantener la esencia en contacto con el contorno de ojos.",
+    "ru": "Гелевые патчи с коллагеном и портулаком удерживают эссенцию на коже вокруг глаз.",
+    "ar": "لصقات جل بالكولاجين والرجلة مصممة لإبقاء الخلاصة ملاصقة لمنطقة العين."
+  },
+  "胶原蛋白 · 马齿苋 · 凝胶形态": {
+    "en": "Collagen · purslane · gel format",
+    "fr": "Collagène · pourpier · format gel",
+    "es": "Colágeno · verdolaga · formato de gel",
+    "ru": "Коллаген · портулак · гелевый формат",
+    "ar": "كولاجين · رجلة · تصميم جل"
+  },
+  "保湿、紧致感与疲惫眼周护理": {
+    "en": "Moisturizing and firming-focused care for tired eye areas",
+    "fr": "Soin hydratant et raffermissant des contours des yeux fatigués",
+    "es": "Cuidado hidratante y reafirmante para contornos de ojos cansados",
+    "ru": "Увлажняющий и укрепляющий уход за уставшей областью вокруг глаз",
+    "ar": "عناية مرطبة ومشددة لمنطقة العين المتعبة"
+  },
+  "蓝色保湿眼膜": {
+    "en": "Blue Moisturizing Eye Mask",
+    "fr": "Patchs hydratants bleus pour les yeux",
+    "es": "Parches hidratantes azules para ojos",
+    "ru": "Синие увлажняющие патчи",
+    "ar": "لصقات عين زرقاء مرطبة"
+  },
+  "清爽蓝色凝胶搭配咖啡因、透明质酸与烟酰胺，颜色醒目、成分熟悉，适合主打补水与焕亮感的眼周护理。": {
+    "en": "A refreshing blue eye mask with caffeine, hyaluronic acid and niacinamide for hydrating and brightening-focused care.",
+    "fr": "Des patchs bleus rafraîchissants à la caféine, à l’acide hyaluronique et à la niacinamide pour un soin hydratant axé sur l’éclat.",
+    "es": "Parches azules refrescantes con cafeína, ácido hialurónico y niacinamida para un cuidado hidratante enfocado en la luminosidad.",
+    "ru": "Освежающие синие патчи с кофеином, гиалуроновой кислотой и ниацинамидом увлажняют и придают коже более сияющий вид.",
+    "ar": "لصقات عين زرقاء منعشة بالكافيين وحمض الهيالورونيك والنياسيناميد لعناية تركز على الترطيب والإشراق."
+  },
+  "咖啡因 · 透明质酸 · 烟酰胺": {
+    "en": "Caffeine · hyaluronic acid · niacinamide",
+    "fr": "Caféine · acide hyaluronique · niacinamide",
+    "es": "Cafeína · ácido hialurónico · niacinamida",
+    "ru": "Кофеин · гиалуроновая кислота · ниацинамид",
+    "ar": "كافيين · حمض الهيالورونيك · نياسيناميد"
+  },
+  "浮肿感、暗沉感、细纹与干燥眼周护理": {
+    "en": "Care for puffiness, dark circles, fine lines and dryness",
+    "fr": "Soin ciblant poches, cernes, ridules et sécheresse",
+    "es": "Cuidado para bolsas, ojeras, líneas finas y sequedad",
+    "ru": "Уход против отёчности, тёмных кругов, мелких морщин и сухости",
+    "ar": "عناية بالانتفاخ والهالات الداكنة والخطوط الدقيقة والجفاف"
+  },
+  "高分子凝胶面膜": {
+    "en": "Polymer Gel Face Mask",
+    "fr": "Masque visage en gel polymère",
+    "es": "Mascarilla facial de gel polimérico",
+    "ru": "Полимерная гелевая маска для лица",
+    "ar": "قناع وجه من الجل البوليمري"
+  },
+  "高分子凝胶完整覆盖面部，膜体柔韧、造型空间更大，可围绕补水、紧致感与焕亮等不同卖点开发。": {
+    "en": "A full-face polymer gel format for hydrating, firming and brightening-led skincare concepts.",
+    "fr": "Un format gel polymère couvrant tout le visage, destiné aux concepts hydratants, raffermissants et illuminateurs.",
+    "es": "Un formato de gel polimérico de cobertura facial completa para conceptos hidratantes, reafirmantes e iluminadores.",
+    "ru": "Полимерная гелевая маска на всё лицо для ухода, направленного на увлажнение, упругость и сияние.",
+    "ar": "تصميم من الجل البوليمري يغطي الوجه بالكامل لمنتجات عناية تركز على الترطيب والتماسك والإشراق."
+  },
+  "全脸覆盖 · 高分子凝胶 · 形状可定制": {
+    "en": "Full-face coverage · polymer gel · shape customisation",
+    "fr": "Couverture complète · gel polymère · forme personnalisable",
+    "es": "Cobertura completa · gel polimérico · forma personalizable",
+    "ru": "Полное покрытие лица · полимерный гель · индивидуальная форма",
+    "ar": "تغطية الوجه بالكامل · جل بوليمري · إمكانية تخصيص الشكل"
+  },
+  "补水、紧致感、抗皱与焕亮面部护理": {
+    "en": "Hydrating, anti-wrinkle, firming and brightening-led facial care",
+    "fr": "Soin visage hydratant, anti-rides, raffermissant et illuminateur",
+    "es": "Cuidado facial hidratante, antiarrugas, reafirmante e iluminador",
+    "ru": "Увлажняющий уход за лицом для разглаживания морщин, упругости и сияния",
+    "ar": "عناية بالوجه تركز على الترطيب وتقليل مظهر التجاعيد والتماسك والإشراق"
+  },
+  "30 g": {
+    "en": "30 g",
+    "fr": "30 g",
+    "es": "30 g",
+    "ru": "30 g",
+    "ar": "30 g"
+  },
+  "独立纯铝膜袋 + 外彩盒": {
+    "en": "Individual aluminum film bag + outer box",
+    "fr": "Sachet aluminium individuel + étui",
+    "es": "Bolsa individual de aluminio + caja",
+    "ru": "Индивидуальный пакет из алюминиевой фольги + внешняя коробка",
+    "ar": "كيس فردي من رقائق الألومنيوم + علبة خارجية"
+  },
+  "高分子凝胶冷敷眼膜": {
+    "en": "Polymer Gel Cold-Compress Eye Mask",
+    "fr": "Masque froid pour les yeux en gel polymère",
+    "es": "Mascarilla fría para ojos de gel polimérico",
+    "ru": "Полимерная гелевая маска — холодный компресс для глаз",
+    "ar": "قناع كمادة باردة للعين من الجل البوليمري"
+  },
+  "高分子凝胶带来鲜明冷敷感，为疲惫眼周增添清凉补水体验；如计划开发可重复使用的产品，也可进一步沟通膜体与包装要求。": {
+    "en": "A cooling polymer gel eye format developed for hydrating care and relief of tired-looking eye areas.",
+    "fr": "Un format froid en gel polymère pour hydrater et rafraîchir le contour des yeux marqué par la fatigue.",
+    "es": "Un formato frío de gel polimérico para hidratar y refrescar el contorno de ojos con aspecto cansado.",
+    "ru": "Охлаждающая полимерная гелевая маска для увлажнения и ухода за зоной глаз с признаками усталости.",
+    "ar": "تصميم مبرد للعين من الجل البوليمري، مطور للترطيب والعناية بمظهر منطقة العين المتعب."
+  },
+  "冷敷体验 · 高分子凝胶 · 可沟通复用型开发": {
+    "en": "Cooling feel · polymer gel · reusable-format development potential",
+    "fr": "Sensation froide · gel polymère · potentiel de format réutilisable",
+    "es": "Sensación fría · gel polimérico · potencial de formato reutilizable",
+    "ru": "Охлаждающее ощущение · полимерный гель · возможность разработки многоразового формата",
+    "ar": "إحساس مبرد · جل بوليمري · إمكانية تطوير تصميم قابل لإعادة الاستخدام"
+  },
+  "冷敷感、补水与疲惫眼周护理": {
+    "en": "Cooling hydration and tired-eye care",
+    "fr": "Hydratation fraîche et soin des yeux fatigués",
+    "es": "Hidratación refrescante y cuidado de ojos cansados",
+    "ru": "Охлаждающее увлажнение и уход за уставшей зоной глаз",
+    "ar": "ترطيب مبرد وعناية بمنطقة العين المتعبة"
+  },
+  "8 g": {
+    "en": "8 g",
+    "fr": "8 g",
+    "es": "8 g",
+    "ru": "8 g",
+    "ar": "8 g"
+  },
+  "独立装水凝胶唇膜": {
+    "en": "Individual Hydrogel Lip Patch",
+    "fr": "Patch lèvres hydrogel individuel",
+    "es": "Parche labial de hidrogel individual",
+    "ru": "Гидрогелевый патч для губ в индивидуальной упаковке",
+    "ar": "لصقة شفاه هيدروجيل بتغليف فردي"
+  },
+  "贴合唇形的水凝胶采用独立吸塑包装，取用直观、呈现完整，既适合单次保湿护理，也方便进入礼盒或组合装。": {
+    "en": "A lip-shaped hydrogel patch supplied in an individual blister format for moisturizing lip-care concepts.",
+    "fr": "Un patch hydrogel en forme de lèvres, conditionné individuellement sous blister pour les concepts de soin hydratant.",
+    "es": "Un parche de hidrogel con forma de labios en blíster individual para conceptos de cuidado hidratante.",
+    "ru": "Гидрогелевый патч по форме губ в индивидуальном блистере для увлажняющего ухода.",
+    "ar": "لصقة هيدروجيل على شكل الشفاه في عبوة فردية مشكلة، لمنتجات العناية بترطيب الشفاه."
+  },
+  "贴合唇形 · 胶体 4 g + 精华 2 g · 独立装": {
+    "en": "Lip contour fit · gel 4 g + essence 2 g · individual pack",
+    "fr": "Forme lèvres · gel 4 g + essence 2 g · emballage individuel",
+    "es": "Forma labial · gel 4 g + esencia 2 g · envase individual",
+    "ru": "Прилегание по контуру губ · гель 4 г + эссенция 2 г · индивидуальная упаковка",
+    "ar": "ملاءمة محيط الشفاه · جل 4 غ + خلاصة 2 غ · عبوة فردية"
+  },
+  "补水保湿、单次护理与礼盒组合型唇部产品": {
+    "en": "Hydrating and moisturizing-led lip care",
+    "fr": "Soin hydratant des lèvres",
+    "es": "Cuidado hidratante de labios",
+    "ru": "Уход для увлажнения губ и удержания влаги",
+    "ar": "عناية بالشفاه تركز على الترطيب والاحتفاظ بالرطوبة"
+  },
+  "6 g": {
+    "en": "6 g",
+    "fr": "6 g",
+    "es": "6 g",
+    "ru": "6 g",
+    "ar": "6 g"
+  },
+  "印刷 PVC 吸塑 + 外彩盒": {
+    "en": "Printed PVC blister + outer box",
+    "fr": "Blister PVC imprimé + étui",
+    "es": "Blíster de PVC impreso + caja",
+    "ru": "Печатный блистер ПВХ + внешняя коробка",
+    "ar": "عبوة مشكلة من PVC مطبوع + علبة خارجية"
+  },
+  "高分子凝胶额头贴": {
+    "en": "Polymer Gel Forehead Patch",
+    "fr": "Patch front en gel polymère",
+    "es": "Parche de frente de gel polimérico",
+    "ru": "Полимерный гелевый патч для лба",
+    "ar": "لصقة جبهة من الجل البوليمري"
+  },
+  "轻量凝胶贴集中覆盖额头区域，护理部位一目了然，让补水与额纹平滑感成为容易被消费者理解的局部护理卖点。": {
+    "en": "A targeted forehead patch for hydrating care and concepts focused on the appearance of forehead lines.",
+    "fr": "Un patch ciblé pour hydrater le front et prendre soin de l’apparence des lignes frontales.",
+    "es": "Un parche localizado para hidratar la frente y cuidar la apariencia de las líneas frontales.",
+    "ru": "Локальный патч для увлажняющего ухода за лбом и уменьшения видимости линий на лбу.",
+    "ar": "لصقة موضعية للجبهة للعناية المرطبة والمنتجات التي تركز على مظهر خطوط الجبهة."
+  },
+  "额头定区覆盖 · 高分子凝胶 · 轻量形态": {
+    "en": "Targeted forehead coverage · polymer gel · lightweight format",
+    "fr": "Couverture ciblée du front · gel polymère · format léger",
+    "es": "Cobertura localizada de frente · gel polimérico · formato ligero",
+    "ru": "Локальное покрытие лба · полимерный гель · лёгкий формат",
+    "ar": "تغطية موضعية للجبهة · جل بوليمري · تصميم خفيف"
+  },
+  "额头补水与额纹平滑感局部护理": {
+    "en": "Hydration and forehead-line smoothing-led care",
+    "fr": "Hydratation et soin lissant des lignes du front",
+    "es": "Hidratación y cuidado alisador de líneas de la frente",
+    "ru": "Уход для увлажнения и разглаживания линий лба",
+    "ar": "عناية تركز على الترطيب وتنعيم مظهر خطوط الجبهة"
+  },
+  "5 g": {
+    "en": "5 g",
+    "fr": "5 g",
+    "es": "5 g",
+    "ru": "5 g",
+    "ar": "5 g"
+  },
+  "法令纹贴": {
+    "en": "Nasolabial Folds Patch",
+    "fr": "Patch sillons nasogéniens",
+    "es": "Parche para surcos nasolabiales",
+    "ru": "Патч для носогубных складок",
+    "ar": "لصقة للثنيات الأنفية الشفوية"
+  },
+  "成对轮廓贴片对应笑纹与法令纹区域，消费者一眼就能理解护理目标，并感受局部补水与贴合包裹。": {
+    "en": "A paired local-area patch shaped for smile-line and nasolabial-fold care.",
+    "fr": "Une paire de patchs locaux conçue pour le soin des rides du sourire et des sillons nasogéniens.",
+    "es": "Un par de parches localizados para el cuidado de líneas de sonrisa y surcos nasolabiales.",
+    "ru": "Парные локальные патчи для ухода за линиями улыбки и носогубными складками.",
+    "ar": "زوج من اللصقات الموضعية المصممة للعناية بخطوط الابتسام والثنيات الأنفية الشفوية."
+  },
+  "成对轮廓形 · 局部贴合 · 高分子凝胶": {
+    "en": "Paired contour shape · localized fit · polymer gel",
+    "fr": "Forme contour par paire · ajustement local · gel polymère",
+    "es": "Forma de contorno por pares · ajuste local · gel polimérico",
+    "ru": "Парная контурная форма · локальное прилегание · полимерный гель",
+    "ar": "تصميم مزدوج يتبع محيط المنطقة · ملاءمة موضعية · جل بوليمري"
+  },
+  "笑纹、法令纹与局部补水紧致护理": {
+    "en": "Smile-line and nasolabial-fold smoothing with firming and hydration-led care",
+    "fr": "Soin lissant des rides du sourire et sillons, avec hydratation et fermeté",
+    "es": "Cuidado alisador de líneas de sonrisa y surcos, con hidratación y firmeza",
+    "ru": "Увлажняющий и укрепляющий уход для разглаживания линий улыбки и носогубных складок",
+    "ar": "عناية تركز على تنعيم مظهر خطوط الابتسام والثنيات الأنفية الشفوية والتماسك والترطيب"
+  },
+  "3 g": {
+    "en": "3 g",
+    "fr": "3 g",
+    "es": "3 g",
+    "ru": "3 g",
+    "ar": "3 g"
+  },
+  "高分子凝胶 V 脸提拉贴": {
+    "en": "Polymer Gel V-Line Lifting Patch",
+    "fr": "Patch liftant V-line en gel polymère",
+    "es": "Parche lifting V-line de gel polimérico",
+    "ru": "Подтягивающий полимерный гелевый патч для V-контура",
+    "ar": "لصقة شد خط الفك على شكل V من الجل البوليمري"
+  },
+  "下半脸轮廓膜配有耳孔结构，方便贴合与固定，让补水、滋养与轮廓紧致感融入更具包裹感的下颌护理体验。": {
+    "en": "A lower-face contour patch developed for hydrating, nourishing and firming-led jawline concepts.",
+    "fr": "Un patch pour le bas du visage, destiné aux concepts hydratants, nourrissants et raffermissants de la mâchoire.",
+    "es": "Un parche para el contorno inferior del rostro destinado a conceptos hidratantes, nutritivos y reafirmantes de la mandíbula.",
+    "ru": "Патч по контуру нижней части лица для увлажняющего, питательного и укрепляющего ухода за линией челюсти.",
+    "ar": "لصقة تتبع محيط أسفل الوجه، مطورة لمنتجات العناية بخط الفك التي تركز على الترطيب والتغذية والتماسك."
+  },
+  "下半脸轮廓 · 高分子凝胶 · 耳孔结构": {
+    "en": "Lower-face contour · polymer gel · ear-opening structure",
+    "fr": "Contour bas du visage · gel polymère · ouvertures auriculaires",
+    "es": "Contorno inferior · gel polimérico · aberturas para orejas",
+    "ru": "Контур нижней части лица · полимерный гель · отверстия для ушей",
+    "ar": "محيط أسفل الوجه · جل بوليمري · فتحات للأذنين"
+  },
+  "下颌贴合、滋养与轮廓紧致感护理": {
+    "en": "Hydrating, nourishing and contour-firming-led jawline care",
+    "fr": "Soin hydratant, nourrissant et raffermissant de la mâchoire",
+    "es": "Cuidado hidratante, nutritivo y reafirmante de la mandíbula",
+    "ru": "Увлажняющий и питательный уход для укрепления контура челюсти",
+    "ar": "عناية بخط الفك تركز على الترطيب والتغذية وتماسك المحيط"
+  },
+  "15 g": {
+    "en": "15 g",
+    "fr": "15 g",
+    "es": "15 g",
+    "ru": "15 g",
+    "ar": "15 g"
+  },
+  "额头眼周二合一抗皱贴": {
+    "en": "Forehead & Eye 2-in-1 Anti-Wrinkle Patch",
+    "fr": "Patch anti-rides front et yeux 2-en-1",
+    "es": "Parche antiarrugas 2 en 1 para frente y ojos",
+    "ru": "Разглаживающий патч для лба и глаз 2 в 1",
+    "ar": "لصقة للجبهة والعين 2 في 1 للعناية بالتجاعيد"
+  },
+  "一片同时覆盖额头与眼周，把两个护理部位融入一次贴敷，让多区域护理本身成为醒目的产品记忆点。": {
+    "en": "A one-piece format covering the forehead and eye area for multi-zone firming and smoothing-led care.",
+    "fr": "Un format monobloc couvrant le front et les yeux pour un soin multi-zone raffermissant et lissant.",
+    "es": "Un formato de una pieza que cubre frente y ojos para un cuidado reafirmante y alisador multizona.",
+    "ru": "Цельный формат, покрывающий лоб и зону глаз, для многозонального укрепляющего и разглаживающего ухода.",
+    "ar": "تصميم من قطعة واحدة يغطي الجبهة ومنطقة العين للعناية بتماسك البشرة وتنعيم مظهرها في عدة مناطق."
+  },
+  "额头 + 眼周覆盖 · 一片式 · 高分子凝胶": {
+    "en": "Forehead + eye coverage · one-piece format · polymer gel",
+    "fr": "Front + yeux · format monobloc · gel polymère",
+    "es": "Frente + ojos · formato de una pieza · gel polimérico",
+    "ru": "Покрытие лба и глаз · цельный формат · полимерный гель",
+    "ar": "تغطية الجبهة والعين · قطعة واحدة · جل بوليمري"
+  },
+  "额头与眼周同步护理的多区域产品": {
+    "en": "Multi-zone anti-wrinkle, firming and repairing-led care",
+    "fr": "Soin multi-zone anti-rides, raffermissant et réparateur",
+    "es": "Cuidado multizona antiarrugas, reafirmante y reparador",
+    "ru": "Многозональный уход для разглаживания морщин, упругости и восстановления",
+    "ar": "عناية متعددة المناطق تركز على تقليل مظهر التجاعيد والتماسك ودعم تجدد البشرة"
+  },
+  "双耳挂下颌提拉膜": {
+    "en": "Double Ear-Hook Jawline Mask",
+    "fr": "Masque mâchoire à double contour d’oreille",
+    "es": "Mascarilla de mandíbula con doble sujeción de orejas",
+    "ru": "Маска для линии челюсти с двойным креплением за ушами",
+    "ar": "قناع خط الفك بتثبيت مزدوج حول الأذنين"
+  },
+  "双耳挂结构帮助膜体贴合下颌线，佩戴方式直观，让下半脸获得更鲜明的包裹感与轮廓紧致体验。": {
+    "en": "A double ear-hook lower-face mask designed for close jawline fit and firming-led contour care.",
+    "fr": "Un masque bas du visage à double contour d’oreille, conçu pour épouser la mâchoire et soutenir les concepts raffermissants.",
+    "es": "Una mascarilla inferior con doble sujeción de orejas para adaptarse a la mandíbula y apoyar conceptos reafirmantes.",
+    "ru": "Маска для нижней части лица с двойным креплением за ушами для плотного прилегания и укрепляющего ухода за контуром челюсти.",
+    "ar": "قناع لأسفل الوجه بتثبيت مزدوج حول الأذنين، مصمم لملاءمة خط الفك والعناية بتماسك محيطه."
+  },
+  "双耳挂结构 · 下颌覆盖 · 高分子凝胶": {
+    "en": "Double ear-hook structure · jawline coverage · polymer gel",
+    "fr": "Double contour d’oreille · couverture mâchoire · gel polymère",
+    "es": "Doble sujeción · cobertura de mandíbula · gel polimérico",
+    "ru": "Двойное крепление за ушами · покрытие линии челюсти · полимерный гель",
+    "ar": "تثبيت مزدوج حول الأذنين · تغطية خط الفك · جل بوليمري"
+  },
+  "下颌线紧致感、提拉感与浮肿感护理": {
+    "en": "Jawline firming, lifting and swelling-reduction-led care",
+    "fr": "Soin raffermissant et liftant de la mâchoire",
+    "es": "Cuidado reafirmante y lifting de la mandíbula",
+    "ru": "Уход для упругости и подтягивания линии челюсти, уменьшения видимой отёчности",
+    "ar": "عناية بخط الفك تركز على التماسك والشد وتقليل مظهر الانتفاخ"
+  },
+  "25 g": {
+    "en": "25 g",
+    "fr": "25 g",
+    "es": "25 g",
+    "ru": "25 g",
+    "ar": "25 g"
+  },
+  "胶原凝胶面膜 · 吸塑装": {
+    "en": "Collagen gel face mask · blister pack",
+    "fr": "Masque visage au gel de collagène · blister",
+    "es": "Mascarilla facial de gel de colágeno · blíster",
+    "ru": "Коллагеновая гелевая маска для лица · блистер",
+    "ar": "قناع وجه من جل الكولاجين · عبوة مشكلة"
+  },
+  "补水、保湿、舒缓": {
+    "en": "Hydrating, moisturizing and soothing",
+    "fr": "Hydratation, maintien de l’humidité et apaisement",
+    "es": "Hidratación, retención de humedad y efecto calmante",
+    "ru": "Увлажнение, удержание влаги и успокаивающий уход",
+    "ar": "ترطيب واحتفاظ بالرطوبة وتهدئة البشرة"
+  },
+  "吸塑托 + 膜袋 + 外彩盒": {
+    "en": "Blister pack + film bag + outer box",
+    "fr": "Blister + sachet film + boîte extérieure",
+    "es": "Blíster + bolsa de película + caja exterior",
+    "ru": "Блистер + плёночный пакет + внешняя коробка",
+    "ar": "عبوة مشكلة + كيس تغليف + علبة خارجية"
+  },
+  "60 g / piece": {
+    "en": "60 g / piece",
+    "fr": "60 g / pièce",
+    "es": "60 g / unidad",
+    "ru": "60 g / шт.",
+    "ar": "60 g / قطعة"
+  },
+  "50,000 pieces": {
+    "en": "50,000 pieces",
+    "fr": "50,000 pièces",
+    "es": "50,000 unidades",
+    "ru": "50,000 шт.",
+    "ar": "50,000 قطعة"
+  },
+  "白变透明凝胶面膜": {
+    "en": "White-to-transparent gel face mask",
+    "fr": "Masque gel visage passant du blanc au transparent",
+    "es": "Mascarilla facial de gel que pasa de blanco a transparente",
+    "ru": "Гелевая маска для лица, меняющая цвет с белого на прозрачный",
+    "ar": "قناع جل للوجه يتحول من الأبيض إلى الشفاف"
+  },
+  "紧致、抗皱与焕亮；贴敷过程中逐渐变薄、趋于透明": {
+    "en": "Firming, anti-wrinkle and brightening-led care; becomes thinner and clearer during wear",
+    "fr": "Soin fermeté, rides et éclat ; devient plus fin et transparent pendant la pose",
+    "es": "Cuidado de firmeza, arrugas y luminosidad; se vuelve más fino y transparente durante el uso",
+    "ru": "Уход для упругости, разглаживания морщин и сияния; становится тоньше и прозрачнее при использовании",
+    "ar": "عناية تركز على التماسك وتقليل مظهر التجاعيد والإشراق؛ يصبح أرق وأكثر شفافية أثناء الاستخدام"
+  },
+  "23 g / piece": {
+    "en": "23 g / piece",
+    "fr": "23 g / pièce",
+    "es": "23 g / unidad",
+    "ru": "23 g / шт.",
+    "ar": "23 g / قطعة"
+  },
+  "仿生水凝胶面膜": {
+    "en": "Human-like hydrogel face mask",
+    "fr": "Masque hydrogel visage biomimétique",
+    "es": "Mascarilla facial de hidrogel biomimético",
+    "ru": "Биомиметическая гидрогелевая маска для лица",
+    "ar": "قناع هيدروجيل للوجه بملمس شبيه بالبشرة"
+  },
+  "补水、保湿、紧致与焕亮": {
+    "en": "Hydrating, moisturizing, firming and brightening-led care",
+    "fr": "Soin hydratant axé sur la rétention d’eau, la fermeté et l’éclat",
+    "es": "Cuidado hidratante orientado a retención de humedad, firmeza y luminosidad",
+    "ru": "Увлажняющий уход для удержания влаги, упругости и сияния",
+    "ar": "عناية تركز على الترطيب والاحتفاظ بالرطوبة والتماسك والإشراق"
+  },
+  "膜袋 + 外彩盒": {
+    "en": "Film bag + outer box",
+    "fr": "Sachet film + boîte extérieure",
+    "es": "Bolsa de película + caja exterior",
+    "ru": "Плёночный пакет + внешняя коробка",
+    "ar": "كيس تغليف + علبة خارجية"
+  },
+  "35 g / piece": {
+    "en": "35 g / piece",
+    "fr": "35 g / pièce",
+    "es": "35 g / unidad",
+    "ru": "35 g / шт.",
+    "ar": "35 g / قطعة"
+  },
+  "微孔冰导膏状面膜": {
+    "en": "Microporous cooling conductive cream mask",
+    "fr": "Masque crème microporeux à effet frais",
+    "es": "Mascarilla cremosa microporosa de efecto refrescante",
+    "ru": "Микропористая охлаждающая кремовая маска",
+    "ar": "قناع كريمي ناقل للتبريد ذو مسام دقيقة"
+  },
+  "清凉、贴合、弹力与紧致感": {
+    "en": "Cooling, contour-fitting, elasticity and firming-led care",
+    "fr": "Soin frais épousant les contours, axé sur l’élasticité et la fermeté",
+    "es": "Cuidado refrescante y adaptable al contorno, orientado a elasticidad y firmeza",
+    "ru": "Охлаждающий уход с прилеганием по контуру, для эластичности и упругости",
+    "ar": "عناية تركز على التبريد وملاءمة المحيط والمرونة والتماسك"
+  },
+  "29 g × 4 patches / box": {
+    "en": "29 g × 4 patches / box",
+    "fr": "29 g × 4 patchs / boîte",
+    "es": "29 g × 4 parches / caja",
+    "ru": "29 g × 4 патчей / коробка",
+    "ar": "29 g × 4 لصقات / علبة"
+  },
+  "10,000 pieces": {
+    "en": "10,000 pieces",
+    "fr": "10,000 pièces",
+    "es": "10,000 unidades",
+    "ru": "10,000 шт.",
+    "ar": "10,000 قطعة"
+  },
+  "补水、抗皱、紧致与焕亮": {
+    "en": "Hydrating, anti-wrinkle, firming and brightening-led care",
+    "fr": "Soin hydratant, lissant, raffermissant et éclat",
+    "es": "Cuidado hidratante, alisador, reafirmante y de luminosidad",
+    "ru": "Увлажняющий уход для разглаживания морщин, упругости и сияния",
+    "ar": "عناية تركز على الترطيب وتقليل مظهر التجاعيد والتماسك والإشراق"
+  },
+  "纯铝膜袋 + 外彩盒": {
+    "en": "Pure aluminum film bag + outer box",
+    "fr": "Sachet aluminium pur + boîte extérieure",
+    "es": "Bolsa de aluminio puro + caja exterior",
+    "ru": "Пакет из чистой алюминиевой фольги + внешняя коробка",
+    "ar": "كيس من رقائق الألومنيوم الخالص + علبة خارجية"
+  },
+  "30 g / piece": {
+    "en": "30 g / piece",
+    "fr": "30 g / pièce",
+    "es": "30 g / unidad",
+    "ru": "30 g / шт.",
+    "ar": "30 g / قطعة"
+  },
+  "25,000 pieces": {
+    "en": "25,000 pieces",
+    "fr": "25,000 pièces",
+    "es": "25,000 unidades",
+    "ru": "25,000 шт.",
+    "ar": "25,000 قطعة"
+  },
+  "膏状面膜": {
+    "en": "Cream face mask",
+    "fr": "Masque crème pour le visage",
+    "es": "Mascarilla cremosa facial",
+    "ru": "Кремовая маска для лица",
+    "ar": "قناع كريمي للوجه"
+  },
+  "滋养、修护、紧致与焕亮": {
+    "en": "Nourishing, repairing, firming and brightening-led care",
+    "fr": "Soin nourrissant axé sur la réparation, la fermeté et l’éclat",
+    "es": "Cuidado nutritivo orientado a reparación, firmeza y luminosidad",
+    "ru": "Питательный уход для восстановления, упругости и сияния",
+    "ar": "عناية تركز على التغذية ودعم تجدد البشرة والتماسك والإشراق"
+  },
+  "14 g / piece": {
+    "en": "14 g / piece",
+    "fr": "14 g / pièce",
+    "es": "14 g / unidad",
+    "ru": "14 g / шт.",
+    "ar": "14 g / قطعة"
+  },
+  "油膏面膜": {
+    "en": "Oil cream face mask",
+    "fr": "Masque visage crème-huile",
+    "es": "Mascarilla facial de crema y aceite",
+    "ru": "Масляно-кремовая маска для лица",
+    "ar": "قناع كريمي زيتي للوجه"
+  },
+  "油润保湿、修护与紧致感": {
+    "en": "Oil-rich moisturizing, repairing and firming-led care",
+    "fr": "Soin riche en huiles, hydratant, réparateur et raffermissant",
+    "es": "Cuidado rico en aceites, hidratante, reparador y reafirmante",
+    "ru": "Богатый маслами уход для увлажнения, восстановления и упругости",
+    "ar": "عناية غنية بالزيوت تركز على الترطيب ودعم تجدد البشرة والتماسك"
+  },
+  "16 g / piece": {
+    "en": "16 g / piece",
+    "fr": "16 g / pièce",
+    "es": "16 g / unidad",
+    "ru": "16 g / шт.",
+    "ar": "16 g / قطعة"
+  },
+  "白变透明蝶形眼膜": {
+    "en": "White-to-transparent butterfly eye mask",
+    "fr": "Masque yeux papillon passant du blanc au transparent",
+    "es": "Mascarilla de ojos mariposa que pasa de blanco a transparente",
+    "ru": "Маска-бабочка для глаз, меняющая цвет с белого на прозрачный",
+    "ar": "قناع عين بشكل فراشة يتحول من الأبيض إلى الشفاف"
+  },
+  "紧致、抗皱与焕亮": {
+    "en": "Firming, anti-wrinkle and brightening-led care",
+    "fr": "Soin axé sur la fermeté, le lissage des rides et l’éclat",
+    "es": "Cuidado orientado a firmeza, apariencia de arrugas y luminosidad",
+    "ru": "Уход для упругости, разглаживания видимых морщин и сияния",
+    "ar": "عناية تركز على التماسك وتقليل مظهر التجاعيد والإشراق"
+  },
+  "8 g / pair": {
+    "en": "8 g / pair",
+    "fr": "8 g / paire",
+    "es": "8 g / par",
+    "ru": "8 g / пара",
+    "ar": "8 g / زوج"
+  },
+  "50,000 pairs": {
+    "en": "50,000 pairs",
+    "fr": "50,000 paires",
+    "es": "50,000 pares",
+    "ru": "50,000 пар",
+    "ar": "50,000 زوج"
+  },
+  "瓶装凝胶眼膜 · 单色": {
+    "en": "Bottled gel eye mask · single colour",
+    "fr": "Patchs yeux en gel en pot · une couleur",
+    "es": "Parches de ojos de gel en tarro · un color",
+    "ru": "Гелевые патчи для глаз в банке · одноцветные",
+    "ar": "أقنعة جل للعين في عبوة · بلون واحد"
+  },
+  "补水、保湿、抗皱、紧致与焕亮": {
+    "en": "Hydrating, moisturizing, anti-wrinkle, firming and brightening-led care",
+    "fr": "Soin hydratant avec rétention d’eau, lissage, fermeté et éclat",
+    "es": "Cuidado hidratante con retención de humedad, alisado, firmeza y luminosidad",
+    "ru": "Уход для увлажнения, удержания влаги, разглаживания морщин, упругости и сияния",
+    "ar": "عناية تركز على الترطيب والاحتفاظ بالرطوبة وتقليل مظهر التجاعيد والتماسك والإشراق"
+  },
+  "广口瓶 + 外彩盒": {
+    "en": "Wide-mouth jar + outer box",
+    "fr": "Pot à large ouverture + boîte extérieure",
+    "es": "Tarro de boca ancha + caja exterior",
+    "ru": "Банка с широким горлом + внешняя коробка",
+    "ar": "مرطبان واسع الفوهة + علبة خارجية"
+  },
+  "1.4 g × 60 pieces": {
+    "en": "1.4 g × 60 pieces",
+    "fr": "1.4 g × 60 pièces",
+    "es": "1.4 g × 60 unidades",
+    "ru": "1.4 g × 60 шт.",
+    "ar": "1.4 g × 60 قطعة"
+  },
+  "10,000 bottles": {
+    "en": "10,000 bottles",
+    "fr": "10,000 flacons",
+    "es": "10,000 frascos",
+    "ru": "10,000 флаконов",
+    "ar": "10,000 عبوة"
+  },
+  "瓶装星形眼膜": {
+    "en": "Bottled star eye mask",
+    "fr": "Patchs yeux étoile en pot",
+    "es": "Parches de ojos en forma de estrella en tarro",
+    "ru": "Патчи-звёзды для глаз в банке",
+    "ar": "أقنعة عين بشكل نجمة في عبوة"
+  },
+  "瓶装凝胶眼膜 · 双色": {
+    "en": "Bottled gel eye mask · dual colour",
+    "fr": "Patchs yeux en gel en pot · deux couleurs",
+    "es": "Parches de ojos de gel en tarro · dos colores",
+    "ru": "Гелевые патчи для глаз в банке · двухцветные",
+    "ar": "أقنعة جل للعين في عبوة · بلونين"
+  },
+  "眼罩形凝胶贴 · 单片装": {
+    "en": "Eye-shaped gel patch · single pack",
+    "fr": "Patch gel contour des yeux · sachet individuel",
+    "es": "Parche de gel con forma de ojo · envase individual",
+    "ru": "Гелевый патч по контуру глаза · индивидуальная упаковка",
+    "ar": "لصقة جل على شكل العين · عبوة فردية"
+  },
+  "补水、保湿、抗皱与紧致": {
+    "en": "Hydrating, moisturizing, anti-wrinkle and firming-led care",
+    "fr": "Soin hydratant axé sur la rétention d’eau, les rides et la fermeté",
+    "es": "Cuidado hidratante orientado a retención de humedad, arrugas y firmeza",
+    "ru": "Уход для увлажнения, удержания влаги, разглаживания морщин и упругости",
+    "ar": "عناية تركز على الترطيب والاحتفاظ بالرطوبة وتقليل مظهر التجاعيد والتماسك"
+  },
+  "18 g / patch": {
+    "en": "18 g / patch",
+    "fr": "18 g / patch",
+    "es": "18 g / parche",
+    "ru": "18 g / патч",
+    "ar": "18 g / لصقة"
+  },
+  "月牙形凝胶眼膜 · 独立装": {
+    "en": "Crescent gel eye patch · individual pack",
+    "fr": "Patch gel yeux en croissant · sachet individuel",
+    "es": "Parche de ojos de gel en media luna · envase individual",
+    "ru": "Серповидный гелевый патч для глаз · индивидуальная упаковка",
+    "ar": "لصقة جل هلالية للعين · عبوة فردية"
+  },
+  "印刷 PVC 顶膜 + 外彩盒": {
+    "en": "Printed PVC top film + outer box",
+    "fr": "Film supérieur PVC imprimé + boîte extérieure",
+    "es": "Película superior de PVC impreso + caja exterior",
+    "ru": "Печатная верхняя плёнка ПВХ + внешняя коробка",
+    "ar": "غشاء علوي مطبوع من PVC + علبة خارجية"
+  },
+  "6.2 g / pair": {
+    "en": "6.2 g / pair",
+    "fr": "6.2 g / paire",
+    "es": "6.2 g / par",
+    "ru": "6.2 g / пара",
+    "ar": "6.2 g / زوج"
+  },
+  "吸塑月牙形眼膜": {
+    "en": "Blister crescent eye patch",
+    "fr": "Patch yeux en croissant sous blister",
+    "es": "Parche de ojos de media luna en blíster",
+    "ru": "Серповидный патч для глаз в блистере",
+    "ar": "لصقة عين هلالية في عبوة مشكلة"
+  },
+  "5 g / pair": {
+    "en": "5 g / pair",
+    "fr": "5 g / paire",
+    "es": "5 g / par",
+    "ru": "5 g / пара",
+    "ar": "5 g / زوج"
+  },
+  "吸塑眼膜 · 专利形状 A": {
+    "en": "Blister eye mask · patented shape A",
+    "fr": "Masque yeux sous blister · forme brevetée A",
+    "es": "Mascarilla de ojos en blíster · forma patentada A",
+    "ru": "Маска для глаз в блистере · запатентованная форма A",
+    "ar": "قناع عين في عبوة مشكلة · الشكل أ المسجل ببراءة"
+  },
+  "吸塑眼膜 · 专利形状 B": {
+    "en": "Blister eye mask · patented shape B",
+    "fr": "Masque yeux sous blister · forme brevetée B",
+    "es": "Mascarilla de ojos en blíster · forma patentada B",
+    "ru": "Маска для глаз в блистере · запатентованная форма B",
+    "ar": "قناع عين في عبوة مشكلة · الشكل ب المسجل ببراءة"
+  },
+  "7 g / pair": {
+    "en": "7 g / pair",
+    "fr": "7 g / paire",
+    "es": "7 g / par",
+    "ru": "7 g / пара",
+    "ar": "7 g / زوج"
+  },
+  "白变透明眼膜": {
+    "en": "White-to-transparent eye mask",
+    "fr": "Masque yeux passant du blanc au transparent",
+    "es": "Mascarilla de ojos que pasa de blanco a transparente",
+    "ru": "Маска для глаз, меняющая цвет с белого на прозрачный",
+    "ar": "قناع عين يتحول من الأبيض إلى الشفاف"
+  },
+  "10 g / pair": {
+    "en": "10 g / pair",
+    "fr": "10 g / paire",
+    "es": "10 g / par",
+    "ru": "10 g / пара",
+    "ar": "10 g / زوج"
+  },
+  "白变透明 E 形眼膜": {
+    "en": "White-to-transparent E-shape eye mask",
+    "fr": "Masque yeux en E passant du blanc au transparent",
+    "es": "Mascarilla de ojos en E que pasa de blanco a transparente",
+    "ru": "E-образная маска для глаз, меняющая цвет с белого на прозрачный",
+    "ar": "قناع عين بشكل E يتحول من الأبيض إلى الشفاف"
+  },
+  "微孔冰导眼膜": {
+    "en": "Microporous cooling conductive eye mask",
+    "fr": "Masque yeux microporeux à effet frais",
+    "es": "Mascarilla de ojos microporosa de efecto refrescante",
+    "ru": "Микропористая охлаждающая маска для глаз",
+    "ar": "قناع عين ناقل للتبريد ذو مسام دقيقة"
+  },
+  "清凉、贴合、平滑、焕亮与补水": {
+    "en": "Cooling, close-fitting, smoothing, brightening and hydrating-led care",
+    "fr": "Soin frais et ajusté, axé sur le lissage, l’éclat et l’hydratation",
+    "es": "Cuidado refrescante y ajustado, orientado a alisado, luminosidad e hidratación",
+    "ru": "Охлаждающий плотно прилегающий уход для гладкости, сияния и увлажнения",
+    "ar": "عناية تركز على التبريد والملاءمة الدقيقة والتنعيم والإشراق والترطيب"
+  },
+  "10.5 g × 7 patches / box": {
+    "en": "10.5 g × 7 patches / box",
+    "fr": "10.5 g × 7 patchs / boîte",
+    "es": "10.5 g × 7 parches / caja",
+    "ru": "10.5 g × 7 патчей / коробка",
+    "ar": "10.5 g × 7 لصقات / علبة"
+  },
+  "高分子凝胶眼膜 · 眼罩形": {
+    "en": "Polymer gel eye mask · eye-mask shape",
+    "fr": "Masque yeux en gel polymère · contour des yeux",
+    "es": "Mascarilla de ojos de gel polimérico · contorno de ojos",
+    "ru": "Полимерная гелевая маска · по форме глаз",
+    "ar": "قناع عين من الجل البوليمري · بتصميم قناع العين"
+  },
+  "补水、舒缓眼周疲惫、焕亮与紧致": {
+    "en": "Hydrating, fatigue-relief, brightening and firming-led care",
+    "fr": "Soin hydratant pour atténuer l’apparence de fatigue, améliorer l’éclat et la fermeté",
+    "es": "Cuidado hidratante para el aspecto cansado, la luminosidad y la firmeza",
+    "ru": "Увлажняющий уход против признаков усталости, для сияния и упругости",
+    "ar": "عناية تركز على الترطيب وتخفيف مظهر التعب والإشراق والتماسك"
+  },
+  "10 g / piece": {
+    "en": "10 g / piece",
+    "fr": "10 g / pièce",
+    "es": "10 g / unidad",
+    "ru": "10 g / шт.",
+    "ar": "10 g / قطعة"
+  },
+  "高分子凝胶眼膜 · 月牙形": {
+    "en": "Polymer gel eye mask · crescent shape",
+    "fr": "Masque yeux en gel polymère · croissant",
+    "es": "Mascarilla de ojos de gel polimérico · media luna",
+    "ru": "Полимерная гелевая маска для глаз · серповидная",
+    "ar": "قناع عين من الجل البوليمري · بشكل هلال"
+  },
+  "25,000 pairs": {
+    "en": "25,000 pairs",
+    "fr": "25,000 paires",
+    "es": "25,000 pares",
+    "ru": "25,000 пар",
+    "ar": "25,000 زوج"
+  },
+  "冷敷、补水与缓解眼周疲惫": {
+    "en": "Cooling, hydrating and eye-fatigue relief",
+    "fr": "Fraîcheur, hydratation et soin du contour des yeux fatigué",
+    "es": "Frescor, hidratación y cuidado del aspecto cansado de los ojos",
+    "ru": "Охлаждение, увлажнение и уход за уставшей зоной глаз",
+    "ar": "تبريد وترطيب وتخفيف مظهر تعب العين"
+  },
+  "8 g / piece": {
+    "en": "8 g / piece",
+    "fr": "8 g / pièce",
+    "es": "8 g / unidad",
+    "ru": "8 g / шт.",
+    "ar": "8 g / قطعة"
+  },
+  "高分子凝胶包裹式眼膜": {
+    "en": "Polymer gel wrap eye mask",
+    "fr": "Masque enveloppant pour les yeux en gel polymère",
+    "es": "Mascarilla envolvente de ojos de gel polimérico",
+    "ru": "Обёртывающая полимерная гелевая маска для глаз",
+    "ar": "قناع جل بوليمري يلتف حول منطقة العين"
+  },
+  "多区域抗皱、紧致与修护": {
+    "en": "Multi-zone anti-wrinkle, firming and repairing-led care",
+    "fr": "Soin multizone axé sur le lissage des rides, la fermeté et la réparation",
+    "es": "Cuidado multizona orientado a alisado de arrugas, firmeza y reparación",
+    "ru": "Многозональный уход для разглаживания морщин, упругости и восстановления",
+    "ar": "عناية متعددة المناطق تركز على تقليل مظهر التجاعيد والتماسك ودعم تجدد البشرة"
+  },
+  "复合凝胶眼膜 · 月牙形": {
+    "en": "Composite gel eye mask · crescent shape",
+    "fr": "Masque yeux en gel composite · croissant",
+    "es": "Mascarilla de ojos de gel compuesto · media luna",
+    "ru": "Маска для глаз из композитного геля · серповидная",
+    "ar": "قناع عين من الجل المركب · بشكل هلال"
+  },
+  "补水、密集修护、抗皱、紧致与焕亮": {
+    "en": "Hydrating, intensive repair, anti-wrinkle, firming and brightening-led care",
+    "fr": "Soin hydratant et réparateur intensif, axé sur les rides, la fermeté et l’éclat",
+    "es": "Cuidado hidratante y reparador intensivo, orientado a arrugas, firmeza y luminosidad",
+    "ru": "Уход для увлажнения, интенсивного восстановления, разглаживания морщин, упругости и сияния",
+    "ar": "عناية تركز على الترطيب والدعم المكثف لتجدد البشرة وتقليل مظهر التجاعيد والتماسك والإشراق"
+  },
+  "5 g / piece": {
+    "en": "5 g / piece",
+    "fr": "5 g / pièce",
+    "es": "5 g / unidad",
+    "ru": "5 g / шт.",
+    "ar": "5 g / قطعة"
+  },
+  "复合印花凝胶眼膜": {
+    "en": "Composite printed gel eye patch",
+    "fr": "Patch yeux imprimé en gel composite",
+    "es": "Parche de ojos de gel compuesto impreso",
+    "ru": "Патч для глаз из композитного геля с печатью",
+    "ar": "لصقة عين من الجل المركب المطبوع"
+  },
+  "复合凝胶眼膜 · 全眼罩形": {
+    "en": "Composite gel eye mask · full eye shape",
+    "fr": "Masque yeux en gel composite · couverture complète",
+    "es": "Mascarilla de ojos de gel compuesto · cobertura completa",
+    "ru": "Маска из композитного геля · полное покрытие зоны глаз",
+    "ar": "قناع عين من الجل المركب · بتصميم يغطي منطقة العين كاملة"
+  },
+  "复合凝胶眼膜 · 轮廓形": {
+    "en": "Composite gel eye mask · contour shape",
+    "fr": "Masque yeux en gel composite · forme profilée",
+    "es": "Mascarilla de ojos de gel compuesto · forma contorneada",
+    "ru": "Маска для глаз из композитного геля · контурная",
+    "ar": "قناع عين من الجل المركب · بتصميم يتبع محيط العين"
+  },
+  "膏状眼膜": {
+    "en": "Cream eye mask",
+    "fr": "Masque crème pour les yeux",
+    "es": "Mascarilla cremosa de ojos",
+    "ru": "Кремовая маска для глаз",
+    "ar": "قناع كريمي للعين"
+  },
+  "盒装水凝胶唇膜": {
+    "en": "Boxed hydrogel lip patch",
+    "fr": "Patch lèvres hydrogel en boîte",
+    "es": "Parche labial de hidrogel en caja",
+    "ru": "Гидрогелевые патчи для губ в коробке",
+    "ar": "لصقات شفاه هيدروجيل في علبة"
+  },
+  "补水、舒缓与去角质唇部护理": {
+    "en": "Hydrating, soothing and exfoliating-led lip care",
+    "fr": "Soin des lèvres hydratant, apaisant et exfoliant",
+    "es": "Cuidado labial hidratante, calmante y exfoliante",
+    "ru": "Увлажняющий, успокаивающий и отшелушивающий уход для губ",
+    "ar": "عناية بالشفاه تركز على الترطيب والتهدئة والتقشير"
+  },
+  "120 g / box · 60 g / pair": {
+    "en": "120 g / box · 60 g / pair",
+    "fr": "120 g / boîte · 60 g / paire",
+    "es": "120 g / caja · 60 g / par",
+    "ru": "120 g / коробка · 60 g / пара",
+    "ar": "120 g / علبة · 60 g / زوج"
+  },
+  "补水与保湿唇部护理": {
+    "en": "Hydrating and moisturizing-led lip care",
+    "fr": "Soin des lèvres axé sur l’hydratation et la rétention d’eau",
+    "es": "Cuidado labial orientado a hidratación y retención de humedad",
+    "ru": "Уход для увлажнения губ и удержания влаги",
+    "ar": "عناية بالشفاه تركز على الترطيب والاحتفاظ بالرطوبة"
+  },
+  "6 g / piece": {
+    "en": "6 g / piece",
+    "fr": "6 g / pièce",
+    "es": "6 g / unidad",
+    "ru": "6 g / шт.",
+    "ar": "6 g / قطعة"
+  },
+  "独立装水凝胶颈膜": {
+    "en": "Individual hydrogel neck mask",
+    "fr": "Masque cou hydrogel individuel",
+    "es": "Mascarilla de cuello de hidrogel individual",
+    "ru": "Гидрогелевая маска для шеи в индивидуальной упаковке",
+    "ar": "قناع هيدروجيل للرقبة بتغليف فردي"
+  },
+  "补水、抗皱、紧致与焕亮颈部护理": {
+    "en": "Hydrating, anti-wrinkle, firming and brightening-led neck care",
+    "fr": "Soin du cou hydratant, lissant, raffermissant et éclat",
+    "es": "Cuidado de cuello hidratante, alisador, reafirmante y de luminosidad",
+    "ru": "Увлажняющий уход для шеи, разглаживания морщин, упругости и сияния",
+    "ar": "عناية بالرقبة تركز على الترطيب وتقليل مظهر التجاعيد والتماسك والإشراق"
+  },
+  "微孔冰导颈膜": {
+    "en": "Microporous cooling conductive neck mask",
+    "fr": "Masque cou microporeux à effet frais",
+    "es": "Mascarilla de cuello microporosa de efecto refrescante",
+    "ru": "Микропористая охлаждающая маска для шеи",
+    "ar": "قناع رقبة ناقل للتبريد ذو مسام دقيقة"
+  },
+  "清凉、贴合、平滑与紧致颈部护理": {
+    "en": "Cooling, contour-fitting, smoothing and firming-led neck care",
+    "fr": "Soin frais du cou épousant les contours, lissant et raffermissant",
+    "es": "Cuidado refrescante de cuello adaptable al contorno, alisador y reafirmante",
+    "ru": "Охлаждающий уход для шеи с прилеганием по контуру, для гладкости и упругости",
+    "ar": "عناية بالرقبة تركز على التبريد وملاءمة المحيط والتنعيم والتماسك"
+  },
+  "13.5 g × 5 pieces / box": {
+    "en": "13.5 g × 5 pieces / box",
+    "fr": "13.5 g × 5 pièces / boîte",
+    "es": "13.5 g × 5 unidades / caja",
+    "ru": "13.5 g × 5 шт. / коробка",
+    "ar": "13.5 g × 5 قطعة / علبة"
+  },
+  "额头与眼周多区域抗皱、紧致与修护": {
+    "en": "Multi-zone anti-wrinkle, firming and repairing-led care",
+    "fr": "Soin multizone axé sur le lissage des rides, la fermeté et la réparation",
+    "es": "Cuidado multizona orientado a alisado de arrugas, firmeza y reparación",
+    "ru": "Многозональный уход для разглаживания морщин, упругости и восстановления",
+    "ar": "عناية متعددة المناطق تركز على تقليل مظهر التجاعيد والتماسك ودعم تجدد البشرة"
+  },
+  "15 g / piece": {
+    "en": "15 g / piece",
+    "fr": "15 g / pièce",
+    "es": "15 g / unidad",
+    "ru": "15 g / шт.",
+    "ar": "15 g / قطعة"
+  },
+  "V 脸提拉贴": {
+    "en": "V-line lifting patch",
+    "fr": "Patch raffermissant contour en V",
+    "es": "Parche reafirmante de contorno en V",
+    "ru": "Подтягивающий патч для V-контура лица",
+    "ar": "لصقة لشد خط الفك على شكل V"
+  },
+  "补水、滋养、轮廓紧致与提拉感": {
+    "en": "Hydrating, nourishing, contour-firming and lifting-led care",
+    "fr": "Soin hydratant et nourrissant pour raffermir et tonifier les contours",
+    "es": "Cuidado hidratante y nutritivo orientado a firmeza y elevación del contorno",
+    "ru": "Увлажняющий и питательный уход для упругости и подтягивания контура",
+    "ar": "عناية تركز على الترطيب والتغذية وتماسك المحيط والشد"
+  },
+  "双耳挂 V 脸膜": {
+    "en": "Double ear-hook V-line mask",
+    "fr": "Masque contour en V à double accroche aux oreilles",
+    "es": "Mascarilla de contorno en V con doble sujeción a las orejas",
+    "ru": "Маска для V-контура с двойным креплением за ушами",
+    "ar": "قناع خط الفك على شكل V بتثبيت مزدوج حول الأذنين"
+  },
+  "下颌线紧致、提拉与减轻浮肿感": {
+    "en": "Jawline firming, lifting and swelling-reduction-led care",
+    "fr": "Soin de l’ovale axé sur la fermeté, le tonus et l’apparence des gonflements",
+    "es": "Cuidado de mandíbula orientado a firmeza, elevación y aspecto de hinchazón",
+    "ru": "Уход для упругости и подтягивания линии челюсти, уменьшения видимой отёчности",
+    "ar": "عناية بخط الفك تركز على التماسك والشد وتقليل مظهر الانتفاخ"
+  },
+  "25 g / piece": {
+    "en": "25 g / piece",
+    "fr": "25 g / pièce",
+    "es": "25 g / unidad",
+    "ru": "25 g / шт.",
+    "ar": "25 g / قطعة"
+  },
+  "高尔夫运动护理面膜": {
+    "en": "Golf mask",
+    "fr": "Masque de soin pour le golf",
+    "es": "Mascarilla de cuidado para golf",
+    "ru": "Уходовая маска для гольфа",
+    "ar": "قناع للعناية أثناء الغولف"
+  },
+  "运动场景护理、长效补水与下颌紧致感": {
+    "en": "Sports care, long-lasting hydration and jawline firming-led care",
+    "fr": "Soin sportif, hydratation longue durée et fermeté de l’ovale",
+    "es": "Cuidado deportivo, hidratación duradera y firmeza de la mandíbula",
+    "ru": "Спортивный уход, длительное увлажнение и упругость линии челюсти",
+    "ar": "عناية أثناء الرياضة تركز على الترطيب طويل الأمد وتماسك خط الفك"
+  },
+  "38 g / piece": {
+    "en": "38 g / piece",
+    "fr": "38 g / pièce",
+    "es": "38 g / unidad",
+    "ru": "38 g / шт.",
+    "ar": "38 g / قطعة"
+  },
+  "额头贴": {
+    "en": "Forehead patch",
+    "fr": "Patch pour le front",
+    "es": "Parche para la frente",
+    "ru": "Патч для лба",
+    "ar": "لصقة للجبهة"
+  },
+  "补水与额纹平滑感": {
+    "en": "Hydrating and forehead-line smoothing-led care",
+    "fr": "Soin hydratant et lissant pour les lignes du front",
+    "es": "Cuidado hidratante y alisador de líneas de la frente",
+    "ru": "Увлажняющий уход для разглаживания линий лба",
+    "ar": "عناية تركز على الترطيب وتنعيم مظهر خطوط الجبهة"
+  },
+  "法令纹、笑纹与表情纹平滑，并兼顾紧致补水": {
+    "en": "Smile-line and expression-line smoothing with firming and hydration-led care",
+    "fr": "Soin hydratant et raffermissant pour lisser les plis du sourire et d’expression",
+    "es": "Cuidado hidratante y reafirmante para alisar líneas de sonrisa y expresión",
+    "ru": "Увлажняющий и укрепляющий уход для разглаживания линий улыбки и мимики",
+    "ar": "عناية تركز على تنعيم مظهر خطوط الابتسام والتعبير مع التماسك والترطيب"
+  },
+  "3 g / piece": {
+    "en": "3 g / piece",
+    "fr": "3 g / pièce",
+    "es": "3 g / unidad",
+    "ru": "3 g / шт.",
+    "ar": "3 g / قطعة"
+  },
+  "蝴蝶形法令纹贴": {
+    "en": "Butterfly nasolabial folds patch",
+    "fr": "Patch papillon pour les sillons nasogéniens",
+    "es": "Parche mariposa para surcos nasolabiales",
+    "ru": "Патч-бабочка для носогубных складок",
+    "ar": "لصقة بشكل فراشة للثنيات الأنفية الشفوية"
+  },
+  "眼纹、笑纹与法令纹多区域平滑护理": {
+    "en": "Eye-line, smile-line and nasolabial-fold smoothing-led care",
+    "fr": "Soin lissant des lignes des yeux, du sourire et des sillons nasogéniens",
+    "es": "Cuidado alisador de líneas de ojos, sonrisa y surcos nasolabiales",
+    "ru": "Уход для разглаживания линий вокруг глаз, улыбки и носогубных складок",
+    "ar": "عناية تركز على تنعيم مظهر خطوط العين والابتسام والثنيات الأنفية الشفوية"
+  },
+  "轮廓提拉贴": {
+    "en": "Lifting line mask",
+    "fr": "Masque à lignes raffermissantes",
+    "es": "Mascarilla de líneas reafirmantes",
+    "ru": "Маска с подтягивающими линиями",
+    "ar": "قناع بخطوط للشد"
+  },
+  "密集修护、紧致与抗皱": {
+    "en": "Intensive repair, firming and anti-wrinkle-led care",
+    "fr": "Soin réparateur intensif, raffermissant et lissant",
+    "es": "Cuidado reparador intensivo, reafirmante y alisador",
+    "ru": "Интенсивный восстанавливающий уход для упругости и разглаживания морщин",
+    "ar": "عناية تركز على الدعم المكثف لتجدد البشرة والتماسك وتقليل مظهر التجاعيد"
+  },
+  "复合凝胶额头眼周二合一贴": {
+    "en": "Composite forehead & eye 2-in-1 patch",
+    "fr": "Patch composite front et yeux 2-en-1",
+    "es": "Parche compuesto de frente y ojos 2 en 1",
+    "ru": "Композитный патч для лба и глаз 2 в 1",
+    "ar": "لصقة مركبة للجبهة والعين 2 في 1"
+  },
+  "12 g / piece": {
+    "en": "12 g / piece",
+    "fr": "12 g / pièce",
+    "es": "12 g / unidad",
+    "ru": "12 g / шт.",
+    "ar": "12 g / قطعة"
+  },
+  "一种凝胶化妆品生产系统": {
+    "en": "Hydrogel cosmetics production system",
+    "fr": "Système de production de cosmétiques hydrogel",
+    "es": "Sistema de producción de cosméticos de hidrogel",
+    "ru": "Система производства гидрогелевой косметики",
+    "ar": "نظام إنتاج مستحضرات تجميل الهيدروجيل"
+  },
+  "实用新型专利": {
+    "en": "Utility model patent",
+    "fr": "Brevet de modèle d’utilité",
+    "es": "Patente de modelo d’utilidad",
+    "ru": "Патент на полезную модель",
+    "ar": "براءة نموذج منفعة"
+  },
+  "广州品爵生物科技有限公司": {
+    "en": "Guangzhou Pinjue Biotechnology Co., Ltd.",
+    "fr": "Guangzhou Pinjue Biotechnology Co., Ltd.",
+    "es": "Guangzhou Pinjue Biotechnology Co., Ltd.",
+    "ru": "Guangzhou Pinjue Biotechnology Co., Ltd.",
+    "ar": "Guangzhou Pinjue Biotechnology Co., Ltd."
+  },
+  "一种面膜成型托盘及面膜机": {
+    "en": "Facial-mask forming tray and mask machine",
+    "fr": "Plateau de formage et machine pour masques visage",
+    "es": "Bandeja de formado y máquina para mascarillas faciales",
+    "ru": "Формовочный лоток и машина для лицевых масок",
+    "ar": "صينية تشكيل وآلة لأقنعة الوجه"
+  },
+  "鱼鳞纹状胶原眼贴（一）": {
+    "en": "Fish-scale-pattern collagen eye patch (I)",
+    "fr": "Patch contour des yeux au collagène motif écailles (I)",
+    "es": "Parche de ojos de colágeno con patrón de escamas (I)",
+    "ru": "Коллагеновый патч для глаз с рисунком рыбьей чешуи (I)",
+    "ar": "لصقة عين بالكولاجين بنمط قشور السمك (I)"
+  },
+  "外观设计专利": {
+    "en": "Design patent",
+    "fr": "Brevet de dessin",
+    "es": "Patente de diseño",
+    "ru": "Патент на промышленный образец",
+    "ar": "براءة تصميم"
+  },
+  "一种凝胶类化妆品的涂布装置": {
+    "en": "Coating device for gel cosmetics",
+    "fr": "Dispositif d’enduction pour cosmétiques en gel",
+    "es": "Dispositivo de recubrimiento para cosméticos en gel",
+    "ru": "Устройство нанесения покрытия для гелевой косметики",
+    "ar": "جهاز طلاء لمستحضرات التجميل الهلامية"
+  },
+  "把想法，做成好产品。": {
+    "en": "Make the mask\nyour brand has in mind.",
+    "fr": "Créez le masque\nque votre marque imagine.",
+    "es": "Cree la mascarilla\nque imagina su marca.",
+    "ru": "Создайте маску,\nкоторую задумал ваш бренд.",
+    "ar": "اصنع القناع\nالذي تتصوره علامتك."
+  },
+  "从配方、膜体和贴合度，到颜色、内容量与包装，每个细节都可以围绕品牌体验调整，并通过实物样品确认。": {
+    "en": "Choose the formula, material, fit, fill and packaging. We bring those choices together in a sample you can see and feel.",
+    "fr": "Choisissez la formule, la matière, la coupe, le remplissage et l’emballage. Nous réunissons ces choix dans un échantillon à voir et à toucher.",
+    "es": "Elija la fórmula, el material, el ajuste, el contenido y el envase. Reunimos esas elecciones en una muestra que puede ver y tocar.",
+    "ru": "Выберите формулу, материал, посадку, наполнение и упаковку. Мы объединим решения в физическом образце.",
+    "ar": "اختر التركيبة والمادة والملاءمة والتعبئة والتغليف. نجمع هذه الخيارات في عينة يمكنك رؤيتها وتجربتها."
+  },
+  "从品牌设想，\n到消费者拿在手里的成品。": {
+    "en": "An idea, a sample,\nthen a finished mask.",
+    "fr": "Une idée, un échantillon,\npuis un masque fini.",
+    "es": "Una idea, una muestra\ny después una mascarilla terminada.",
+    "ru": "Идея, образец,\nа затем готовая маска.",
+    "ar": "فكرة ثم عينة،\nثم قناع جاهز."
+  },
+  "贴合度、肤感、颜色与包装，都可以用实物亲自确认；满意的样品，也会继续作为生产、检查与交付的重要参考。": {
+    "en": "We shape the product with you, make a physical sample, prepare it for production and stay with it through delivery.",
+    "fr": "Nous façonnons le produit avec vous, réalisons un échantillon, préparons la production et suivons le projet jusqu’à la livraison.",
+    "es": "Damos forma al producto con usted, preparamos una muestra, organizamos la producción y acompañamos el proyecto hasta la entrega.",
+    "ru": "Мы вместе формируем продукт, делаем образец, готовим производство и сопровождаем заказ до доставки.",
+    "ar": "نصمم المنتج معك ونصنع عينة ونجهزه للإنتاج ونواكبه حتى التسليم."
+  },
+  "您确认过的样品，\n就是生产要守住的标准。": {
+    "en": "Made with care.\nChecked as it moves.",
+    "fr": "Fabriqué avec soin.\nContrôlé à chaque étape.",
+    "es": "Fabricado con cuidado.\nControlado en cada paso.",
+    "ru": "Произведено с вниманием.\nПроверено на каждом этапе.",
+    "ar": "صُنع بعناية.\nوفُحص في كل مرحلة."
+  },
+  "订单进入生产后，材料、成型、内容量、封口与包装都围绕确认样品检查，让最终成品更接近品牌认可的效果。": {
+    "en": "The sample sets the standard. Materials, forming, fill, sealing and packing are checked as the order moves through production.",
+    "fr": "L’échantillon donne la référence. Les matières, le formage, le remplissage, le scellage et l’emballage sont contrôlés au fil de la production.",
+    "es": "La muestra marca la referencia. Los materiales, el formado, el contenido, el sellado y el empaque se comprueban durante la producción.",
+    "ru": "Образец задаёт стандарт. Материалы, формование, наполнение, герметизация и упаковка проверяются по ходу производства.",
+    "ar": "تحدد العينة المعيار. وتُفحص المواد والتشكيل والتعبئة والإغلاق والتغليف خلال الإنتاج."
+  },
+  "专注研发，做好护肤。": {
+    "en": "Hydrogel masks\nare what we know best.",
+    "fr": "Les masques hydrogel,\nc’est notre spécialité.",
+    "es": "Las mascarillas de hidrogel\nson nuestra especialidad.",
+    "ru": "Гидрогелевые маски —\nнаша специализация.",
+    "ar": "أقنعة الهيدروجيل\nهي خبرتنا الأساسية."
+  },
+  "2015 年成立于广州，我们为希望打造自有产品的品牌开发并生产面膜、眼膜与其他局部水凝膜贴。": {
+    "en": "Founded in Guangzhou in 2015, we make finished face masks, eye masks and targeted hydrogel patches for brands looking for a product they can shape and call their own.",
+    "fr": "Fondée à Guangzhou en 2015, nous fabriquons des masques visage, yeux et des patchs hydrogel ciblés pour les marques.",
+    "es": "Fundada en Guangzhou en 2015, fabricamos mascarillas faciales, oculares y parches de hidrogel localizados para marcas.",
+    "ru": "С 2015 года в Гуанчжоу мы создаём маски для лица, глаз и локальные гидрогелевые патчи для брендов.",
+    "ar": "منذ 2015 في قوانغتشو نصنع أقنعة الوجه والعين ولصقات الهيدروجيل الموضعية للعلامات."
+  },
+  "聊聊您的\n下一款水凝膜。": {
+    "en": "Start with a product,\na sample, or a question.",
+    "fr": "Commencez par un produit,\nun échantillon ou une question.",
+    "es": "Empiece con un producto,\nuna muestra o una pregunta.",
+    "ru": "Начните с продукта,\nобразца или вопроса.",
+    "ar": "ابدأ بمنتج\nأو عينة أو سؤال."
+  },
+  "想比较现有产品、申请样品，或开发新的膜型与包装，都欢迎来聊。样品、报价与交期会通过工作邮箱继续确认。": {
+    "en": "Browse the range, ask for samples or tell us what you want to make. A product advisor will continue with you by email.",
+    "fr": "Parcourez la gamme, demandez des échantillons ou décrivez ce que vous souhaitez créer. Un conseiller poursuivra l’échange par e-mail.",
+    "es": "Explore la gama, solicite muestras o cuéntenos qué quiere crear. Un asesor continuará la conversación por correo.",
+    "ru": "Изучите линейку, запросите образцы или опишите идею. Консультант продолжит общение по электронной почте.",
+    "ar": "تصفح المجموعة أو اطلب عينات أو أخبرنا بما تريد صنعه. سيتابع مستشار المنتجات معك عبر البريد."
+  },
+  "看得见的专利，\n让水凝膜能力更有依据。": {
+    "en": "From hydrogel making\nto the finished patch.",
+    "fr": "De la fabrication de l’hydrogel\nau patch fini.",
+    "es": "De la producción de hidrogel\nal parche terminado.",
+    "ru": "От производства гидрогеля\nдо готового патча.",
+    "ar": "من صناعة الهيدروجيل\nإلى اللصقة الجاهزة."
+  },
+  "相关证书覆盖凝胶生产、涂布、面膜成型与胶原眼贴外观设计，为修齐的水凝膜研发和生产积累提供可核对的证明。": {
+    "en": "The supplied archive includes patents for gel production, coating, mask forming and the appearance of collagen eye patches.",
+    "fr": "Le dossier fourni couvre la production de gel, l’enduction, le formage des masques et le dessin de patchs contour des yeux au collagène.",
+    "es": "El archivo facilitado reúne patentes de producción de gel, recubrimiento, formado de mascarillas y diseño de parches de colágeno.",
+    "ru": "В предоставленном архиве есть патенты на производство геля, нанесение покрытия, формование масок и внешний вид коллагеновых патчей.",
+    "ar": "يتضمن الأرشيف المقدم براءات لإنتاج الجل والطلاء وتشكيل الأقنعة ومظهر لصقات الكولاجين للعين."
+  },
+  "水凝胶眼膜选型：先看膜型，再谈配方": {
+    "en": "Choosing a hydrogel eye mask: start with the shape, then the formula",
+    "fr": "Choisir un masque hydrogel pour les yeux : la forme avant la formule",
+    "es": "Elegir una mascarilla de ojos de hidrogel: primero la forma, después la fórmula",
+    "ru": "Выбор гидрогелевой маски для глаз: сначала форма, затем формула",
+    "ar": "اختيار قناع هيدروجيل للعين: ابدأ بالشكل ثم التركيبة"
+  },
+  "从贴合部位、凝胶触感、产品外观和包装方式四个角度，梳理品牌选择眼膜样品时值得优先确认的事项。": {
+    "en": "Four practical considerations for selecting eye-mask samples: coverage, gel feel, product appearance and packaging.",
+    "fr": "Quatre critères pratiques pour choisir les échantillons : zone couverte, toucher du gel, aspect du produit et emballage.",
+    "es": "Cuatro criterios prácticos para seleccionar muestras: cobertura, tacto del gel, aspecto del producto y envase.",
+    "ru": "Четыре практических критерия выбора образцов: зона покрытия, ощущения от геля, внешний вид и упаковка.",
+    "ar": "أربع نقاط عملية لاختيار عينات أقنعة العين: منطقة التغطية وملمس الجل ومظهر المنتج وطريقة التغليف."
+  },
+  "为品牌开发一款水凝胶眼膜时，配方并不是唯一的起点。眼周轮廓、膜体厚度、凝胶柔韧度和包装方式，会共同影响消费者第一次拿起和贴敷产品时的感受。\n\n先确认希望覆盖的眼周区域。月牙形、蝶形和组合式膜型在覆盖范围与视觉表达上各不相同，适合通过实物样品比较贴合度和佩戴舒适度。\n\n再比较凝胶体系与表面效果。颜色、透明度、厚度和清凉感都能形成直观差异，但最终规格仍应以双方确认的样品和文件为准。\n\n最后把单片克重、包装形式、预计数量和目标市场一起带入评估。这样得到的样品方向更接近真实上市需求，也能减少后续反复调整。": {
+    "en": "When developing a hydrogel eye mask for a brand, the formula is not the only starting point. The eye-area contour, gel thickness, flexibility and packaging all affect how the product feels when a consumer first picks it up and applies it.\n\nFirst, decide which part of the eye area you want to cover. Crescent, butterfly and combined shapes differ in coverage and appearance. Physical samples are useful for comparing fit and comfort during wear.\n\nNext, compare the gel system and surface finish. Colour, transparency, thickness and cooling feel can create noticeable differences, but the final specifications should follow the samples and documents agreed by both parties.\n\nFinally, assess the weight per piece, packaging format, expected quantity and target market together. This brings the sample direction closer to the intended launch and can reduce repeated adjustments later.",
+    "fr": "Lorsqu’une marque développe un masque hydrogel pour les yeux, la formule n’est pas le seul point de départ. Le contour de la zone oculaire, l’épaisseur du gel, sa souplesse et l’emballage influencent l’impression ressentie lorsque le consommateur prend le produit et l’applique pour la première fois.\n\nCommencez par définir la zone à couvrir autour des yeux. Les formes en croissant, en papillon et combinées diffèrent par leur couverture et leur aspect. Des échantillons physiques permettent de comparer l’ajustement et le confort pendant la pose.\n\nComparez ensuite le système de gel et la finition de surface. La couleur, la transparence, l’épaisseur et l’effet frais peuvent créer des différences perceptibles. Les spécifications finales doivent toutefois correspondre aux échantillons et documents approuvés par les deux parties.\n\nEnfin, évaluez ensemble le poids par pièce, le format d’emballage, la quantité prévue et le marché cible. Le choix de l’échantillon se rapproche ainsi du lancement envisagé et peut limiter les ajustements ultérieurs.",
+    "es": "Al desarrollar una mascarilla de ojos de hidrogel para una marca, la fórmula no es el único punto de partida. El contorno de la zona ocular, el grosor del gel, su flexibilidad y el envase influyen en la sensación que produce el producto al cogerlo y aplicarlo por primera vez.\n\nPrimero, determine qué zona alrededor de los ojos desea cubrir. Las formas de media luna, mariposa y combinadas ofrecen distinta cobertura y apariencia. Las muestras físicas permiten comparar el ajuste y la comodidad durante el uso.\n\nDespués, compare el sistema de gel y el acabado superficial. El color, la transparencia, el grosor y el efecto refrescante pueden crear diferencias perceptibles, pero las especificaciones finales deben seguir las muestras y los documentos acordados por ambas partes.\n\nPor último, evalúe conjuntamente el peso por pieza, el formato de envase, la cantidad prevista y el mercado objetivo. Así, la orientación de la muestra se acerca al lanzamiento previsto y puede reducir los ajustes posteriores.",
+    "ru": "При разработке гидрогелевой маски для глаз формула — не единственная отправная точка. Контур зоны глаз, толщина геля, его гибкость и упаковка вместе влияют на первое впечатление при извлечении и нанесении продукта.\n\nСначала определите, какую область вокруг глаз необходимо покрыть. Серповидные, напоминающие бабочку и комбинированные формы различаются зоной покрытия и внешним видом. Физические образцы помогают сравнить прилегание и комфорт во время использования.\n\nЗатем сравните гелевую систему и поверхность. Цвет, прозрачность, толщина и охлаждающее ощущение могут создавать заметные различия, но окончательные характеристики должны соответствовать образцам и документам, согласованным обеими сторонами.\n\nНаконец, оцените вместе массу одной штуки, формат упаковки, ожидаемое количество и целевой рынок. Это приблизит выбранный образец к реальным требованиям запуска и поможет сократить последующие изменения.",
+    "ar": "عند تطوير قناع هيدروجيل للعين لعلامة تجارية، لا تكون التركيبة نقطة البداية الوحيدة. فمحيط منطقة العين وسماكة الجل ومرونته وطريقة التغليف تؤثر معاً في إحساس المستهلك عند التقاط المنتج ووضعه للمرة الأولى.\n\nابدأ بتحديد الجزء الذي تريد تغطيته من منطقة العين. تختلف الأشكال الهلالية وأشكال الفراشة والتصاميم المدمجة في التغطية والمظهر. وتساعد العينات الفعلية على مقارنة الملاءمة والراحة أثناء الاستخدام.\n\nثم قارن نظام الجل وتشطيب سطحه. يمكن للون والشفافية والسماكة والإحساس المبرد أن تصنع فروقاً ملموسة، لكن المواصفات النهائية يجب أن تستند إلى العينات والوثائق التي يتفق عليها الطرفان.\n\nأخيراً، قيّم وزن القطعة وطريقة التغليف والكمية المتوقعة والسوق المستهدف معاً. فهذا يجعل اتجاه العينة أقرب إلى متطلبات الإطلاق الفعلية ويساعد على تقليل التعديلات المتكررة لاحقاً."
+  },
+  "产品与膜型": {
+    "en": "Products and formats",
+    "fr": "Produits et formats",
+    "es": "Productos y formatos",
+    "ru": "Продукция и форматы",
+    "ar": "المنتجات والتصاميم"
+  },
+  "从样品确认到批量生产，品牌需要核对什么": {
+    "en": "From sample approval to production: what should a brand check?",
+    "fr": "De l’approbation de l’échantillon à la production : que faut-il vérifier ?",
+    "es": "De la aprobación de la muestra a la producción: ¿qué debe comprobar una marca?",
+    "ru": "От утверждения образца к производству: что нужно проверить бренду?",
+    "ar": "من اعتماد العينة إلى الإنتاج: ما الذي ينبغي للعلامة التجارية مراجعته؟"
+  },
+  "把肤感、规格、包装和验收依据写进样品确认，帮助后续生产更准确地延续已经认可的产品方向。": {
+    "en": "Record the skin feel, specifications, packaging and acceptance criteria when approving a sample, so production can follow the agreed product direction.",
+    "fr": "Consignez le toucher, les spécifications, l’emballage et les critères d’acceptation pour que la production suive le produit approuvé.",
+    "es": "Registre el tacto, las especificaciones, el envase y los criterios de aceptación para que la producción siga el producto acordado.",
+    "ru": "Зафиксируйте ощущения на коже, характеристики, упаковку и критерии приёмки, чтобы производство соответствовало утверждённому продукту.",
+    "ar": "وثّق ملمس المنتج ومواصفاته وتغليفه ومعايير قبوله عند اعتماد العينة، حتى يتبع الإنتاج اتجاه المنتج المتفق عليه."
+  },
+  "样品确认不是一句“效果可以”，而是一组可复核的产品依据。品牌可以从膜型尺寸、单片克重、凝胶颜色、贴敷感和包装结构开始记录。\n\n涉及配方、功效表达、认证或目标市场要求的信息，应以双方确认的文件为准。网站图片和文字用于帮助沟通方向，不能替代正式规格书、检测资料或法规判断。\n\n进入批量生产前，再核对数量、包装物料、交付节点和品质检查方式。把这些信息与已确认样品对应起来，能让设计、采购和生产围绕同一版本继续推进。": {
+    "en": "Sample approval is more than saying that a product looks right. It should establish a set of product details that can be checked again. A brand can begin by recording the mask dimensions, weight per piece, gel colour, feel during wear and packaging structure.\n\nInformation about formulas, efficacy wording, certifications or target-market requirements should follow documents agreed by both parties. Website images and text help communicate a direction; they do not replace formal specifications, test documents or regulatory assessment.\n\nBefore moving into production, check the quantity, packaging materials, delivery milestones and quality-inspection methods again. Linking these details to the approved sample allows design, purchasing and production to work from the same agreed version.",
+    "fr": "Approuver un échantillon ne se limite pas à dire que le produit convient. Il faut établir des caractéristiques vérifiables. La marque peut commencer par noter les dimensions du masque, le poids par pièce, la couleur du gel, la sensation pendant la pose et la structure de l’emballage.\n\nLes informations concernant la formule, les allégations d’efficacité, les certifications ou les exigences du marché cible doivent suivre les documents approuvés par les deux parties. Les images et textes du site facilitent les échanges, sans remplacer une fiche technique, des rapports d’essai ou une évaluation réglementaire.\n\nAvant la production en série, vérifiez à nouveau la quantité, les matériaux d’emballage, les étapes de livraison et les méthodes de contrôle qualité. Relier ces éléments à l’échantillon approuvé permet aux équipes de conception, d’achat et de production de travailler à partir de la même version.",
+    "es": "Aprobar una muestra es más que decir que el producto parece adecuado. Debe establecer un conjunto de características verificables. La marca puede empezar registrando las dimensiones de la mascarilla, el peso por pieza, el color del gel, la sensación durante el uso y la estructura del envase.\n\nLa información sobre fórmulas, alegaciones de eficacia, certificaciones o requisitos del mercado objetivo debe seguir los documentos acordados por ambas partes. Las imágenes y los textos del sitio facilitan la comunicación, pero no sustituyen las especificaciones formales, los informes de ensayo ni la evaluación normativa.\n\nAntes de iniciar la producción en serie, vuelva a comprobar la cantidad, los materiales del envase, los hitos de entrega y los métodos de control de calidad. Vincular estos datos a la muestra aprobada permite que diseño, compras y producción trabajen sobre la misma versión acordada.",
+    "ru": "Утверждение образца — это не просто подтверждение, что продукт выглядит подходящим. Необходимо зафиксировать проверяемые характеристики. Бренд может начать с размеров маски, массы одной штуки, цвета геля, ощущений при использовании и конструкции упаковки.\n\nИнформация о формулах, заявлениях об эффективности, сертификатах и требованиях целевого рынка должна соответствовать документам, согласованным обеими сторонами. Изображения и тексты сайта помогают обсудить направление, но не заменяют официальные спецификации, протоколы испытаний или нормативную оценку.\n\nПеред серийным производством ещё раз проверьте количество, упаковочные материалы, этапы поставки и методы контроля качества. Связав эти сведения с утверждённым образцом, команды дизайна, закупок и производства смогут работать по одной согласованной версии.",
+    "ar": "اعتماد العينة لا يقتصر على القول إن المنتج مناسب، بل ينبغي أن يحدد مجموعة من تفاصيل المنتج التي يمكن التحقق منها مجدداً. ويمكن للعلامة التجارية أن تبدأ بتسجيل أبعاد القناع ووزن القطعة ولون الجل والإحساس أثناء الاستخدام وبنية التغليف.\n\nينبغي أن تستند المعلومات المتعلقة بالتركيبات وصياغة ادعاءات الفعالية والشهادات ومتطلبات السوق المستهدف إلى الوثائق المتفق عليها بين الطرفين. وتساعد صور الموقع ونصوصه على توضيح اتجاه المنتج، لكنها لا تحل محل المواصفات الرسمية أو وثائق الاختبار أو التقييم التنظيمي.\n\nقبل الانتقال إلى الإنتاج، راجع الكمية ومواد التغليف ومراحل التسليم وطرق فحص الجودة مرة أخرى. وربط هذه التفاصيل بالعينة المعتمدة يتيح لفرق التصميم والمشتريات والإنتاج العمل وفق النسخة المتفق عليها نفسها."
+  },
+  "制造与品控": {
+    "en": "Manufacturing and quality",
+    "fr": "Fabrication et qualité",
+    "es": "Fabricación y calidad",
+    "ru": "Производство и качество",
+    "ar": "التصنيع والجودة"
+  }
+}

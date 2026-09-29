@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "project": "修齐生物独立站",
+    "report_type": "日常开发日报 · 文案与自维护后台更新",
+    "report_id": "GT-WEB-DB-20260902",
+    "version": "v1.0",
+    "date": "2026-09-02",
+    "effective_through": "2026-09-02",
+    "phase": "对外文案与客户自维护能力完善",
+    "status": "VERIFIED 本地已验证"
+  },
+  "summary": "中文官网文案已集中改为面向客户的销售表达；自维护后台补齐网站页面、产品、膜型和专利资质四个模块，并接通草稿、发布与公开网站读取。",
+  "scope_note": "本日报记录 9 月 2 日在本地开发版完成并验证的增量，不代表已经部署到正式域名。",
+  "metrics": [
+    {"value": "4", "label": "新增后台维护模块"},
+    {"value": "21", "label": "后台可维护产品"},
+    {"value": "41", "label": "后台可维护膜型"},
+    {"value": "243", "label": "生产构建静态页面"}
+  ],
+  "screenshots": [
+    {
+      "id": "S01",
+      "title": "中文首页：对外销售表达",
+      "route": "/zh/",
+      "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S01_home_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "首屏直接说明可开发的水凝膜品类、可调整内容与样品价值，不再向访客解释页面功能或内部产品逻辑。",
+      "tag": "当前网页预览 · 概念素材待确认",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W01 / S02",
+      "title": "产品中心销售文案",
+      "route": "/zh/products/",
+      "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S02_products_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "产品中心围绕消费者体验、样品判断和品牌差异展开，21 款成品、41 种膜型与 5 类凝胶材质仍保持清晰可查。",
+      "tag": "21 款产品 · 41 种膜型",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W02 / S03",
+      "title": "产品详情完整销售信息",
+      "route": "/zh/products/collagen-elastic-face-mask/",
+      "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S03_product-detail_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "详情页保留真实介绍、亮点、用途、规格、包装、起订量与工艺，同时把标题和段落改为客户更容易理解的选品语言。",
+      "tag": "产品资料与销售表达同步",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W03 / S04",
+      "title": "专利原件与权利人信息",
+      "route": "/zh/patents/",
+      "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S04_patents_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "专利页继续展示 4 份证书原图，并把权利人字段改为自然的本地化表达，名称、编号和权利人可直接对照原件。",
+      "tag": "证书信息需客户最终核对",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W04 / S05",
+      "title": "自维护后台扩展",
+      "route": "/admin/",
+      "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S05_admin-login_1280x720.png",
+      "status": "VERIFIED 已验证",
+      "summary": "后台补齐网站页面、产品、膜型和专利资质，均支持搜索、修改图片、保存草稿、版本冲突保护、发布和发布记录。",
+      "tag": "本地验收版 · 尚未正式部署",
+      "viewport": "桌面 · 1280 × 720"
+    }
+  ],
+  "attention": {
+    "id": "W05 / S06",
+    "title": "产品中心窄屏适配",
+    "route": "/zh/products/",
+    "path": "artifacts/daily-brief/2026-09-02/screenshots/2026-09-02_S06_products-mobile_375x844.png",
+    "status": "VERIFIED 已验证",
+    "summary": "390px 视口下标题、内容卡、菜单与底部咨询入口均可用，页面没有横向溢出。",
+    "tag": "窄屏实测 · 390px 视口",
+    "viewport": "窄屏 · 375 × 844"
+  },
+  "qa": [
+    {"value": "160 / 160", "label": "全项目测试"},
+    {"value": "23 / 23", "label": "内容后台测试"},
+    {"value": "0", "label": "Lint 警告与错误"},
+    {"value": "243", "label": "静态页面构建成功"}
+  ],
+  "client_inputs": [
+    "确认 21 款产品、41 种膜型和 4 份专利资料中哪些内容可在正式网站公开。",
+    "核对产品规格、起订量、功效方向、专利权利人、产能和联系方式的最终对外版本。",
+    "提供或确认正式 Logo、品牌手册、工厂和产品素材；当前部分人物与场景图属于概念预览。",
+    "确认正式域名、后台部署环境、维护账号与备份要求，之后再进行线上部署。"
+  ],
+  "next_steps": [
+    {"title": "客户校对", "body": "集中确认官网销售文案、产品资料和专利信息。"},
+    {"title": "后台验收", "body": "按改页面、改产品、换图片和发布四个场景走查。"},
+    {"title": "部署准备", "body": "确认域名、私有后台服务、持久存储与备份方案。"},
+    {"title": "多语言复核", "body": "继续校对六语言术语、产品分类与阿文 RTL 页面。"}
+  ],
+  "disclaimer": "说明：截图来自本机验证构建；概念图、商业条件与对外证据均需以客户最终确认资料为准。"
+}

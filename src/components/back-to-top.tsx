@@ -7,7 +7,9 @@ const labels: Record<Locale, string> = {
   en: 'Back to top',
   zh: '返回顶部',
   fr: 'Retour en haut',
-  es: 'Volver arriba'
+  es: 'Volver arriba',
+  ru: 'Наверх',
+  ar: 'العودة إلى الأعلى'
 };
 
 export function BackToTop({locale}: {locale: Locale}) {

@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import re
+import secrets
 import shutil
 import subprocess
 import threading
@@ -20,9 +21,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Literal
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from gradio_client import Client, handle_file
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -54,12 +55,34 @@ WEB_PREVIEW_FACE_BUDGET = 100_000
 TRIPO_ENABLED = False
 
 SKU_IMAGE_PATHS = {
+    "HD-1267": "public/assets/packaging/hd-1267.png",
+    "HD-1167": "public/assets/packaging/hd-1167.png",
+    "HD-1168": "public/assets/packaging/hd-1168.png",
+    "HD-1169": "public/assets/packaging/hd-1169.png",
+    "HD-1170": "public/assets/packaging/hd-1170.png",
+    "HD-1159": "public/assets/packaging/hd-1159.png",
+    "HD-1160": "public/assets/packaging/hd-1160.png",
+    "HD-1161": "public/assets/packaging/hd-1161.png",
+    "HD-1162": "public/assets/packaging/hd-1162.png",
+    "HD-843": "public/assets/packaging/hd-843.png",
+    "HD-844": "public/assets/packaging/hd-844.png",
+    "HD-845": "public/assets/packaging/hd-845.png",
+    "HD-846": "public/assets/packaging/hd-846.png",
+    "HD-847": "public/assets/packaging/hd-847.png",
+    "SK-LOTION-150": "public/assets/products/sk-lotion-150.png",
+    "SK-CLEANSER-150": "public/assets/products/sk-cleanser-150.png",
     "GT-AIRLESS-030": "public/assets/products/gt-airless-030-v2.png",
     "GT-DROPPER-030": "public/assets/products/gt-dropper-030-v2.png",
     "GT-JAR-050": "public/assets/products/gt-jar-050-v2.png",
     "GT-MASK-FULL-025": "public/assets/products/gt-mask-full-025-v2.png",
     "GT-MASK-SPLIT-030": "public/assets/products/gt-mask-split-030-v2.png",
 }
+BROCHURE_VARIANTS_PATH = PROJECT_ROOT / "docs" / "packaging-brochure-variants.json"
+if BROCHURE_VARIANTS_PATH.is_file():
+    for brochure_variant in json.loads(BROCHURE_VARIANTS_PATH.read_text(encoding="utf-8"))["variants"]:
+        brochure_id = brochure_variant["id"]
+        if re.fullmatch(r"HD-\d+(?:-\d+(?:ML|G))?", brochure_id):
+            SKU_IMAGE_PATHS[brochure_id] = f"public/assets/packaging/{brochure_id.lower()}.png"
 
 
 class GenerateRequest(BaseModel):
@@ -679,6 +702,24 @@ def generated_asset_headers() -> dict[str, str]:
 
 
 app = FastAPI(title="Guangtuo SKU 3D Studio", version="1.0.0")
+
+
+@app.middleware("http")
+async def require_private_gateway_access(request: Request, call_next):
+    token = os.environ.get("STUDIO_GATEWAY_TOKEN", "").strip()
+    if not token:
+        return JSONResponse(status_code=503, content={"error": "STUDIO_NOT_CONFIGURED"})
+    supplied = request.headers.get("authorization", "")
+    if not secrets.compare_digest(supplied.encode(), ("Bearer " + token).encode()):
+        return JSONResponse(status_code=401, content={"error": "STUDIO_AUTH_REQUIRED"})
+    if request.method == "POST" and (
+        os.environ.get("STUDIO_GENERATION_ENABLED") != "true"
+        or os.environ.get("STUDIO_LICENSE_ACCEPTED") != "true"
+    ):
+        return JSONResponse(status_code=503, content={"error": "STUDIO_GENERATION_DISABLED"})
+    return await call_next(request)
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

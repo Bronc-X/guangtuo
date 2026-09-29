@@ -3,6 +3,10 @@ import type {InquiryInput, JobStatus} from '@/lib/contracts';
 
 type Fetcher = typeof fetch;
 
+export function resolveInquiryApiBaseUrl(configured: string | undefined, production: boolean): string | undefined {
+  return configured?.trim() || (production ? '/api' : undefined);
+}
+
 const publicJobSchema = z.object({
   id: z.string().min(1).max(100),
   status: z.enum(['queued', 'processing', 'completed', 'retryable_error', 'failed']),
@@ -18,10 +22,11 @@ function apiUrl(baseUrl: string, path: string): string {
   return `${baseUrl.replace(/\/$/, '')}${path}`;
 }
 
-export async function createRemoteInquiry(baseUrl: string, input: InquiryInput, fetcher: Fetcher = fetch) {
+export async function createRemoteInquiry(baseUrl: string, input: InquiryInput, fetcher: Fetcher = fetch, options: {idempotencyKey?: string; locale?: string} = {}) {
   const response = await fetcher(apiUrl(baseUrl, '/inquiries'), {
     method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Idempotency-Key': crypto.randomUUID()},
+    signal: AbortSignal.timeout(25_000),
+    headers: {'Content-Type': 'application/json', 'Idempotency-Key': options.idempotencyKey ?? crypto.randomUUID(), 'X-Inquiry-Locale': options.locale ?? 'en'},
     body: JSON.stringify(input)
   });
   if (!response.ok) throw new Error('Inquiry submission failed');

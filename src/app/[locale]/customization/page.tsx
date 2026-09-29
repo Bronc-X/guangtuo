@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import {pageLabels} from '@/data/page-labels';
 import {ActionBand, PageIntro, SectionTitle} from '@/components/site-section-kit';
 import {companyPageAlternates, companyPageCopy, companyText} from '@/data/company-page-copy';
 import {defaultLocale, isLocale, type Locale} from '@/lib/routing';
@@ -23,7 +24,7 @@ export default async function CustomizationPage({params}: PageParams) {
   const t = (value: Parameters<typeof companyText>[1]) => companyText(locale, value);
 
   return (
-    <main className="page-main">
+    <main className="page-main" data-cms="pages:customization">
       <PageIntro eyebrow={t(copy.intro.eyebrow)} title={t(copy.intro.title)} body={t(copy.intro.body)} meta={copy.intro.meta.map(t)} />
 
       <section className="section section--dark">
@@ -46,7 +47,7 @@ export default async function CustomizationPage({params}: PageParams) {
       </section>
 
       <section className="section section--paper">
-        <SectionTitle eyebrow="FAQ" title={t(copy.faqTitle)} />
+        <SectionTitle eyebrow={pageLabels[locale].faq} title={t(copy.faqTitle)} />
         <div className="faq-list">
           {copy.faq.map((item) => <details key={t(item.question)}><summary>{t(item.question)}</summary><p>{t(item.answer)}</p></details>)}
         </div>

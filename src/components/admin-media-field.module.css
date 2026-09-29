@@ -1,0 +1,7 @@
+.field { display: grid; gap: 10px; grid-column: 1 / -1; min-width: 0; }
+.field label { font-size: 13px; font-weight: 750; }
+.field button { min-height: 44px; padding: 10px 16px; border: 1px solid #d7d2ca; border-radius: 8px; background: #faf7f0; color: #202426; cursor: pointer; }
+.field select { width: 100%; min-height: 44px; padding: 10px; background: white; border: 1px solid #d7d2ca; border-radius: 8px; color: #202426; }
+.field button:disabled, .field select:disabled { opacity: .6; cursor: wait; }
+.field small { color: #727773; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.field .error { color: #a12c36; }

@@ -1,0 +1,19 @@
+.content { --line: #ded9cc; --ink: #171a19; --paper: #fffef9; --accent: #c94872; display: grid; gap: 20px; padding: 26px; color: var(--ink); overflow-wrap: anywhere; }
+.content details { border-block-end: 1px solid var(--line); padding-block-end: 18px; }
+.content summary { cursor: pointer; font-weight: 700; }
+.details { display: grid; gap: 12px; }
+.details div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px; }
+.details dd { margin: 0; white-space: pre-wrap; }
+.recipient { margin: 0; }
+.generation { display: grid; gap: 14px; padding: 20px; border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); }
+.generation h3, .generation p { margin: 0; }
+.generation select { max-width: 100%; min-height: 44px; padding: 8px; background: var(--paper); color: var(--ink); border: 1px solid var(--line); font: inherit; }
+.citations blockquote { margin: 12px 0; padding-inline-start: 14px; border-inline-start: 2px solid var(--line); white-space: pre-wrap; }
+.confirmCheck { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.7; }
+.confirmCheck input { margin-top: 5px; accent-color: var(--accent); }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.actions button { min-height: 44px; border: 1px solid var(--line); border-radius: 24px; padding: 10px 16px; background: var(--paper); color: var(--ink); cursor: pointer; }
+.actions button:last-child { background: var(--ink); color: var(--paper); }
+.actions button:disabled { opacity: .45; cursor: not-allowed; }
+.actions button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 700px) { .content { padding: 18px; } .details div { grid-template-columns: 1fr; gap: 4px; } }

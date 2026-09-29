@@ -1,0 +1,938 @@
+{
+  "source": "红点包装画册（9.3）.pdf",
+  "pageCount": 59,
+  "note": "Text-layer model-number inventory. Capacity, material, visual variants and deduplication require image review.",
+  "models": [
+    {
+      "sku": "HD-1167",
+      "sourcePages": [
+        7
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1168",
+      "sourcePages": [
+        7
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1169",
+      "sourcePages": [
+        7
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1170",
+      "sourcePages": [
+        7
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1267",
+      "sourcePages": [
+        7
+      ],
+      "status": "review-model-ready"
+    },
+    {
+      "sku": "HD-1163",
+      "sourcePages": [
+        8
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1164",
+      "sourcePages": [
+        8
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1165",
+      "sourcePages": [
+        8
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1166",
+      "sourcePages": [
+        8
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1266",
+      "sourcePages": [
+        8
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1178",
+      "sourcePages": [
+        9
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1179",
+      "sourcePages": [
+        9
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1180",
+      "sourcePages": [
+        9
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1181",
+      "sourcePages": [
+        9
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-340",
+      "sourcePages": [
+        10
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-615",
+      "sourcePages": [
+        10
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-71",
+      "sourcePages": [
+        10
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1111",
+      "sourcePages": [
+        11
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1406",
+      "sourcePages": [
+        11
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1407",
+      "sourcePages": [
+        11
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1408",
+      "sourcePages": [
+        11
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-613",
+      "sourcePages": [
+        11
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1182",
+      "sourcePages": [
+        12
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1183",
+      "sourcePages": [
+        12
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1184",
+      "sourcePages": [
+        12
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1185",
+      "sourcePages": [
+        12
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1159",
+      "sourcePages": [
+        13
+      ],
+      "status": "review-model-ready"
+    },
+    {
+      "sku": "HD-1160",
+      "sourcePages": [
+        13
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1161",
+      "sourcePages": [
+        13
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1162",
+      "sourcePages": [
+        13
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1152",
+      "sourcePages": [
+        14
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1153",
+      "sourcePages": [
+        14
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1154",
+      "sourcePages": [
+        14
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1155",
+      "sourcePages": [
+        14
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1148",
+      "sourcePages": [
+        15
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1149",
+      "sourcePages": [
+        15
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1150",
+      "sourcePages": [
+        15
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1151",
+      "sourcePages": [
+        15
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1156",
+      "sourcePages": [
+        16
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1157",
+      "sourcePages": [
+        16
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1158",
+      "sourcePages": [
+        16
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1287",
+      "sourcePages": [
+        17
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1288",
+      "sourcePages": [
+        17
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1290",
+      "sourcePages": [
+        17
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1286",
+      "sourcePages": [
+        18
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1291",
+      "sourcePages": [
+        18
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-888",
+      "sourcePages": [
+        18
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1219",
+      "sourcePages": [
+        19
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1256",
+      "sourcePages": [
+        19
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-915",
+      "sourcePages": [
+        19
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1086",
+      "sourcePages": [
+        20
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-843",
+      "sourcePages": [
+        21
+      ],
+      "status": "review-model-ready"
+    },
+    {
+      "sku": "HD-978",
+      "sourcePages": [
+        22
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-465",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-508",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-510",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-511",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-512",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-513",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-907",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-908",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-909",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-910",
+      "sourcePages": [
+        23
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-57",
+      "sourcePages": [
+        24
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-58",
+      "sourcePages": [
+        24
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-59",
+      "sourcePages": [
+        24
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-60",
+      "sourcePages": [
+        24
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-61",
+      "sourcePages": [
+        24
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1409",
+      "sourcePages": [
+        25
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1410",
+      "sourcePages": [
+        25
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1411",
+      "sourcePages": [
+        25
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-981",
+      "sourcePages": [
+        25
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1101",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1102",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1103",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1412",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-887",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-958",
+      "sourcePages": [
+        26
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-148",
+      "sourcePages": [
+        28
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-149",
+      "sourcePages": [
+        28
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-150",
+      "sourcePages": [
+        28
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-151",
+      "sourcePages": [
+        28
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-152",
+      "sourcePages": [
+        28
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1258",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1405",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-239",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-240",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-241",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-242",
+      "sourcePages": [
+        29
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-844",
+      "sourcePages": [
+        31
+      ],
+      "status": "review-model-ready"
+    },
+    {
+      "sku": "HD-845",
+      "sourcePages": [
+        31
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-846",
+      "sourcePages": [
+        31
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-847",
+      "sourcePages": [
+        31
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-998",
+      "sourcePages": [
+        33
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1376",
+      "sourcePages": [
+        35
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1112",
+      "sourcePages": [
+        37
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1229",
+      "sourcePages": [
+        39
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1319",
+      "sourcePages": [
+        41
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1380",
+      "sourcePages": [
+        43
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-900",
+      "sourcePages": [
+        45
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-901",
+      "sourcePages": [
+        45
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-902",
+      "sourcePages": [
+        45
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1010",
+      "sourcePages": [
+        47
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1011",
+      "sourcePages": [
+        47
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1004",
+      "sourcePages": [
+        48
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-948",
+      "sourcePages": [
+        48
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1172",
+      "sourcePages": [
+        49
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1031",
+      "sourcePages": [
+        50
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1032",
+      "sourcePages": [
+        50
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1305",
+      "sourcePages": [
+        51
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1306",
+      "sourcePages": [
+        51
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1307",
+      "sourcePages": [
+        51
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1236",
+      "sourcePages": [
+        52
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1237",
+      "sourcePages": [
+        52
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1238",
+      "sourcePages": [
+        52
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1377",
+      "sourcePages": [
+        52
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1145",
+      "sourcePages": [
+        53
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1146",
+      "sourcePages": [
+        53
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1018",
+      "sourcePages": [
+        54
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1211",
+      "sourcePages": [
+        54
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1303",
+      "sourcePages": [
+        55
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1304",
+      "sourcePages": [
+        55
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1317",
+      "sourcePages": [
+        55
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1308",
+      "sourcePages": [
+        56
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1309",
+      "sourcePages": [
+        56
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1313",
+      "sourcePages": [
+        56
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1413",
+      "sourcePages": [
+        56
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1080",
+      "sourcePages": [
+        57
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1093",
+      "sourcePages": [
+        57
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-1095",
+      "sourcePages": [
+        57
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-09",
+      "sourcePages": [
+        58
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-10",
+      "sourcePages": [
+        58
+      ],
+      "status": "pending-photo-audit"
+    },
+    {
+      "sku": "HD-11",
+      "sourcePages": [
+        58
+      ],
+      "status": "pending-photo-audit"
+    }
+  ]
+}

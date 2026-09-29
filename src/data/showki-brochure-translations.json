@@ -1,0 +1,1028 @@
+{
+  "SK-P08-01": {
+    "fr": {
+      "name": "Pdrn Cristal de glace Essence Mist",
+      "effect": "hydrate et répare la peau, apaise l'irritation, rafraîchit et revitalise instantanément le teint"
+    },
+    "es": {
+      "name": "Pdrn Ice Crystal Essence Mist",
+      "effect": "Profundamente hidrata y repara la piel, calma la irritación, instantáneamente refresca y revitaliza la tez"
+    },
+    "ru": {
+      "name": "Ледяной кристалл Pdrn Essence Mist",
+      "effect": "Глубоко увлажняет и восстанавливает кожу, успокаивает раздражение, мгновенно освежает и оживляет цвет лица"
+    },
+    "ar": {
+      "name": "Pdrn Ice Crystal Esence Mist",
+      "effect": "الهدرات العميقة وتصليح الجلد، وتهيج الملابس، وترميم فوري، وإعادة تنشيط التعقيد"
+    }
+  },
+  "SK-P08-02": {
+    "fr": {
+      "name": "Crème d'huile de bain",
+      "effect": "Nettoie la peau du corps tout en nourrissant profondément, soulage la sécheresse et l'étanchéité, laisse la peau douce et souple après le bain"
+    },
+    "es": {
+      "name": "Crema de aceite de baño",
+      "effect": "Limpia la piel del cuerpo mientras se nutre profundamente, alivia la sequedad y la rigidez, deja la piel suave y flexible después de bañarse"
+    },
+    "ru": {
+      "name": "Масляный крем Bath",
+      "effect": "Очищает кожу тела при глубоком питании, снимает сухость и герметичность, оставляет кожу мягкой и эластичной после купания"
+    },
+    "ar": {
+      "name": "Bath Oil Cream",
+      "effect": "ينظف جلد الجسم بينما يتغذى بعمق ويخفف من الجاذبية والشدّة، ويترك الجلد لينة وفوقية بعد الاستحمام"
+    }
+  },
+  "SK-P08-03": {
+    "fr": {
+      "name": "Mousse antibactérienne double couche d'huile d'eau de canneberge (soins intimes)",
+      "effect": "Nettoie et inhibe doucement les bactéries nocives, apaise la peau intime, maintient la microécologie acide naturelle"
+    },
+    "es": {
+      "name": "Cranberry Water-Oil Dual Layer Antibacterial Mousse (Intimate Care)",
+      "effect": "Limpia suavemente e inhibe bacterias dañinas, calma la piel íntima, mantiene microecología ácido natural"
+    },
+    "ru": {
+      "name": "Двухслойная антибактериальная мусса (интимная помощь)",
+      "effect": "Мягко очищает и ингибирует вредные бактерии, успокаивает интимную кожу, поддерживает естественную кислотную микроэкологию"
+    },
+    "ar": {
+      "name": "Cranberry Water-Oil Dual Layer Antibacterial Mousse (Intimate Care)",
+      "effect": "نظيفة وتحد من البكتيريا المؤذية، الجلد العنيف، الحفاظ على الإيكولوجيا المجهرية الحمضية الطبيعية"
+    }
+  },
+  "SK-P08-04": {
+    "fr": {
+      "name": "Masque de bulle d'oxygène",
+      "effect": "Profondément purifie les pores, infuse la peau avec l'oxygène, illumine le ton terne, enlève les impuretés"
+    },
+    "es": {
+      "name": "Oxygen Infusing Bubble Mask",
+      "effect": "Profundamente purifica los poros, infunde la piel con oxígeno, ilumina el tono aburrido, aleja impurezas"
+    },
+    "ru": {
+      "name": "Кислородная маска для пузырьков",
+      "effect": "Глубоко очищает поры, наполняет кожу кислородом, осветляет тусклый тонус, убирает примеси"
+    },
+    "ar": {
+      "name": "Oxygen Infusing Bubble Mask",
+      "effect": "بعمق تنقية المسامات، تحشر الجلد مع الأكسجين، نبرة الدونات المشرقة، تزيل الشوائب"
+    }
+  },
+  "SK-P08-05": {
+    "fr": {
+      "name": "Pdrn Collagen Pro-Xylane Crème faciale",
+      "effect": "L'anti-âge raffermit, stimule la production de collagène, répare la barrière de peau, lisse les lignes fines"
+    },
+    "es": {
+      "name": "Pdrn Collagen Pro-Xylane Face Cream",
+      "effect": "Firma anti-envejecimiento, aumenta la producción de colágeno, repara la barrera de la piel, pliegues y suaviza líneas finas"
+    },
+    "ru": {
+      "name": "Pdrn Collagen Pro-Xylane крем для лица",
+      "effect": "Антивозрастное упрочнение, повышает производство коллагена, восстанавливает кожный барьер, пух и сглаживает тонкие линии"
+    },
+    "ar": {
+      "name": "Pdrn Collagen Pro-Xylane Face Cream",
+      "effect": "مكافحة التعبئة، وتعزيز إنتاج الكولاغين، وإصلاح حاجز الجلد، والسباكات، وسلاسة الخطوط"
+    }
+  },
+  "SK-P08-06": {
+    "fr": {
+      "name": "Microalgues Photo-Protection Essence Mist",
+      "effect": "Boucliers peau de photo-dommage, fournit des soins anti-oxydants, apaise et répare la peau légèrement stressée"
+    },
+    "es": {
+      "name": "Microalgas Photo-Protection Essence Mist",
+      "effect": "Escudos de piel de foto-damage, ofrece cuidado antioxidante, calma y repara la piel resistente a la luz"
+    },
+    "ru": {
+      "name": "Микроводоросли Фотозащита Суть Туман",
+      "effect": "Щиты кожи от фотоповреждения, обеспечивает антиоксидантный уход, успокаивает и восстанавливает светлую кожу"
+    },
+    "ar": {
+      "name": "Microalgae Photo-Protection Esence Mist",
+      "effect": "جلد الدروع من الأشعة الضوئية، يقدم الرعاية المضادة للأكسدة، والملابس، ويصلح الجلد الخفيف"
+    }
+  },
+  "SK-P09-01": {
+    "fr": {
+      "name": "Huile nettoyante",
+      "effect": "Dissout profondément le maquillage têtu et l'excès d'huile, nettoie soigneusement les pores"
+    },
+    "es": {
+      "name": "Aceite de limpieza",
+      "effect": "Disuelva profundamente el maquillaje obstinado y el exceso de aceite, limpia completamente los poros"
+    },
+    "ru": {
+      "name": "Чистящее масло",
+      "effect": "Глубоко растворяет упрямый макияж и избыток масла, тщательно очищает поры"
+    },
+    "ar": {
+      "name": "تطهير النفط",
+      "effect": "تذوب بعمق المكياج العنيد والزيت الزائد، وتنظف المسامير بشكل شامل"
+    }
+  },
+  "SK-P09-02": {
+    "fr": {
+      "name": "Détachant doux pour les yeux et les lèvres",
+      "effect": "Enlève doucement le maquillage des yeux et des lèvres, apaise la peau délicate, non irritante"
+    },
+    "es": {
+      "name": "Ojo suave &amp; Lip maquillaje Remover",
+      "effect": "Extrae suavemente el maquillaje de ojos y labios, calma la piel delicada, no irritante"
+    },
+    "ru": {
+      "name": "Нежный макияж для глаз и губ Remover",
+      "effect": "Мягко удаляет макияж глаз и губ, успокаивает нежную кожу, не раздражает"
+    },
+    "ar": {
+      "name": "Gentle Eye &apos; Lip Makeup Remover",
+      "effect": "يزيل برفق عينه ومكياج شفاهه، الجلد الحساس غير المزعج"
+    }
+  },
+  "SK-P09-03": {
+    "fr": {
+      "name": "Baume nettoyant",
+      "effect": "Melts loin maquillage imperméable, répare et nourrit la peau pendant le nettoyage"
+    },
+    "es": {
+      "name": "Balm de limpieza",
+      "effect": "Deslienta el maquillaje impermeable, repara y nutre la piel durante la limpieza"
+    },
+    "ru": {
+      "name": "Чистящий бальзам",
+      "effect": "Расплавляет водонепроницаемый макияж, ремонтирует и питает кожу во время очищения"
+    },
+    "ar": {
+      "name": "تنظيف البلم",
+      "effect": "طلاءات بعيدة عن المكياج الواقية من المياه، والتصليحات، وجلود النور أثناء التطهير"
+    }
+  },
+  "SK-P10-01": {
+    "fr": {
+      "name": "Nettoyant doux à l'acide amino",
+      "effect": "Nettoie légèrement la peau, maintient le manteau acide naturel, pas d'étanchéité après le lavage"
+    },
+    "es": {
+      "name": "Amino Acid Gentle Cleanser",
+      "effect": "Limpia suavemente la piel, mantiene manto de ácido natural, sin rigidez después del lavado"
+    },
+    "ru": {
+      "name": "Аминокислотный нежный очиститель",
+      "effect": "Легко очищает кожу, поддерживает естественную кислотную мантию, отсутствие герметичности после мытья"
+    },
+    "ar": {
+      "name": "Amino Acid Gentle Cleanser",
+      "effect": "(ميلدلي) ينظف الجلد ويحافظ على حامض طبيعي، لا شدّة بعد الغسيل"
+    }
+  },
+  "SK-P10-02": {
+    "fr": {
+      "name": "Nettoyeur purifiant d'acide salicylique",
+      "effect": "Unclogs pores, améliore les têtes noires et les comedons fermés, purifie la peau"
+    },
+    "es": {
+      "name": "Limpiador purificador de ácido salicílico",
+      "effect": "Descerrar los poros, mejora las cabezas negras y las comedones cerradas, purifica la piel"
+    },
+    "ru": {
+      "name": "Очиститель салициловой кислоты",
+      "effect": "Расщепляет поры, улучшает угри и закрытые комедоны, очищает кожу"
+    },
+    "ar": {
+      "name": "محصول ملح",
+      "effect": "المسامير الغامضة، تُحسن الرؤوس السوداء والمذنبات المغلقة، تُنقّي الجلد"
+    }
+  },
+  "SK-P10-03": {
+    "fr": {
+      "name": "Nettoyant d'équilibrage anti-huile",
+      "effect": "Régule la sécrétion de sébum, contrôle l'excès d'huile, apaise la peau avec des extraits de plantes"
+    },
+    "es": {
+      "name": "Limpiador de equilibrio de control de aceite",
+      "effect": "Regula la secreción del sebo, controla el exceso de aceite, calma la piel con extractos de plantas"
+    },
+    "ru": {
+      "name": "Очиститель балансировки нефти",
+      "effect": "Регулирует секрецию кожного сала, контролирует избыток масла, успокаивает кожу растительными экстрактами"
+    },
+    "ar": {
+      "name": "Oil-Control Balancing Cleanser",
+      "effect": "يُنظّمُ سرّيةَ السيبومَ، يُسيطرُ على الزيتِ الزائدِ، جلد السوثِ مَع مقتطفاتِ نباتِ"
+    }
+  },
+  "SK-P10-04": {
+    "fr": {
+      "name": "Nettoyeur de mousse de lait Pdrn",
+      "effect": "Nettoie doucement, verrouille l'humidité, laisse la peau douce et hydratée"
+    },
+    "es": {
+      "name": "Pdrn Milk Foam Cleanser",
+      "effect": "Limpia suavemente, bloquea la humedad, deja la piel suave e hidratada"
+    },
+    "ru": {
+      "name": "Pdrn Milk Foam Cleanser",
+      "effect": "Мягко очищает, запирает влагу, оставляет кожу мягкой и гидратированной"
+    },
+    "ar": {
+      "name": "Pdrn Milk Foam Cleanser",
+      "effect": "نظيفة بلطف، أقفال في الرطوبة، وتترك الجلد ناعماً ومهذباً"
+    }
+  },
+  "SK-P10-05": {
+    "fr": {
+      "name": "Nettoyage des barrières",
+      "effect": "Nettoie doucement tout en réparant et en renforçant la barrière cutanée"
+    },
+    "es": {
+      "name": "Limpiador de reparación de barrera",
+      "effect": "Limpia suavemente mientras repara y fortalece la barrera de la piel"
+    },
+    "ru": {
+      "name": "Очиститель для ремонта барьеров",
+      "effect": "Мягко очищает при восстановлении и укреплении барьера кожи"
+    },
+    "ar": {
+      "name": "منظفات إصلاح الحاجز",
+      "effect": "نظيفة برفق مع إصلاح وتعزيز حاجز الجلد"
+    }
+  },
+  "SK-P11-01": {
+    "fr": {
+      "name": "Masque aéré en argile",
+      "effect": "Absorbe l'excès d'huile et de têtes noires, purifie les pores, apaise la peau"
+    },
+    "es": {
+      "name": "Airy Clay Mask",
+      "effect": "Absorbes exceso de aceite y cabezas negras, purifica los poros, calma la piel"
+    },
+    "ru": {
+      "name": "Маска Airy Clay",
+      "effect": "Поглощает избыток масла и угрей, очищает поры, успокаивает кожу"
+    },
+    "ar": {
+      "name": "Airy Both Mask",
+      "effect": "الزيت الزائد والرؤوس السوداء، تنقية المسامير، الجلد الأسود"
+    }
+  },
+  "SK-P11-02": {
+    "fr": {
+      "name": "Masque rouge pour tapis",
+      "effect": "Nettoie et éclaircit la peau, raffine la texture de la peau"
+    },
+    "es": {
+      "name": "Mascara de alfombra roja",
+      "effect": "Limpia profundamente y aclara la piel, refina la textura de la piel"
+    },
+    "ru": {
+      "name": "Красная ковровая маска",
+      "effect": "Глубоко очищает и осветляет кожу, очищает текстуру кожи"
+    },
+    "ar": {
+      "name": "Carpet Mask",
+      "effect": "نظيفة عميقة وبشرة مشرقة تصقل نسيج الجلد"
+    }
+  },
+  "SK-P11-03": {
+    "fr": {
+      "name": "Masque de gel nettoyant pour pores",
+      "effect": "Élimine les impuretés interstitielles, apaise la peau sans se dessécher"
+    },
+    "es": {
+      "name": "Máscara para limpiar poros",
+      "effect": "Levante las impurezas poro, calma la piel sin secar"
+    },
+    "ru": {
+      "name": "Маска для замораживания пор",
+      "effect": "Снимает примеси пор, успокаивает кожу, не высыхая"
+    },
+    "ar": {
+      "name": "Pore Cleaning Freeze Mask",
+      "effect": "الرفعات تُشَوِّرُ الشوائبَ، الجلد الأسود بدون جَفْض"
+    }
+  },
+  "SK-P11-04": {
+    "fr": {
+      "name": "Pad exfoliant doux",
+      "effect": "Exfolie délicatement la peau morte, améliore les pores rugueux, lisse la peau"
+    },
+    "es": {
+      "name": "Paleta exfoliante suave",
+      "effect": "Exfolia suavemente la piel muerta, mejora los poros duros, suaviza la piel"
+    },
+    "ru": {
+      "name": "Нежный отшелушивающий пад",
+      "effect": "Мягко отшелушивает мертвую кожу, улучшает грубые поры, сглаживает кожу"
+    },
+    "ar": {
+      "name": "المزيج النبيل",
+      "effect": "يقهر الجلد الميت بلطف، ويحسّن المسامير الخام، ويسلّم الجلد"
+    }
+  },
+  "SK-P12-01": {
+    "fr": {
+      "name": "Toner d'essence hydratant à l'acide hyaluronique",
+      "effect": "hydrate profondément la peau, répare la barrière, améliore la rétention d'humidité"
+    },
+    "es": {
+      "name": "Hialurónico ácido hidratante Essence Toner",
+      "effect": "Hidrata profundamente la piel, repara la barrera, mejora la retención de humedad"
+    },
+    "ru": {
+      "name": "Гиалуроновая кислота увлажняющая эссенция тонера",
+      "effect": "Глубоко увлажняет кожу, восстанавливает барьер, усиливает удержание влаги"
+    },
+    "ar": {
+      "name": "Hyaluronic Acid Moisturizing Esence Toner",
+      "effect": "جلد الهدرات العميقة، إصلاح الحاجز، يُحسّن الاحتفاظ بالرطوبة"
+    }
+  },
+  "SK-P12-02": {
+    "fr": {
+      "name": "Réparation de la crème faciale nourissante",
+      "effect": "Profondément nourrit et répare la peau, verrouille l'humidité pendant de longues heures"
+    },
+    "es": {
+      "name": "Reparación de crema facial de ruido",
+      "effect": "Profundamente nutre y repara la piel, bloquea la humedad durante largas horas"
+    },
+    "ru": {
+      "name": "Ремонт питательного крема для лица",
+      "effect": "Глубоко питает и восстанавливает кожу, запирает влагу на долгие часы"
+    },
+    "ar": {
+      "name": "إصلاح واجهة الكريام",
+      "effect": "تغذي وتصليح الجلد، أقفال في الرطوبة لساعات طويلة"
+    }
+  },
+  "SK-P12-03": {
+    "fr": {
+      "name": "Essence hydratante profonde",
+      "effect": "Hydratant de longue durée, apaise et nourrit la peau, soulage la sécheresse"
+    },
+    "es": {
+      "name": "Esencia profunda hidratante",
+      "effect": "hidratación duradera, calma y nutre la piel, alivia la sequedad"
+    },
+    "ru": {
+      "name": "Глубокая увлажняющая сущность",
+      "effect": "Длительное увлажнение, успокаивает и питает кожу, снимает сухость"
+    },
+    "ar": {
+      "name": "التطويق العميق",
+      "effect": "طليقاً يرتجف و يرتجف"
+    }
+  },
+  "SK-P12-04": {
+    "fr": {
+      "name": "Masque dormant hydratant de nuit",
+      "effect": "Offre des soins intensifs d'hydratation et de réparation pendant la nuit, améliore la peau sèche terne"
+    },
+    "es": {
+      "name": "Mascara de dormir hidratante durante la noche",
+      "effect": "Ofrece cuidados intensivos de hidratación y reparación durante la noche, mejora la piel seca"
+    },
+    "ru": {
+      "name": "Ночная увлажняющая маска для сна",
+      "effect": "Обеспечивает интенсивную гидратацию и ремонт ухода в течение ночи, улучшает сухость тусклой кожи"
+    },
+    "ar": {
+      "name": "بين عشية وضحاها",
+      "effect": "تقديم الرعاية الصحية والإصلاحية المكثفة بين عشية وضحاها، مما يحسّن الجلد الداكن الجاف"
+    }
+  },
+  "SK-P12-05": {
+    "fr": {
+      "name": "Lotion hydratante légère",
+      "effect": "Rafraîchissant quotidiennement hydratant, non gras, pas de contagion interstitielle"
+    },
+    "es": {
+      "name": "Loción hidratante de luz",
+      "effect": "Refrescante hidratación diaria, no grasa, sin poro-clogging"
+    },
+    "ru": {
+      "name": "Легкая увлажняющая лоция",
+      "effect": "Освежающий ежедневный увлажняющий, не жирный, без засорения пор"
+    },
+    "ar": {
+      "name": "حركة الضوء",
+      "effect": "نبذ التعبئة اليومية، وعدم الجاذبية، وعدم الاعتذار"
+    }
+  },
+  "SK-P13-01": {
+    "fr": {
+      "name": "Vaporisateur apaisant",
+      "effect": "Apaise instantanément la peau irritée, rafraîchit et hydrate"
+    },
+    "es": {
+      "name": "Soothing Spray",
+      "effect": "Alimente calma la piel irritada, refresca e hidrata"
+    },
+    "ru": {
+      "name": "Успокаивающий спрей",
+      "effect": "Мгновенно успокаивает раздраженную кожу, освежает и увлажняет"
+    },
+    "ar": {
+      "name": "(سبراي)",
+      "effect": "الأثداء الفاسدة المهيجة الجلدية والردود والهدرات"
+    }
+  },
+  "SK-P13-02": {
+    "fr": {
+      "name": "Baume de réparation d'urgence de barrière de peau",
+      "effect": "Répare rapidement la barrière cutanée endommagée, soulage l'irritation et l'inconfort"
+    },
+    "es": {
+      "name": "Skin Barrier de reparación de emergencia Balm",
+      "effect": "Reparaciones rápidas de la barrera de la piel dañada, alivia la irritación y el malestar"
+    },
+    "ru": {
+      "name": "Кожный барьер аварийного ремонта бальзам",
+      "effect": "Быстро восстанавливает поврежденный кожный барьер, снимает раздражение и дискомфорт"
+    },
+    "ar": {
+      "name": "Skin Barrier Emergency Repair Balm",
+      "effect": "التصليحات السريعة التي تضررت حاجز الجلد، تخفف من الغضب وعدم الارتياح"
+    }
+  },
+  "SK-P13-03": {
+    "fr": {
+      "name": "Essence de conditionnement à l'oignon",
+      "effect": "Adoucit la rougeur, conditionne la texture de la peau, renforce la barrière cutanée"
+    },
+    "es": {
+      "name": "Condicionamiento de cebolla Esencia",
+      "effect": "Apacigua el enrojecimiento, condiciona la textura de la piel, fortalece la barrera de la piel"
+    },
+    "ru": {
+      "name": "Сущность кондиционирования лука",
+      "effect": "Успокаивает покраснение, обуславливает текстуру кожи, укрепляет кожный барьер"
+    },
+    "ar": {
+      "name": "Onion Conditioning Esence",
+      "effect": "حمراء الثياب، ظروف النسيج الجلدي، يعزز حاجز الجلد"
+    }
+  },
+  "SK-P13-04": {
+    "fr": {
+      "name": "Masque de feuille de réparation apaisant",
+      "effect": "Adoucit la peau sensible, hydrate profondément et répare la barrière cutanée"
+    },
+    "es": {
+      "name": "Máscara de hoja de reparación calmante",
+      "effect": "Soothes piel sensible, hidrata profundamente y repara la barrera de la piel"
+    },
+    "ru": {
+      "name": "Успокаивающая маска для ремонта",
+      "effect": "Успокаивает чувствительную кожу, глубоко увлажняет и восстанавливает кожный барьер"
+    },
+    "ar": {
+      "name": "مصطفة إصلاح الملابس",
+      "effect": "بشرة حساسة، هدرات عميقة وإصلاح حاجز الجلد"
+    }
+  },
+  "SK-P14-01": {
+    "fr": {
+      "name": "Jeune Glow Mist",
+      "effect": "Améliore l'élasticité de la peau, diminue les lignes fines, rafraîchit et éclaircit le teint"
+    },
+    "es": {
+      "name": "Juvenil Glow Mist",
+      "effect": "Boost elasticidad de la piel, se desvanecen las líneas finas, refresca y aclara la tez"
+    },
+    "ru": {
+      "name": "Молодежный туман Glow",
+      "effect": "Повышает эластичность кожи, выцветает тонкие линии, освежает и осветляет цвет лица"
+    },
+    "ar": {
+      "name": "حشرة الشباب",
+      "effect": "عظمة الجلدِ، يَتلاشى الخطوطِ الجميلةِ، refreshes and brightens complexion"
+    }
+  },
+  "SK-P14-02": {
+    "fr": {
+      "name": "Crème visage de finition anti-âge",
+      "effect": "Renforce la peau, réduit les rides, nourrit et raffine la texture de la peau"
+    },
+    "es": {
+      "name": "Crema facial de refinanciamiento de envejecimiento",
+      "effect": "Firmas piel, reduce las arrugas, nutre y refina la textura de la piel"
+    },
+    "ru": {
+      "name": "Антивозрастной очищающий крем для лица",
+      "effect": "Фирменная кожа, уменьшает морщины, питает и улучшает текстуру кожи"
+    },
+    "ar": {
+      "name": "Anti-Aging Refining Face Cream",
+      "effect": "بشرة الثعابين، تُقلّل من المُجعدات، وتُغذي وتُصقل مُنصات الجلد"
+    }
+  },
+  "SK-P14-03": {
+    "fr": {
+      "name": "Essence de renforcement de l'hexapeptide",
+      "effect": "Renforce et soulève la peau, réduit les rides et les rides, améliore l'élasticité de la peau"
+    },
+    "es": {
+      "name": "Hexapeptide Firming Essence",
+      "effect": "Firmas y levanta la piel, reduce las líneas finas y las arrugas, aumenta la elasticidad de la piel"
+    },
+    "ru": {
+      "name": "Гексапептид, создающий сущность",
+      "effect": "Фирмы и поднимают кожу, уменьшают тонкие линии и морщины, повышают эластичность кожи"
+    },
+    "ar": {
+      "name": "Hexapeptide Firming Esence",
+      "effect": "الحشرات و الرفعات الجلدية، يقلل من الخطوط الجميلة والمجارير، ويعزز مرونة الجلد"
+    }
+  },
+  "SK-P14-04": {
+    "fr": {
+      "name": "Essence antiride des yeux",
+      "effect": "Cible les lignes fines autour de la zone des yeux, renforce le contour des yeux, réduit les poches"
+    },
+    "es": {
+      "name": "Esencia antiarrugas",
+      "effect": "Metas líneas finas alrededor del área ocular, empresas contorno ocular, reduce la pufiza"
+    },
+    "ru": {
+      "name": "Антиморщинная сущность глаз",
+      "effect": "Целевые тонкие линии вокруг области глаз, контур глаз фирмы, уменьшает отечность"
+    },
+    "ar": {
+      "name": "Eye Anti-Wrinkle Esence",
+      "effect": "خطوط جيدة حول منطقة العين، الشركات تحجب العين، تقلل من الاكتفاء"
+    }
+  },
+  "SK-P14-05": {
+    "fr": {
+      "name": "Bakouchiol & Acmella Oleracea Huile essentielle",
+      "effect": "Anti-oxydant, raffermit la peau, améliore les lignes fines, nourrit profondément"
+    },
+    "es": {
+      "name": "Bakuchiol &amp; Acmella Oleracea Aceite esencial",
+      "effect": "Antioxidante, empresas piel, mejora las líneas finas, nutre profundamente"
+    },
+    "ru": {
+      "name": "Bakuchiol & Acmella Oleracea Эфирное масло",
+      "effect": "Антиоксидант, кожа фирмы, улучшает тонкие линии, глубоко питает"
+    },
+    "ar": {
+      "name": "Bakuchiol &quot; Acmella Oleracea Essential Oil",
+      "effect": "مضادة للأكسدة، الشركات الجلدية، تُحسّن الخطوط الجيّدة، تغذيات عميقة"
+    }
+  },
+  "SK-P15-01": {
+    "fr": {
+      "name": "Essence uniforme de niacinamide",
+      "effect": "Le teint de la peau s'évanouit, se fane des taches foncées, illumine le teint terne"
+    },
+    "es": {
+      "name": "Niacinamide Even-Tone Essence",
+      "effect": "Tono de la piel de la noche, se desvanecen manchas oscuras, brillo dull complexion"
+    },
+    "ru": {
+      "name": "Ниацинамид Even-Tone Essence",
+      "effect": "Эвенс тон кожи, выцветает темные пятна, осветляет тусклый цвет лица"
+    },
+    "ar": {
+      "name": "Niacinamide Even-Tone Esence",
+      "effect": "نبرة جلدية، تختفي بؤر مظلمة، ومعقدات لامعة"
+    }
+  },
+  "SK-P15-02": {
+    "fr": {
+      "name": "Crème allégée",
+      "effect": "Brightens le teint général, inhibe la production de pigments, hydrate la peau"
+    },
+    "es": {
+      "name": "Crema de brillo uniforme",
+      "effect": "Ilumina la complexión general, inhibe la producción de pigmentos, hidrata la piel"
+    },
+    "ru": {
+      "name": "Сливочное мороженое",
+      "effect": "Яркий общий цвет лица, ингибирует производство пигментов, увлажняет кожу"
+    },
+    "ar": {
+      "name": "\"حتى \"الطوارئ",
+      "effect": "تجمّع الشرايين بشكل عام، وتثبيط إنتاج الخنازير، وترطيب الجلد"
+    }
+  },
+  "SK-P15-03": {
+    "fr": {
+      "name": "Vc Essence d'antioxydant dérivée",
+      "effect": "Anti-oxydation, éclaircit la peau, résiste au photo-dommage, s'estompe"
+    },
+    "es": {
+      "name": "Esencia de Antioxidante Derivativo Vc",
+      "effect": "Antioxidación, brillo de la piel, resiste el daño fotográfico, se desvanece dulzura"
+    },
+    "ru": {
+      "name": "Vc Производная антиоксидантная эссенция",
+      "effect": "Антиокисление, осветляет кожу, сопротивляется фотоповреждению, тускнеет"
+    },
+    "ar": {
+      "name": "Vc Derivative Antioxidant Esence",
+      "effect": "مضادة للأكسدة، بشرة مشرقة، مقاومة لدمية الصور، دودة زائفة"
+    }
+  },
+  "SK-P15-04": {
+    "fr": {
+      "name": "Lotion de lait de perle",
+      "effect": "Illumine et nourrit la peau, laisse la peau rayonnante et lisse"
+    },
+    "es": {
+      "name": "Pearl Milk Lotion",
+      "effect": "Ilumina y nutre la piel, deja la piel radiante y suave"
+    },
+    "ru": {
+      "name": "Жемчужное молоко",
+      "effect": "Ярче и питает кожу, оставляет кожу сияющей и гладкой"
+    },
+    "ar": {
+      "name": "ملعقة اللؤلؤ",
+      "effect": "يَجْعلُ الجلدَ و يَعُودُ، يَتْركُ الجلدَ شعاعاً وناعماً"
+    }
+  },
+  "SK-P15-05": {
+    "fr": {
+      "name": "Essence de traitement ciblée à l'emplacement",
+      "effect": "Cible les taches sombres locales, efface intensément la pigmentation"
+    },
+    "es": {
+      "name": "Esencia de tratamiento específico",
+      "effect": "Metas locales manchas oscuras, intensamente se desvanece pigmentación"
+    },
+    "ru": {
+      "name": "Целенаправленное лечение Essence",
+      "effect": "Нацеливается на местные темные пятна, интенсивно выцветает пигментация"
+    },
+    "ar": {
+      "name": "Spot Targeted Treatment Esence",
+      "effect": "أهداف البقع المظلمة المحلية، تتلاشى بشكل مكثف"
+    }
+  },
+  "SK-P16-01": {
+    "fr": {
+      "name": "Nettoyeur de nettoyage à l'huile pour hommes",
+      "effect": "Nettoie profondément l'excès d'huile et de sueur, contrôle l'huile, rafraîchit la peau"
+    },
+    "es": {
+      "name": "Men'S Oil-Control Refreshing Cleanser",
+      "effect": "Limpia profundamente el exceso de aceite y sudor, controla el aceite, refresca la piel"
+    },
+    "ru": {
+      "name": "Мужской масляный очиститель",
+      "effect": "Глубоко очищает лишнее масло и пот, контролирует масло, освежает кожу"
+    },
+    "ar": {
+      "name": "نظيف مُنقّط مُنْقِلَة",
+      "effect": "ينظف بعمق الزيت والتعرق ويتحكم بالنفط ويعيد الجلد"
+    }
+  },
+  "SK-P16-02": {
+    "fr": {
+      "name": "Les hommes réparent l'essence",
+      "effect": "Adoucit l'irritation post-save, améliore la peau rugueuse et terne"
+    },
+    "es": {
+      "name": "Men'S Repairing Essence",
+      "effect": "Soothes post-shave irritación, mejora la piel rugosa y aburrida"
+    },
+    "ru": {
+      "name": "Ремонт мужской сущности",
+      "effect": "Успокаивает послебритье раздражения, улучшает грубую и тусклую кожу"
+    },
+    "ar": {
+      "name": "عودة الرجال",
+      "effect": "تهيج السوث بعد الحلاقة، ويحسن الجلد الخام والممل"
+    }
+  },
+  "SK-P16-03": {
+    "fr": {
+      "name": "Lotion de réparation multi-effets pour hommes",
+      "effect": "Hydrate, apaise la peau, lutte contre la fatigue, soins tout-en-un"
+    },
+    "es": {
+      "name": "Loción de reparación multiefecto para hombres",
+      "effect": "Moisturiza, calma la piel, combate la dulzura relacionada con la fatiga, todo en uno cuidado"
+    },
+    "ru": {
+      "name": "Мультиэффективная ремонтная лоция",
+      "effect": "Увлажняет, успокаивает кожу, борется с усталостью, связанной с тупостью, уходом «все в одном»"
+    },
+    "ar": {
+      "name": "رد فعل الرجال",
+      "effect": "مُتطوّرات، بشرة مُمتلئة، مُحاربة التهاب مُتعلّق بالدّينة، الرعاية الوحيدة"
+    }
+  },
+  "SK-P16-04": {
+    "fr": {
+      "name": "Lotion spéciale écran solaire pour hommes",
+      "effect": "Protection UV à large spectre, contrôle de l'huile, pas de coulée blanche"
+    },
+    "es": {
+      "name": "Loción especial de la pantalla solar masculina",
+      "effect": "Protección de espectro UV amplio, control de aceite, sin yeso blanco"
+    },
+    "ru": {
+      "name": "Мужской специальный солнцезащитный крем Lotion",
+      "effect": "УФ-защита широкого спектра, управление маслом, отсутствие белого оттенка"
+    },
+    "ar": {
+      "name": "لون الشمس الخاص الرجال",
+      "effect": "حماية الأشعة فوق البنفسجية ذات الطيف العريض، والتحكم بالنفط، وعدم وجود طبقة بيضاء"
+    }
+  },
+  "SK-P17-01": {
+    "fr": {
+      "name": "Essence de pétoncle volumisant de contrôle de l'huile",
+      "effect": "Réduit la sécrétion d'huile du cuir chevelu, volumise les racines des cheveux, rafraîchit le cuir chevelu"
+    },
+    "es": {
+      "name": "Esencia del cuero cabelludo de control de aceite",
+      "effect": "Reduce la secreción de aceite de cuero cabelludo, volumiza las raíces del cabello, refresca cuero"
+    },
+    "ru": {
+      "name": "Нефтеконтроль объемная скальп-сущность",
+      "effect": "Уменьшает секрецию масла кожи головы, объемит корни волос, освежает кожу головы"
+    },
+    "ar": {
+      "name": "Oil-Control Volumizing Scalp Esence",
+      "effect": "الحد من سر الزيت، وتضخم جذور الشعر، وثباتات"
+    }
+  },
+  "SK-P17-02": {
+    "fr": {
+      "name": "Réparer apaisant l'huile de pré-lavage",
+      "effect": "Adoucit les démangeaisons du cuir chevelu, répare la barrière du cuir chevelu endommagée"
+    },
+    "es": {
+      "name": "Soothing Reparar el cuero cabelludo Pre-Wash aceite",
+      "effect": "Soothes secado picazón cuero cabelludo, reparaciones dañado la barrera del cuero cabelludo"
+    },
+    "ru": {
+      "name": "Успокаивающий ремонт Scalp Pre-Wash Oil",
+      "effect": "Успокаивает сухой зуд кожи головы, восстанавливает поврежденный барьер кожи головы"
+    },
+    "ar": {
+      "name": "Soothing Repair Scalp Pre-Wash Oil",
+      "effect": "الأثداء الجافّة، وتصليح الحاجز الصدري"
+    }
+  },
+  "SK-P17-03": {
+    "fr": {
+      "name": "Essence de pétoncle antidétonation",
+      "effect": "Améliore les pellicules, soulage les démangeaisons du cuir chevelu, conditionne l'environnement du cuir chevelu"
+    },
+    "es": {
+      "name": "Anti-Dandruff Estado de Esencia",
+      "effect": "Mejora el caspa, alivia la picazón del cuero cabelludo, condiciones ambiente del cuero cabelludo"
+    },
+    "ru": {
+      "name": "Кондиционирование кожи головы Scalp Essence",
+      "effect": "Улучшает перхоть, снимает зуд кожи головы, обуславливает окружающую среду кожи головы"
+    },
+    "ar": {
+      "name": "Anti-Dandruff Conditioning Scalp Esence",
+      "effect": "يحسّن الرنّد، يخفف الحكّة، الظروف المُتدلّلة"
+    }
+  },
+  "SK-P18-01": {
+    "fr": {
+      "name": "Laver le corps doux",
+      "effect": "Nettoie doucement la peau du corps, pas de sensation serrée après le lavage"
+    },
+    "es": {
+      "name": "Lavado corporal suave",
+      "effect": "Limpia suavemente la piel del cuerpo, sin sensación apretada después de lavarse"
+    },
+    "ru": {
+      "name": "Нежная стирка для тела",
+      "effect": "Мягко очищает кожу тела, не ощущает туго после мытья"
+    },
+    "ar": {
+      "name": "واش الجسم النبيل",
+      "effect": "ينظف بشرة الجسم برفق، لا شعور ضيق بعد الغسيل"
+    }
+  },
+  "SK-P18-02": {
+    "fr": {
+      "name": "Réparation du corps huile essentielle",
+      "effect": "Hydratant et raffermissant la peau du corps, adapté au massage corporel"
+    },
+    "es": {
+      "name": "Reparación de aceite esencial del cuerpo",
+      "effect": "Moisturiza y firma piel corporal, adecuado para masaje corporal"
+    },
+    "ru": {
+      "name": "Ремонт эфирного масла тела",
+      "effect": "Увлажняет и укрепляет кожу тела, подходит для массажа тела"
+    },
+    "ar": {
+      "name": "هيئة إصلاح النفط الأساسي",
+      "effect": "الجمود والشركات جلد الجسم المناسب للتدليك الجسمي"
+    }
+  },
+  "SK-P18-03": {
+    "fr": {
+      "name": "Frottement du corps",
+      "effect": "Exfolie délicatement la peau morte, améliore la peau bosselée, lisse la texture du corps"
+    },
+    "es": {
+      "name": "Body Scrub",
+      "effect": "Exfolia suavemente la piel muerta, mejora la piel rugosa, suaviza la textura corporal"
+    },
+    "ru": {
+      "name": "Скраб для тела",
+      "effect": "Мягко отшелушивает мертвую кожу, улучшает грубую ухабистую кожу, сглаживает текстуру тела"
+    },
+    "ar": {
+      "name": "الجسد",
+      "effect": "يقهر الجلد الميت بلطف ويحسّن الجلد العنيف ويسلّم نسيج الجسم"
+    }
+  },
+  "SK-P18-04": {
+    "fr": {
+      "name": "Huile de réparation de lèvres de nuit",
+      "effect": "Nourrit et répare intensivement la peau des lèvres pendant la nuit, fane les lèvres"
+    },
+    "es": {
+      "name": "Overnight Lip Repair Oil",
+      "effect": "Nutre y repara intensamente la piel de labios durante la noche, se desvanecen las líneas de labios"
+    },
+    "ru": {
+      "name": "Ремонтное масло для губ",
+      "effect": "Интенсивно питает и восстанавливает кожу губ за ночь, выцветает линии губ"
+    },
+    "ar": {
+      "name": "بين عشية وضحاها",
+      "effect": "تغذي وتصلح جلد الشفاه بين عشية وضحاها"
+    }
+  },
+  "SK-P18-05": {
+    "fr": {
+      "name": "Crème froide corporelle",
+      "effect": "Refroidit et hydrate la peau du corps, soulage la sécheresse, rafraîchit la peau"
+    },
+    "es": {
+      "name": "Crema fría del cuerpo",
+      "effect": "Cools e hidrata la piel del cuerpo, alivia la sequedad, refresca la piel"
+    },
+    "ru": {
+      "name": "Холодный крем для тела",
+      "effect": "Охлаждает и увлажняет кожу тела, снимает сухость, освежает кожу"
+    },
+    "ar": {
+      "name": "الجثة الباردة",
+      "effect": "الجلود وجلد الهيدرات يخفف الجاذبية"
+    }
+  },
+  "SK-P19-01": {
+    "fr": {
+      "name": "Stick solaire",
+      "effect": "Fournit une protection UV pratique, facile à réappliquer, prévient les dommages au soleil"
+    },
+    "es": {
+      "name": "Sun Stick",
+      "effect": "Proporciona una protección UV conveniente, fácil de aplicar, previene el daño al sol"
+    },
+    "ru": {
+      "name": "Солнечная палочка",
+      "effect": "Обеспечивает удобную УФ-защиту, простую в повторном применении, предотвращает повреждение от солнца"
+    },
+    "ar": {
+      "name": "الشمس",
+      "effect": "توفير حماية ملائمة للأشعة فوق البنفسجية، من السهل إعادة تطبيقها، ومنع تلف الشمس"
+    }
+  },
+  "SK-P19-02": {
+    "fr": {
+      "name": "Imperméable et imperméable Lotion solaire pour le corps Spf50, Pa+++",
+      "effect": "Protection UV de haut niveau, résistant à l'eau et à la sueur"
+    },
+    "es": {
+      "name": "A prueba de agua &amp; Sweatproof Body Sunscreen Lotion Spf50, Pa+++",
+      "effect": "Protección UV de alto nivel, resistente al agua y al sudor"
+    },
+    "ru": {
+      "name": "Водонепроницаемый и водонепроницаемый крем для тела Spf50, Pa+++",
+      "effect": "УФ-защита высокого уровня, вода и пот устойчивы"
+    },
+    "ar": {
+      "name": "Waterproof &quot; Sweatproof Body Sunscreen Lotion Spf50, Pa+++",
+      "effect": "مستوى عال من الحماية من الأشعة فوق البنفسجية والمياه ومقاومة العرق"
+    }
+  },
+  "SK-P19-03": {
+    "fr": {
+      "name": "Lotion écran solaire à large spectre Spf50, Pa+++",
+      "effect": "Protection quotidienne contre les UV du visage, contrôle de l'huile, pas de casting blanc, maquillage facile"
+    },
+    "es": {
+      "name": "Loción de pantalla solar de espectro amplio Spf50, Pa+++",
+      "effect": "Protección UV facial diaria, control de aceite, sin yeso blanco, fácil de maquillaje"
+    },
+    "ru": {
+      "name": "Широкий спектр солнцезащитных кремов Spf50, Pa+++",
+      "effect": "Ежедневная защита лица от ультрафиолета, управление маслом, отсутствие белого литья, дружественный макияж"
+    },
+    "ar": {
+      "name": "Broad Spectrum Sunscreen Lotion Spf50, Pa+++",
+      "effect": "حماية الأشعة فوق البنفسجية الوجهية اليومية، والتحكم بالنفط، وعدم وجود طبقة بيضاء، ومكياج سهل"
+    }
+  },
+  "SK-P19-04": {
+    "fr": {
+      "name": "Spray écran solaire 3 couleurs Spf50, Pa+++",
+      "effect": "Protection UV complète, application rapide, rafraîchissement de la peau"
+    },
+    "es": {
+      "name": "Spray de 3 colores, Pa+++",
+      "effect": "Protección UV de cobertura completa, aplicación rápida, piel refresca"
+    },
+    "ru": {
+      "name": "3-цветный солнцезащитный спрей Spf50, Pa+++",
+      "effect": "Полная защита от ультрафиолета, быстрое применение, освежает кожу"
+    },
+    "ar": {
+      "name": "3-Color Sunscreen Spray Spf50, Pa+++",
+      "effect": "الحماية الكاملة للأشعة فوق البنفسجية، التطبيق السريع، الجلد"
+    }
+  },
+  "SK-P20-01": {
+    "fr": {
+      "name": "Réglage Gel Mist",
+      "effect": "Set maquillage longue durée, rafraîchit la peau, améliore la finition maquillage"
+    },
+    "es": {
+      "name": "Ajuste de Gel Mist",
+      "effect": "Sets maquillaje de larga duración, refresca la piel, mejora el acabado de maquillaje"
+    },
+    "ru": {
+      "name": "Исполнитель: Gel Mist",
+      "effect": "Настройки макияжа долговечны, освежает кожу, улучшает отделку макияжа"
+    },
+    "ar": {
+      "name": "Setting Gel Mist",
+      "effect": "يجهزون المكياج على فترات طويلة، يرتعشون الجلد، ويعززون المكياج"
+    }
+  },
+  "SK-P20-02": {
+    "fr": {
+      "name": "Sunscreen Foundation Spf50, Pa+++",
+      "effect": "Teinture de peau uniforme, offre une couverture naturelle et une protection UV"
+    },
+    "es": {
+      "name": "Sunscreen Foundation Spf50, Pa+++",
+      "effect": "Tono de piel de la noche, proporciona cobertura natural y protección UV"
+    },
+    "ru": {
+      "name": "Sunscreen Foundation Spf50, Pa+++",
+      "effect": "Тон кожи, обеспечивает естественное покрытие и защиту от ультрафиолета"
+    },
+    "ar": {
+      "name": "Sunscreen Foundation Spf50, Pa+++",
+      "effect": "Evens skin tone, provides natural coverage and UV protection"
+    }
+  },
+  "SK-P20-03": {
+    "fr": {
+      "name": "Crème d'apprêt embrouillante",
+      "effect": "Flous pores, crée une base de peau lisse, prolonge l'usure du maquillage"
+    },
+    "es": {
+      "name": "Pore Blurring Primer Crema",
+      "effect": "Blurs poros, crea base de piel lisa, prolonga el desgaste de maquillaje"
+    },
+    "ru": {
+      "name": "Pore Blurring Праймер Крем",
+      "effect": "Blurs поры, создает гладкую основу кожи, продлевает износ макияжа"
+    },
+    "ar": {
+      "name": "Pore Blurring Primer Cream",
+      "effect": "مسامير العضلات، تخلق قاعدة جلدية سلسة، مكياج طويلة ترتدي"
+    }
+  },
+  "SK-P20-04": {
+    "fr": {
+      "name": "Primeur de base de maquillage",
+      "effect": "Isoles maquillage et polluants externes, prépaire la peau pour la fondation"
+    },
+    "es": {
+      "name": "Matriculación de la base de maquillaje",
+      "effect": "Aisla maquillaje y contaminantes externos, prepas piel para fundaciones"
+    },
+    "ru": {
+      "name": "Макияж Base Primer",
+      "effect": "Изолирует макияж и внешние загрязнители, подготавливает кожу к фундаменту"
+    },
+    "ar": {
+      "name": "المكياج",
+      "effect": "عزل المكياج والملوثات الخارجية، جلد الأساس"
+    }
+  }
+}

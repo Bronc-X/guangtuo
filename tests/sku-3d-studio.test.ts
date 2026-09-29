@@ -1,3 +1,5 @@
+import {existsSync} from 'node:fs';
+import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
 
 import * as catalog from '@/data/legacy-packaging-catalog';
@@ -16,6 +18,37 @@ const {
 } = studio;
 
 describe('SKU 3D studio contract', () => {
+  it('keeps each catalogue size tied to its own model and printed capacity', () => {
+    const series = {
+      'HD-1267': [['HD-1267', '250 ml'], ['HD-1167', '200 ml'], ['HD-1168', '150 ml'], ['HD-1169', '120 ml'], ['HD-1170', '100 ml']],
+      'HD-1159': [['HD-1159', '50 g'], ['HD-1160', '30 g'], ['HD-1161', '30 g'], ['HD-1162', '50 g']],
+      'HD-843': [['HD-843', '300 ml']],
+      'HD-844': [['HD-844', '100 ml × 2'], ['HD-845', '75 ml × 2'], ['HD-846', '50 ml × 2'], ['HD-847', '30 ml × 2']]
+    };
+    for (const [root, variants] of Object.entries(series)) {
+      const found = catalog.allPackagingProducts.filter((product) => (product.seriesSku ?? product.sku) === root);
+      expect(found.map((product) => [product.sku, product.source?.capacity])).toEqual(variants);
+      expect(new Set(found.map((product) => product.modelPath.split('?')[0])).size).toBe(found.length);
+      for (const product of found) {
+        const relativeModel = product.modelPath.split('?')[0].replace(/^\//, '');
+        expect(existsSync(join(process.cwd(), 'public', relativeModel))).toBe(true);
+        expect(createStudioGenerateRequest({sku: product.sku}).specifications.capacity).toBe(product.optionGroups[0].options[0].id);
+        for (const locale of ['fr', 'es', 'ru', 'ar'] as const) expect(product.name[locale]).not.toBe(product.name.en);
+      }
+    }
+  });
+
+  it('shows a size-specific brochure image only when that model has been reviewed', () => {
+    const sample = catalog.allPackagingProducts.find((product) => product.sku === 'HD-1267')!;
+    expect(sample.catalogImages?.retouched).toBe('/assets/packaging/reference/hd-1267-250ml-image2.png');
+    expect(existsSync(join(process.cwd(), 'public', sample.catalogImages!.retouched!.replace(/^\//, '')))).toBe(true);
+    for (const sku of ['HD-1167', 'HD-1168', 'HD-1169', 'HD-1170']) {
+      const variant = catalog.allPackagingProducts.find((product) => product.sku === sku)!;
+      expect(variant.catalogImages?.retouched).toBeUndefined();
+      expect(variant.catalogImages?.original).toBe(sample.catalogImages?.original);
+    }
+  });
+
   it('fills safe generation defaults for a catalog SKU', () => {
     expect(createStudioGenerateRequest({sku: 'GT-JAR-050'})).toEqual({
       engine: 'hunyuan3d',
@@ -153,7 +186,7 @@ describe('SKU 3D studio contract', () => {
     }).STUDIO_WORKFLOW_COPY.zh;
     const allCopy = Object.values(copy).join(' ');
 
-    expect(copy.heading).toBe('包装做出来之前，\n先看看它会是什么样。');
+    expect(copy.heading).toBe('看看包装的样子。');
     expect(copy.intro).toBe('选一款现有包装，调整颜色、材质与 Logo；也可以从一个新造型开始。');
     expect(allCopy).not.toMatch(/SKU|GPT|GPU|显卡|参数化|PBR|GLB|Hunyuan|本机|服务|任务|队列|接口|轨道|边界|实验|生产单元|高精度策略/i);
   });

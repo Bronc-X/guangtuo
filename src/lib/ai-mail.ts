@@ -3,16 +3,16 @@ import type {EmailDraft, InquiryInput, InboundMailDecision, Proposal, ProposalSe
 import type {Locale} from '@/lib/routing';
 
 function proposalSections(inquiry: InquiryInput, locale: Locale): ProposalSections {
-  const selected = inquiry.configuration.trim();
+  const selected = [inquiry.configuration.trim(), inquiry.efficacy, inquiry.productColor, inquiry.texture, inquiry.salesChannel, inquiry.salesPlatforms?.join(', '), inquiry.otherNeeds].filter(Boolean).join(' · ');
   const marketRequirements = inquiry.certificationConstraints.trim();
 
   if (locale === 'zh') return {
     needSummary: `${inquiry.company} 希望为 ${inquiry.market} 市场开发 ${inquiry.sku}：${inquiry.productGoal}。`,
-    recommendedConfiguration: `${inquiry.packagingPreference} 是目前最接近的产品方向。${selected ? `您还提出了：${selected}。` : '配方、形态、净含量与包装都可以继续选择。'}`,
-    missingInformation: `接下来可以补充希望的功效感受、产品形态、包装与标签。${marketRequirements ? `目标市场要求：${marketRequirements}。` : ''}`,
-    commercialPlaceholders: '选定样品、数量与包装后，产品顾问会回复起订量、价格与时间。',
-    nextMaterials: '如果已有配方方向、尺寸或形状要求、品牌视觉与上市计划，也可以一起发送。',
-    suggestedReply: `我想以 ${inquiry.sku} 申请样品与报价，预计数量和上市时间如下：`
+    recommendedConfiguration: `${inquiry.packagingPreference} 已经成为这款产品的打样重点。${selected ? `您还希望保留：${selected}。` : '配方、膜型、净含量与包装仍可围绕品牌继续调整。'}`,
+    missingInformation: `理想肤感、膜型、包装与标签要求，都可以继续调整。${marketRequirements ? `目标市场要求：${marketRequirements}。` : ''}`,
+    commercialPlaceholders: '样品方向、预计数量与包装明确后，即可进一步确认起订量、报价和交期。',
+    nextMaterials: '如有配方参考、尺寸或造型要求、品牌视觉与上市计划，也可一并提供。',
+    suggestedReply: `希望以 ${inquiry.sku} 申请实物样品并获取报价，预计数量和上市时间如下：`
   };
 
   if (locale === 'fr') return {
@@ -33,6 +33,24 @@ function proposalSections(inquiry: InquiryInput, locale: Locale): ProposalSectio
     suggestedReply: `Quiero solicitar una muestra y una cotización de ${inquiry.sku}. Esta es la cantidad y los plazos previstos:`
   };
 
+  if (locale === 'ru') return {
+    needSummary: `${inquiry.company} планирует разработать ${inquiry.sku} для рынка ${inquiry.market}: ${inquiry.productGoal}.`,
+    recommendedConfiguration: `${inquiry.packagingPreference} — наиболее близкое направление. ${selected ? `Также указано: ${selected}.` : 'Формулу, формат, массу нетто и упаковку ещё можно выбрать.'}`,
+    missingInformation: `Далее можно уточнить желаемое ощущение, формат, упаковку и маркировку.${marketRequirements ? ` Требования рынка: ${marketRequirements}.` : ''}`,
+    commercialPlaceholders: 'После выбора образца, количества и упаковки консультант подтвердит минимальный заказ, цену и сроки.',
+    nextMaterials: 'Также можно отправить направление формулы, требования к размерам или форме, материалы бренда и план запуска.',
+    suggestedReply: `Я хотел(а) бы запросить образец и цену для ${inquiry.sku}. Ожидаемые количество и срок запуска:`
+  };
+
+  if (locale === 'ar') return {
+    needSummary: `تخطط ${inquiry.company} لتطوير ${inquiry.sku} لسوق ${inquiry.market}: ${inquiry.productGoal}.`,
+    recommendedConfiguration: `${inquiry.packagingPreference} هو الاتجاه الأقرب حالياً. ${selected ? `كما طلبت: ${selected}.` : 'لا يزال بإمكانك اختيار التركيبة والتصميم والوزن الصافي والتغليف.'}`,
+    missingInformation: `يمكنك بعد ذلك إضافة الإحساس المطلوب وتصميم المنتج والتغليف وتفضيلات الملصق.${marketRequirements ? ` متطلبات السوق: ${marketRequirements}.` : ''}`,
+    commercialPlaceholders: 'يؤكد المستشار الحد الأدنى والسعر والموعد بعد اختيار العينة والكمية والتغليف.',
+    nextMaterials: 'يمكنك أيضاً مشاركة اتجاه التركيبة ومتطلبات الحجم أو الشكل وملفات العلامة وخطة الإطلاق.',
+    suggestedReply: `أرغب في طلب عينة وسعر للمنتج ${inquiry.sku}. الكمية وموعد الإطلاق المتوقعان هما:`
+  };
+
   return {
     needSummary: `${inquiry.company} plans to develop ${inquiry.sku} for ${inquiry.market}: ${inquiry.productGoal}.`,
     recommendedConfiguration: `${inquiry.packagingPreference} is the closest direction for now. ${selected ? `You also asked for: ${selected}.` : 'Formula, format, net weight and pack details can still be chosen.'}`,
@@ -48,22 +66,32 @@ export function buildProposalDraft(inquiry: InquiryInput, locale: Locale): Propo
     id: `preview-${inquiry.sku.toLowerCase()}`,
     status: 'completed',
     locale,
-    sections: proposalSections(inquiry, locale)
+    sections: proposalSections({...inquiry, company: inquiry.company || inquiry.name, market: inquiry.market || (locale === 'zh' ? '待确认市场' : 'a market to confirm'), productGoal: inquiry.productGoal || inquiry.category, packagingPreference: inquiry.packagingPreference || (locale === 'zh' ? '包装待讨论' : 'Packaging to discuss')}, locale)
   };
 }
 
 export function buildEmailDraft(proposal: Proposal, inquiry: InquiryInput, locale: Locale): EmailDraft {
   const copy: Record<Locale, {subject: string; greeting: string; close: string}> = {
-    en: {subject: `Guangtuo Bio | ${inquiry.sku} finished-product enquiry`, greeting: `Hello ${inquiry.name},`, close: 'An advisor will confirm samples, commercial terms and timing with you.'},
-    zh: {subject: `广拓生物｜${inquiry.sku} 成品询价信息`, greeting: `${inquiry.name}，您好：`, close: '顾问将继续与您确认样品、商务条件与时间。'},
-    fr: {subject: `Guangtuo Bio | Demande produit fini ${inquiry.sku}`, greeting: `Bonjour ${inquiry.name},`, close: 'Un conseiller confirmera avec vous les échantillons, conditions commerciales et délais.'},
-    es: {subject: `Guangtuo Bio | Consulta de producto terminado ${inquiry.sku}`, greeting: `Hola ${inquiry.name}:`, close: 'Un asesor confirmará contigo las muestras, condiciones comerciales y plazos.'}
+    en: {subject: `Showki Biotech | ${inquiry.sku} finished-product enquiry`, greeting: `Hello ${inquiry.name},`, close: 'An advisor will confirm samples, commercial terms and timing with you.'},
+    zh: {subject: `修齐生物｜${inquiry.sku} 样品与报价需求`, greeting: `${inquiry.name}，您好：`, close: '感谢您的关注，我们会通过您留下的联系方式继续沟通。'},
+    fr: {subject: `Showki Biotech | Demande produit fini ${inquiry.sku}`, greeting: `Bonjour ${inquiry.name},`, close: 'Un conseiller confirmera avec vous les échantillons, conditions commerciales et délais.'},
+    es: {subject: `Showki Biotech | Consulta de producto terminado ${inquiry.sku}`, greeting: `Hola ${inquiry.name}:`, close: 'Un asesor confirmará contigo las muestras, condiciones comerciales y plazos.'},
+    ru: {subject: `Showki Biotech | Запрос готового продукта ${inquiry.sku}`, greeting: `Здравствуйте, ${inquiry.name}!`, close: 'Консультант подтвердит образцы, коммерческие условия и сроки.'},
+    ar: {subject: `Showki Biotech | استفسار عن المنتج الجاهز ${inquiry.sku}`, greeting: `مرحباً ${inquiry.name}،`, close: 'سيؤكد المستشار العينات والشروط التجارية والمواعيد معك.'}
   };
   const localized = copy[locale];
+  const receipt: Record<Locale, string> = {
+    en: `Thank you for your enquiry about ${inquiry.sku}. We have received your requirements.`,
+    zh: `感谢您咨询 ${inquiry.sku}，我们已收到您的产品需求。`,
+    fr: `Merci pour votre demande concernant ${inquiry.sku}. Nous avons bien reçu vos besoins.`,
+    es: `Gracias por su consulta sobre ${inquiry.sku}. Hemos recibido sus requisitos.`,
+    ru: `Спасибо за запрос о ${inquiry.sku}. Мы получили ваши требования.`,
+    ar: `شكراً لاستفسارك عن ${inquiry.sku}. لقد تلقينا متطلباتك.`
+  };
   return {
     to: inquiry.businessEmail,
     subject: localized.subject,
-    body: [localized.greeting, '', proposal.sections.suggestedReply, '', proposal.sections.commercialPlaceholders, '', localized.close].join('\n'),
+    body: [localized.greeting, '', receipt[locale], '', proposal.sections.nextMaterials, '', localized.close].join('\n'),
     status: 'pending_review'
   };
 }

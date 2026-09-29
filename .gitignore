@@ -1,4 +1,5 @@
 node_modules/
+.venv-translation/
 .next/
 out/
 dist/
@@ -11,6 +12,11 @@ coverage/
 **/__pycache__/
 *.py[cod]
 
+# Local content-management runtime data and generated public media
+.content-cms/
+var/content-cms/
+public/uploads/cms/
+
 # Local Codex, QA and generated review workspaces
 .codex-*/
 .codex_*/
@@ -18,6 +24,8 @@ coverage/
 tmp/
 .qa_contract_*/
 artifacts/
+deliverables/
+output/
 services/triposg/.download-venv/
 services/triposg/.runtime-venv/
 services/triposg/downloads/

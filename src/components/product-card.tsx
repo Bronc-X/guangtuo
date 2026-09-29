@@ -8,11 +8,13 @@ export function ProductCard({product, locale, eager = false}: {product: Product;
     en: {record: 'PRODUCT', pending: 'Product image coming soon'},
     zh: {record: '产品', pending: '产品图片即将更新'},
     fr: {record: 'PRODUIT', pending: 'Visuel à venir'},
-    es: {record: 'PRODUCTO', pending: 'Imagen disponible próximamente'}
+    es: {record: 'PRODUCTO', pending: 'Imagen disponible próximamente'},
+    ru: {record: 'ПРОДУКТ', pending: 'Изображение скоро появится'},
+    ar: {record: 'المنتج', pending: 'صورة المنتج ستتوفر قريباً'}
   }[locale];
 
   return (
-    <Link className="product-card" href={localizedPath(locale, `products/${product.slug}`)}>
+    <Link data-cms={`products:${product.productId}`} className="product-card" href={localizedPath(locale, `products/${product.slug}`)}>
       <div className="product-card__visual">
         {product.media?.imageStatus === 'available' && product.media.image
           ? <Image src={product.media.image} width={1536} height={1536} alt={product.media.alt[locale]} loading={eager ? 'eager' : 'lazy'} />

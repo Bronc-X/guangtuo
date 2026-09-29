@@ -1,0 +1,28 @@
+{
+  "meta": {"project": "修齐生物独立站", "report_type": "交付准备日报 · 功能补全与验收", "report_id": "GT-WEB-DB-20260908", "version": "v1.0", "date": "2026-09-08", "effective_through": "2026-09-08", "phase": "交付验收与部署准备", "status": "VERIFIED 本地已验证"},
+  "summary": "已补齐询盘与邮件确认、文件管理、内容发布、3D 操作和六语内容。正式上线与真实发件仍需服务器及邮箱配置。",
+  "scope_note": "截图为本机验证版；后台为隔离测试数据，不代表正式域名已经上线。",
+  "metrics": [{"value": "195", "label": "自动测试通过"}, {"value": "72", "label": "页面走查通过"}, {"value": "6", "label": "交付语言"}, {"value": "251", "label": "静态 HTML 文件"}],
+  "screenshots": [
+    {"id": "S01", "title": "交付版本官网首页", "route": "/zh/", "path": "output/delivery-completion-final/brief-home.png", "status": "VERIFIED 已验证", "summary": "保持现有视觉方案，补齐与后台、询盘和六语内容的连接。", "tag": "当前验证构建 · 素材需客户确认", "viewport": "桌面 · 1440 × 1000"},
+    {"id": "W01 / S02", "title": "询盘保存与邮件确认", "route": "/admin/", "path": "output/delivery-completion-final/mail-review-sent.png", "status": "VERIFIED 已验证", "summary": "网站提交后可在后台查看、编辑和确认邮件。本次由本地测试发件器接收，没有向外发送邮件。", "tag": "隔离测试数据 · 非真实送达", "viewport": "桌面内容区 · 1196 × 606"},
+    {"id": "W02 / S03", "title": "PDF 文件与证书附件", "route": "/admin/", "path": "output/delivery-completion-final/brief-files.png", "status": "VERIFIED 已验证", "summary": "图片和普通 PDF 可上传；PDF 可绑定专利。已验证实际构建发布及公开下载，构建失败保留上版。", "tag": "PDF 测试文件 · 非客户证书", "viewport": "桌面内容区 · 1196 × 606"},
+    {"id": "W03 / S04", "title": "3D 操作与效果图导出", "route": "/zh/studio/", "path": "output/delivery-completion-final/studio-export.png", "status": "VERIFIED 已验证", "summary": "已支持 Logo 上传与移除、PNG 导出、规格分享恢复。图为网页导出的效果图，模型异常时显示提示。", "tag": "网页实际导出 · 不替代工程图", "viewport": "PNG 实际导出", "contain": true},
+    {"id": "W04 / S05", "title": "六语产品与文章内容", "route": "/fr/insights/", "path": "output/delivery-completion-final/brief-french-article.png", "status": "VERIFIED 已验证", "summary": "补齐法、西、俄产品、膜型、包装、材料与文章文案；两篇文章均有六语版本，源文变化后不会误用旧译文。", "tag": "法语文章 · 六语内容验收", "viewport": "桌面 · 1440 × 1000"}
+  ],
+  "attention": {"id": "S06", "title": "阿拉伯语手机页面", "route": "/ar/products/", "path": "output/delivery-completion-final/brief-arabic-mobile.png", "status": "VERIFIED 已验证", "summary": "390px 手机宽度下，阿文方向、按钮和排版可用，没有横向溢出。", "tag": "RTL 窄屏验证", "viewport": "手机 · 390 × 844"},
+  "qa": [{"value": "195 / 195", "label": "网站与后台测试"}, {"value": "17 / 17", "label": "生成网关契约测试"}, {"value": "72 / 72", "label": "六语页面走查"}, {"value": "0", "label": "生产依赖已知漏洞"}],
+  "client_inputs": [
+    "完成服务器付款并提供公网 IP，随后配置域名、HTTPS 和线上验收。",
+    "提供专用发件邮箱与允许测试的收件人；真实送达及发件域名配置待验收。",
+    "AI 新造型需图片服务、独立 GPU 和许可确认；本版不自动启用付费生成。",
+    "核对产品、专利与品牌素材的公开授权，商业条件以双方确认资料为准。"
+  ],
+  "next_steps": [
+    {"title": "正式部署", "body": "使用配套静态包和后台运行包部署阿里云，完成 DNS 与 HTTPS。"},
+    {"title": "邮件实测", "body": "接入专用发件邮箱，核验一次授权测试邮件的实际送达。"},
+    {"title": "客户验收", "body": "演示改内容、传文件、发布、查看询盘与 3D；补充手机实机检查。"},
+    {"title": "每日简报", "body": "复用这份三页模板，逐日更新实际改动、截图、验证和待确认项。"}
+  ],
+  "disclaimer": "本简报记录本机验证结果，不代表正式域名已上线。测试邮件没有向外部邮箱投递，3D 预览不替代样品或工程确认。"
+}

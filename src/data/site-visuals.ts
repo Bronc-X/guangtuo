@@ -1,4 +1,4 @@
-import type {LocalizedText, ProductCategory} from '@/data/catalog';
+import type {LocalizedText, LegacyProductCategory} from '@/data/catalog';
 
 type CategoryVisual = {
   src: string;
@@ -6,14 +6,16 @@ type CategoryVisual = {
   position?: string;
 };
 
-export const categoryVisuals: Record<ProductCategory, CategoryVisual> = {
+export const categoryVisuals: Record<LegacyProductCategory, CategoryVisual> = {
   'face-masks': {
-    src: '/assets/hydrogel/face-mask-reference.png',
+    src: '/assets/hydrogel/face-mask-reference-hd.webp',
     alt: {
       en: 'Hydrogel face-mask format reference',
       zh: '水凝胶面膜形态参考',
       fr: 'Référence de format de masque visage hydrogel',
-      es: 'Referencia de formato de mascarilla facial de hidrogel'
+      es: 'Referencia de formato de mascarilla facial de hidrogel',
+      ru: 'Пример формата гидрогелевой маски для лица',
+      ar: 'مرجع لتصميم قناع وجه من الهيدروجيل'
     }
   },
   'eye-masks': {
@@ -22,17 +24,21 @@ export const categoryVisuals: Record<ProductCategory, CategoryVisual> = {
       en: 'Gold and red hydrogel eye-mask format reference',
       zh: '金色与红色水凝胶眼膜形态参考',
       fr: 'Référence de patchs hydrogel dorés et rouges pour les yeux',
-      es: 'Referencia de parches de hidrogel dorados y rojos para ojos'
+      es: 'Referencia de parches de hidrogel dorados y rojos para ojos',
+      ru: 'Пример золотых и красных гидрогелевых патчей для глаз',
+      ar: 'مرجع للصقات عين هيدروجيل ذهبية وحمراء'
     },
     position: '50% 38%'
   },
-  'neck-masks': {
-    src: '/assets/hydrogel/neck-mask-reference.png',
+  'specialty-patches': {
+    src: '/assets/hydrogel/neck-mask-reference-hd.webp',
     alt: {
-      en: 'Hydrogel neck-mask format reference',
-      zh: '水凝胶颈膜形态参考',
-      fr: 'Référence de format de masque hydrogel pour le cou',
-      es: 'Referencia de formato de mascarilla de hidrogel para el cuello'
+      en: 'Hydrogel specialty patch format for neck and jawline care',
+      zh: '用于颈部与下颌护理的水凝胶局部膜贴参考',
+      fr: 'Référence de patch hydrogel ciblé pour le cou et la mâchoire',
+      es: 'Referencia de parche de hidrogel localizado para cuello y mandíbula',
+      ru: 'Пример гидрогелевого патча для шеи и линии подбородка',
+      ar: 'مرجع للصقات هيدروجيل موضعية للرقبة وخط الفك'
     }
   }
 };

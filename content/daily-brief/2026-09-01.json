@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "project": "修齐生物独立站",
+    "report_type": "日报机制建立日 · 近期进展补录",
+    "report_id": "GT-WEB-DB-20260901",
+    "version": "v1.0",
+    "date": "2026-09-01",
+    "effective_through": "2026-08-29",
+    "phase": "产品与内容体系完善",
+    "status": "VERIFIED 本地已验证"
+  },
+  "summary": "本地开发版已形成完整的水凝膜产品展示、证据内容、资讯发布与客户内容后台基础，可进入客户核对和版本固化阶段。",
+  "scope_note": "本期为近期进展补录，不代表 9 月 1 日新增代码，也不代表已经正式上线。",
+  "metrics": [
+    {"value": "21", "label": "可展示成品 SKU"},
+    {"value": "41", "label": "已整理水凝膜膜型"},
+    {"value": "6", "label": "站点语言版本"},
+    {"value": "243", "label": "本次静态构建页面"}
+  ],
+  "screenshots": [
+    {
+      "id": "S01",
+      "title": "中文首页：水凝膜定位与样品转化入口",
+      "route": "/zh/",
+      "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S01_home_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "首页已围绕水凝膜研发与生产重新组织首屏表达，并把产品浏览、样品申请和在线咨询放在同一转化路径中。",
+      "tag": "当前网页预览 · 概念素材待替换",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W01 / S02",
+      "title": "产品中心重构",
+      "route": "/zh/products/",
+      "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S02_products_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "产品范围由基线 13 款扩展为 21 款，并建立 41 种膜型、5 类凝胶材质和三类护理场景的浏览入口。",
+      "tag": "当前网页预览",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W02 / S03",
+      "title": "专利与技术证据",
+      "route": "/zh/patents/",
+      "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S03_patents_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "新增专利原件展示，专利名称、编号与证书记载权利人均可逐项核对，并保留不夸大说明。",
+      "tag": "证书信息需客户最终核对",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W03 / S04",
+      "title": "水凝膜知识内容",
+      "route": "/zh/insights/",
+      "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S04_insights_1265x712.png",
+      "status": "VERIFIED 已验证",
+      "summary": "新增知识列表和文章详情链路，当前发布快照包含 2 篇中文文章，并已接入首页、页脚与 sitemap。",
+      "tag": "2 篇已发布内容",
+      "viewport": "桌面 · 1265 × 712"
+    },
+    {
+      "id": "W04 / S05",
+      "title": "客户内容后台",
+      "route": "/admin/",
+      "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S05_admin-login_1280x720.png",
+      "status": "DONE 本地已完成",
+      "summary": "本地后台已接入登录、首页首屏、中文文章、图片和发布记录；当前截图为安全登录入口，正式部署仍待后续完成。",
+      "tag": "本地验收版 · 尚未正式部署",
+      "viewport": "桌面 · 1280 × 720"
+    }
+  ],
+  "attention": {
+    "id": "W05 / S06",
+    "title": "阿拉伯语 RTL 版",
+    "route": "/ar/products/",
+    "path": "artifacts/daily-brief/2026-09-01/screenshots/2026-09-01_S06_ar-products_1265x712.png",
+    "status": "IN PROGRESS 进行中",
+    "summary": "六语言路由与 RTL 布局已建立；当前少量产品分类仍使用英文兜底，需继续完成本地化校对。",
+    "tag": "RTL 已生效 · 翻译待补齐",
+    "viewport": "桌面 · 1265 × 712"
+  },
+  "qa": [
+    {"value": "12 / 12", "label": "公开站基线测试"},
+    {"value": "21 / 21", "label": "内容后台测试"},
+    {"value": "0", "label": "TypeScript 错误"},
+    {"value": "243", "label": "静态页面构建成功"}
+  ],
+  "client_inputs": [
+    "确认 21 款产品中哪些 SKU 可以正式对外公开，并提供对应规格、MOQ 与样品政策。",
+    "核对专利权人、功效与合规表达、联系方式和产能数据，确认可公开版本。",
+    "提供正式 Logo、品牌手册、真实工厂与产品素材；当前页面中的部分图像属于概念预览。",
+    "确认内容后台和公开站后续使用的正式部署平台、域名与账号权限。"
+  ],
+  "next_steps": [
+    {"title": "冻结范围", "body": "确认公开 SKU、证据资料与本轮可交付边界。"},
+    {"title": "补齐本地化", "body": "完成俄语、阿拉伯语产品分类与术语校对。"},
+    {"title": "固化版本", "body": "在客户确认后提交当前成果，建立下一轮回归基线。"},
+    {"title": "继续日报", "body": "日终记录当天增量、截图、验证结果与次日计划。"}
+  ],
+  "disclaimer": "说明：截图来自本机验证构建；概念图、演示数据和商业条件均需以客户最终确认资料为准。"
+}

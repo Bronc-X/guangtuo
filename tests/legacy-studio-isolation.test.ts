@@ -10,7 +10,7 @@ describe('experimental packaging studio isolation', () => {
     const studioComponent = source('src/components/sku-3d-studio.tsx');
     const studioLogic = source('src/lib/sku-3d-studio.ts');
 
-    expect(studioPage).toContain('legacyPackagingProducts');
+    expect(studioPage).toContain('studioPackagingProducts');
     expect(studioComponent).toContain('PackagingConcept');
     expect(studioLogic).toContain('PackagingConcept');
     expect(studioPage).not.toMatch(/import\s+\{products\}\s+from\s+'@\/data\/catalog'/);
@@ -18,8 +18,8 @@ describe('experimental packaging studio isolation', () => {
 
   it('restores the studio in the customer journey while keeping it out of search indexing', () => {
     expect(source('src/components/header.tsx')).toMatch(/localizedPath\(locale, ['"]studio['"]\)/);
-    expect(source('src/app/[locale]/page.tsx')).toContain('<Sku3dStudio');
-    expect(source('src/app/[locale]/page.tsx')).toContain('embedded');
+    expect(source('src/app/[locale]/page.tsx')).toContain('<HomeStudio');
+    expect(source('src/components/home-studio.tsx')).toContain('<Studio locale={locale} embedded />');
     expect(source('src/app/sitemap.ts')).not.toContain("'studio'");
   });
 });

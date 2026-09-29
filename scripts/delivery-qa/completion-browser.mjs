@@ -1,0 +1,68 @@
+import {readFileSync, statSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {browse, js, save, shot, until} from './browser-driver.mjs';
+
+const site = 'http://127.0.0.1:3120';
+const results = [];
+browse('viewport', '1440x1000');
+browse('goto', `${site}/zh/studio/`);
+await until('document.querySelector("[data-viewer-ready=true]")', 30000);
+results.push({test: 'configured-model-load', passed: true});
+browse('js', 'document.querySelector("[data-studio-viewer]").scrollIntoView({block:"center",behavior:"instant"})');
+shot('studio-loaded');
+browse('upload', 'input[type=file]', resolve('src/app/icon.png'));
+await until('!document.querySelector("input[type=file]").disabled');
+browse('js', 'window.__originalObjectUrl=URL.createObjectURL; URL.createObjectURL=(blob)=>{const url=window.__originalObjectUrl(blob);if(blob.type==="image/png")window.__png={url,size:blob.size};return url}');
+browse('click', 'button:has-text("下载 PNG 效果图")');
+await until('window.__png && window.__png.size > 10000');
+results.push({test: 'logo-upload-and-png-export', passed: true, bytes: js('window.__png.size')});
+browse('js', 'fetch(window.__png.url).then(r=>r.blob()).then(blob=>{const reader=new FileReader();reader.onload=()=>window.__pngData=reader.result;reader.readAsDataURL(blob)}); "Reading PNG"');
+await until('typeof window.__pngData === "string"');
+browse('js', 'window.__pngData', '--out', resolve(process.env.DELIVERY_QA_OUTPUT, 'studio-export.png'));
+if (statSync(resolve(process.env.DELIVERY_QA_OUTPUT, 'studio-export.png')).size < 10000) throw new Error('PNG file is empty');
+browse('click', 'button:has-text("打开")');
+browse('click', 'button:has-text("分享当前配置")');
+const share = js('document.querySelector("input[readonly]").value');
+browse('goto', share);
+await until('document.querySelector("[data-viewer-ready=true]")');
+results.push({test: 'share-restores-open-assembly', passed: js('Array.from(document.querySelectorAll("button")).find(b=>b.textContent==="打开")?.getAttribute("aria-pressed")==="true"')});
+browse('click', 'button:has-text("移除 Logo")');
+results.push({test: 'logo-remove', passed: js('Array.from(document.querySelectorAll("button")).find(b=>b.textContent==="移除 Logo")?.disabled')});
+browse('js', 'document.querySelector("canvas").getContext("webgl2").getExtension("WEBGL_lose_context").loseContext()');
+await until('document.body.innerText.includes("暂时无法显示 3D")');
+results.push({test: 'webgl-context-loss-fallback', passed: true});
+shot('studio-context-loss');
+
+browse('goto', `${site}/zh/inquiry/`);
+const fields={name:'QA Delivery Buyer',businessEmail:'delivery-qa@example.test',company:'交付验收专用记录',market:'France',quantity:'1000',budget:'待顾问确认',launchDate:'2027',productGoal:'Hydrogel eye care',packagingPreference:'Jar',notes:'仅用于隔离测试，不能发送外部邮件'};
+for(const [key,value] of Object.entries(fields)) browse('fill',`[name="${key}"]`,value);
+browse('click','input[name=privacyConsent]');
+browse('click','button[type=submit]');
+await until('location.pathname.includes("/status/")');
+await until('document.body.innerText.includes("您的产品需求已收到")');
+results.push({test:'public-persistent-inquiry',passed:js('!document.body.innerText.includes("演示环境") && location.hash.includes("mode=remote")')});
+shot('inquiry-received');
+
+browse('goto', `${site}/admin/`);
+await until('document.querySelector("input[type=password]") || document.body.innerText.includes("你好，")');
+if(js('Boolean(document.querySelector("input[type=password]"))')) {
+  const credentials=JSON.parse(readFileSync('tmp/delivery-completion-20260908/private/qa-credentials.json','utf8'));
+  browse('fill','input[autocomplete=username]',credentials.username);
+  browse('fill','input[type=password]',credentials.password);
+  browse('click','button[type=submit]');
+}
+await until('document.body.innerText.includes("你好，")');
+browse('click','button[aria-label="询盘与邮件"]');
+await until('document.body.innerText.includes("交付验收专用记录")');
+shot('mail-review-before');
+browse('click','input[type=checkbox]');
+browse('click','button:has-text("确认此版本")');
+await until('document.body.innerText.includes("已确认，未发送")');
+browse('click','button:has-text("发送邮件")');
+browse('click','button:has-text("确认发送")');
+await until('document.body.innerText.includes("发件服务已接收邮件")');
+results.push({test:'review-confirm-send-local-transport',passed:true,externalMailSent:false});
+shot('mail-review-sent');
+save('completion-browser',results);
+if(results.some(r=>!r.passed))throw new Error('One or more browser acceptance checks failed');
+console.log(JSON.stringify(results,null,2));

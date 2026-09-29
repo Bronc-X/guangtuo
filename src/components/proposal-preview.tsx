@@ -36,8 +36,8 @@ const previewCopy: Record<Locale, {
   },
   zh: {
     contact: '产品联系人', company: '示例品牌', market: '欧盟', pending: '暂未确定', goal: '一款用于零售护肤新品的胶原面膜', preference: '希望有清凉水凝胶触感与零售包装',
-    labels: ['想做的产品', '最接近的现有款', '还可以继续选择的细节', '样品与报价', '可以提供的资料', '建议回复'],
-    status: '您的面膜摘要', to: '收件人', subject: '主题', note: '可以带着这份摘要继续联系产品顾问，并申请合适的样品。', cta: '申请样品 / 报价'
+    labels: ['希望打造的产品', '已经明确的品牌偏好', '还可以继续调整', '样品、报价与交期', '有助于打样的资料', '给顾问的留言'],
+    status: '您的水凝膜方向', to: '收件人', subject: '主题', note: '确认这份产品方向后，即可申请合适的样品，并进一步沟通可调整内容、报价与交期。', cta: '申请样品并获取报价'
   },
   fr: {
     contact: 'Contact produit', company: 'Marque exemple', market: 'Union européenne', pending: 'Pas encore décidé', goal: 'Un masque visage au collagène pour un nouveau lancement retail', preference: 'Une sensation hydrogel fraîche avec un emballage prêt pour la vente',
@@ -48,6 +48,16 @@ const previewCopy: Record<Locale, {
     contact: 'Contacto de producto', company: 'Marca de ejemplo', market: 'Unión Europea', pending: 'Aún no decidido', goal: 'Una mascarilla facial con colágeno para un nuevo lanzamiento retail', preference: 'Una sensación fresca de hidrogel con empaque listo para la venta',
     labels: ['Lo que quiere crear', 'El producto más cercano', 'Elecciones aún posibles', 'Muestras y precios', 'Archivos útiles para compartir', 'Respuesta sugerida'],
     status: 'RESUMEN DE SU MASCARILLA', to: 'Para', subject: 'Asunto', note: 'Use este resumen para continuar con un asesor y solicitar la muestra adecuada.', cta: 'Solicitar muestras / precios'
+  },
+  ru: {
+    contact: 'Контакт по продукту', company: 'Пример бренда', market: 'ЕС', pending: 'Пока не определено', goal: 'Коллагеновая маска для лица для запуска новой розничной линии ухода', preference: 'Охлаждающий гидрогель в упаковке, готовой для розничной продажи',
+    labels: ['Что вы хотите создать', 'Ближайший продукт', 'Что ещё нужно выбрать', 'Образцы и цены', 'Полезные файлы', 'Предлагаемый ответ'],
+    status: 'СВОДКА ПО ВАШЕЙ МАСКЕ', to: 'Кому', subject: 'Тема', note: 'Используйте эту сводку, чтобы продолжить с консультантом и запросить подходящий образец.', cta: 'Запросить образцы / цену'
+  },
+  ar: {
+    contact: 'جهة اتصال المنتج', company: 'علامة تجريبية', market: 'الاتحاد الأوروبي', pending: 'لم يُحدد بعد', goal: 'قناع وجه بالكولاجين لإطلاق خط عناية جديد بالتجزئة', preference: 'إحساس هيدروجيل منعش مع تغليف جاهز للبيع',
+    labels: ['ما تريد تطويره', 'أقرب منتج', 'الخيارات المتبقية', 'العينات والأسعار', 'ملفات مفيدة للمشاركة', 'رد مقترح'],
+    status: 'ملخص قناعك', to: 'إلى', subject: 'الموضوع', note: 'استخدم هذا الملخص للمتابعة مع مستشار المنتجات وطلب العينة المناسبة.', cta: 'طلب عينات / أسعار'
   }
 };
 

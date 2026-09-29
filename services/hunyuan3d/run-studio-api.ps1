@@ -16,7 +16,7 @@ if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
 }
 
 if (Test-Path -LiteralPath $localEnvironmentFile -PathType Leaf) {
-    foreach ($environmentName in @("OPENAI_API_KEY", "STUDIO_MODEL_WORKER_URL", "STUDIO_ALLOWED_ORIGINS")) {
+    foreach ($environmentName in @("OPENAI_API_KEY", "STUDIO_MODEL_WORKER_URL", "STUDIO_ALLOWED_ORIGINS", "STUDIO_GATEWAY_TOKEN", "STUDIO_GENERATION_ENABLED", "STUDIO_LICENSE_ACCEPTED")) {
         $existingValue = [Environment]::GetEnvironmentVariable($environmentName, "Process")
         if ([string]::IsNullOrWhiteSpace($existingValue)) {
             $escapedName = [regex]::Escape($environmentName)
